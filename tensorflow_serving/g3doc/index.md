@@ -7,5 +7,5 @@ TensorFlow Serving is a flexible, high-performance serving system for machine le
 Detailed developer documentation on TensorFlow Serving is available:
 
 - [Architecture Overview](../architecture)
-- [Server API](../../api/tensorflow_serving)
+- [Server API](../../api/tensorflow_serving.md)
 - [REST Client API](../../api/api_rest)
