@@ -1,0 +1,50 @@
+\hypertarget{classtensorflow_1_1serving_1_1EmptyServable}{}\doxysection{tensorflow\+::serving\+::Empty\+Servable Class Reference}
+\label{classtensorflow_1_1serving_1_1EmptyServable}\index{tensorflow::serving::EmptyServable@{tensorflow::serving::EmptyServable}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Empty\+Servable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtensorflow_1_1serving_1_1EmptyServable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Empty\+Servable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtensorflow_1_1serving_1_1EmptyServable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1EmptyServable_a9764b57ccc87454fb2da9f2c5d534da1}\label{classtensorflow_1_1serving_1_1EmptyServable_a9764b57ccc87454fb2da9f2c5d534da1}} 
+absl\+::\+Status {\bfseries Classify} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Classification\+Request \&request, Classification\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1EmptyServable_a0e65e9c5f00b91271a569aae7853bb4c}\label{classtensorflow_1_1serving_1_1EmptyServable_a0e65e9c5f00b91271a569aae7853bb4c}} 
+absl\+::\+Status {\bfseries Regress} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Regression\+Request \&request, Regression\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1EmptyServable_a792585ec6c0c406d94a7012e6686bb6b}\label{classtensorflow_1_1serving_1_1EmptyServable_a792585ec6c0c406d94a7012e6686bb6b}} 
+absl\+::\+Status {\bfseries Predict} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Predict\+Request \&request, Predict\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1EmptyServable_a329dcd3d76a8fc14b5e0d769d8460bda}\label{classtensorflow_1_1serving_1_1EmptyServable_a329dcd3d76a8fc14b5e0d769d8460bda}} 
+absl\+::\+Status\+Or$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1PredictStreamedContext}{Predict\+Streamed\+Context}} $>$ $>$ {\bfseries Predict\+Streamed} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, absl\+::\+Any\+Invocable$<$ void(absl\+::\+Status\+Or$<$ Predict\+Response $>$)$>$ response\+\_\+callback)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1EmptyServable_ae5ab51c82e79542dd5d6267de5210751}\label{classtensorflow_1_1serving_1_1EmptyServable_ae5ab51c82e79542dd5d6267de5210751}} 
+absl\+::\+Status {\bfseries Multi\+Inference} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Multi\+Inference\+Request \&request, Multi\+Inference\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1EmptyServable_a67613065f15a837ed7bcad58cf5e7465}\label{classtensorflow_1_1serving_1_1EmptyServable_a67613065f15a837ed7bcad58cf5e7465}} 
+absl\+::\+Status {\bfseries Get\+Model\+Metadata} (const Get\+Model\+Metadata\+Request \&request, Get\+Model\+Metadata\+Response $\ast$response) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/servables/tensorflow/servable.\+h\item 
+tensorflow\+\_\+serving/servables/tensorflow/servable.\+cc\end{DoxyCompactItemize}

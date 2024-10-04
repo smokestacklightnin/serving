@@ -1,0 +1,149 @@
+\hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options}{}\doxysection{tensorflow\+::serving\+::main\+::Server\+::Options Struct Reference}
+\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options}\index{tensorflow::serving::main::Server::Options@{tensorflow::serving::main::Server::Options}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a858516addd0f9c709365fb1861070f02}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a858516addd0f9c709365fb1861070f02}} 
+tensorflow\+::int32 {\bfseries grpc\+\_\+port} = 8500
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a4acac0be40d5c3de0a1d13b21bb7b1ae}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a4acac0be40d5c3de0a1d13b21bb7b1ae}} 
+tensorflow\+::string {\bfseries grpc\+\_\+channel\+\_\+arguments}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_adbdd819bcdb419ed8b24863cc724d307}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_adbdd819bcdb419ed8b24863cc724d307}} 
+tensorflow\+::string {\bfseries grpc\+\_\+socket\+\_\+path}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ac83d80fe2424a88e7f1e84beac11a2bf}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ac83d80fe2424a88e7f1e84beac11a2bf}} 
+tensorflow\+::int32 {\bfseries grpc\+\_\+max\+\_\+threads} = 4.\+0 $\ast$ port\+::\+Num\+Schedulable\+CPUs()
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a40fb85d122da36e038fd724650538d19}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a40fb85d122da36e038fd724650538d19}} 
+tensorflow\+::int32 {\bfseries http\+\_\+port} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a7aa16c82c39907ca8c78e9c9d9405ed4}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a7aa16c82c39907ca8c78e9c9d9405ed4}} 
+tensorflow\+::int32 {\bfseries http\+\_\+num\+\_\+threads} = 4.\+0 $\ast$ port\+::\+Num\+Schedulable\+CPUs()
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a66d001be5802e2662e447cf3b0f3f862}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a66d001be5802e2662e447cf3b0f3f862}} 
+tensorflow\+::int32 {\bfseries http\+\_\+timeout\+\_\+in\+\_\+ms} = 30000
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ab76613297053d282778c7b461434c949}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ab76613297053d282778c7b461434c949}} 
+bool {\bfseries enable\+\_\+cors\+\_\+support} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ac69bf9a7572bf4818ae5584ee80b0768}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ac69bf9a7572bf4818ae5584ee80b0768}} 
+bool {\bfseries enable\+\_\+batching} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_abf6d0bb823d50d8ce3bd0cf4fd786990}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_abf6d0bb823d50d8ce3bd0cf4fd786990}} 
+bool {\bfseries enable\+\_\+per\+\_\+model\+\_\+batching\+\_\+params} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_aa3d033165be73a01e1d030b16684ae89}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_aa3d033165be73a01e1d030b16684ae89}} 
+bool {\bfseries allow\+\_\+version\+\_\+labels\+\_\+for\+\_\+unavailable\+\_\+models} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a19d65c9f965b4160da7ed5d0964ae48d}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a19d65c9f965b4160da7ed5d0964ae48d}} 
+bool {\bfseries force\+\_\+allow\+\_\+any\+\_\+version\+\_\+labels\+\_\+for\+\_\+unavailable\+\_\+models} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_aa6b4fea24a7ff7fa104957897271b518}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_aa6b4fea24a7ff7fa104957897271b518}} 
+float {\bfseries per\+\_\+process\+\_\+gpu\+\_\+memory\+\_\+fraction} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ad72a6cccbf3cff2554a17e53687c9ea8}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ad72a6cccbf3cff2554a17e53687c9ea8}} 
+tensorflow\+::string {\bfseries batching\+\_\+parameters\+\_\+file}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a0396a02d534f678da3c603f022ea3a98}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a0396a02d534f678da3c603f022ea3a98}} 
+tensorflow\+::string {\bfseries model\+\_\+name}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ab253620c7ee20f386be6e2ff5de13bcc}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ab253620c7ee20f386be6e2ff5de13bcc}} 
+tensorflow\+::int32 {\bfseries num\+\_\+load\+\_\+threads} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a33fed24d69ae4517ba1f21db84ebfc2b}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a33fed24d69ae4517ba1f21db84ebfc2b}} 
+tensorflow\+::int32 {\bfseries num\+\_\+unload\+\_\+threads} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af7020b4dc82061bbd599bd6011ba6c2c}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af7020b4dc82061bbd599bd6011ba6c2c}} 
+tensorflow\+::int32 {\bfseries max\+\_\+num\+\_\+load\+\_\+retries} = 5
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a2854183a451d6da953d82e38a86a0475}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a2854183a451d6da953d82e38a86a0475}} 
+int64\+\_\+t {\bfseries load\+\_\+retry\+\_\+interval\+\_\+micros} = 1LL $\ast$ 60 $\ast$ 1000 $\ast$ 1000
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af205e580d3b3c0748b44391d9c901869}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af205e580d3b3c0748b44391d9c901869}} 
+tensorflow\+::int32 {\bfseries file\+\_\+system\+\_\+poll\+\_\+wait\+\_\+seconds} = 1
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a6160a4d674a65cd1cef642d03c224d56}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a6160a4d674a65cd1cef642d03c224d56}} 
+bool {\bfseries flush\+\_\+filesystem\+\_\+caches} = true
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a134c72ab31e5f052672ec46561b3e7e3}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a134c72ab31e5f052672ec46561b3e7e3}} 
+tensorflow\+::string {\bfseries model\+\_\+base\+\_\+path}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af94726a871c57484632008c622e40f4c}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af94726a871c57484632008c622e40f4c}} 
+tensorflow\+::string {\bfseries saved\+\_\+model\+\_\+tags}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a3b85d5841a60a41fc42d79404280abf2}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a3b85d5841a60a41fc42d79404280abf2}} 
+int64\+\_\+t {\bfseries tensorflow\+\_\+session\+\_\+parallelism} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a44a733aa53ccc1d989efa79c1f5daa8d}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a44a733aa53ccc1d989efa79c1f5daa8d}} 
+int64\+\_\+t {\bfseries tensorflow\+\_\+intra\+\_\+op\+\_\+parallelism} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a7ce89ba93a651242ea6155f0bbc0daf3}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a7ce89ba93a651242ea6155f0bbc0daf3}} 
+int64\+\_\+t {\bfseries tensorflow\+\_\+inter\+\_\+op\+\_\+parallelism} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ada2d58e7e3e9d9bbdb085bab723793bb}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ada2d58e7e3e9d9bbdb085bab723793bb}} 
+tensorflow\+::string {\bfseries platform\+\_\+config\+\_\+file}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a6c2a2f30fea36f6bbe940465943453a7}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a6c2a2f30fea36f6bbe940465943453a7}} 
+bool {\bfseries use\+\_\+alts\+\_\+credentials} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af94568162947af1c8200b4ee13ae3477}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af94568162947af1c8200b4ee13ae3477}} 
+tensorflow\+::string {\bfseries ssl\+\_\+config\+\_\+file}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a429a4552b3cc7c60c5016b1ac2555b41}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a429a4552b3cc7c60c5016b1ac2555b41}} 
+string {\bfseries model\+\_\+config\+\_\+file}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a0639412df7dfe82f2e8ef0679342a610}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a0639412df7dfe82f2e8ef0679342a610}} 
+string {\bfseries tensorflow\+\_\+session\+\_\+config\+\_\+file}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a2a77305f7f6d5fbce23eedfaa56f1fe1}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a2a77305f7f6d5fbce23eedfaa56f1fe1}} 
+tensorflow\+::int32 {\bfseries fs\+\_\+model\+\_\+config\+\_\+poll\+\_\+wait\+\_\+seconds} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a96a05ae32da321d8f9885acc67f2f796}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a96a05ae32da321d8f9885acc67f2f796}} 
+bool {\bfseries enable\+\_\+model\+\_\+warmup} = true
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af93aed1a1885fe97b36dbf8c72313a05}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_af93aed1a1885fe97b36dbf8c72313a05}} 
+tensorflow\+::int32 {\bfseries num\+\_\+request\+\_\+iterations\+\_\+for\+\_\+warmup} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ade430ea430971bafe5cc45bd44b38058}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ade430ea430971bafe5cc45bd44b38058}} 
+tensorflow\+::string {\bfseries monitoring\+\_\+config\+\_\+file}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a0ab877bec645ef2fa1d6733641450f6d}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a0ab877bec645ef2fa1d6733641450f6d}} 
+bool {\bfseries enforce\+\_\+session\+\_\+run\+\_\+timeout} = true
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a665a204b699f3a91fdcda08a4cae0a05}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a665a204b699f3a91fdcda08a4cae0a05}} 
+bool {\bfseries remove\+\_\+unused\+\_\+fields\+\_\+from\+\_\+bundle\+\_\+metagraph} = true
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a47eafe2907bc8e137d46f95651072229}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a47eafe2907bc8e137d46f95651072229}} 
+bool {\bfseries prefer\+\_\+tflite\+\_\+model} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a8b52fe3920a81d8e1de7f2790e0bd056}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a8b52fe3920a81d8e1de7f2790e0bd056}} 
+tensorflow\+::int32 {\bfseries num\+\_\+tflite\+\_\+pools} = port\+::\+Num\+Schedulable\+CPUs()
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ad3c77d766df21b8c0e4f12cf3896e289}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ad3c77d766df21b8c0e4f12cf3896e289}} 
+tensorflow\+::int32 {\bfseries num\+\_\+tflite\+\_\+interpreters\+\_\+per\+\_\+pool} = 1
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_abced08a72b9096cb0839e2ea8f34fd6b}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_abced08a72b9096cb0839e2ea8f34fd6b}} 
+tensorflow\+::string {\bfseries thread\+\_\+pool\+\_\+factory\+\_\+config\+\_\+file}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_afef47674cd381b95490671d6bec9f6aa}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_afef47674cd381b95490671d6bec9f6aa}} 
+bool {\bfseries enable\+\_\+signature\+\_\+method\+\_\+name\+\_\+check} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a61a39305118199a067581c6f3f9f9f0b}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a61a39305118199a067581c6f3f9f9f0b}} 
+bool {\bfseries enable\+\_\+profiler} = true
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_adf07f562821d9635579709cc78403cef}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_adf07f562821d9635579709cc78403cef}} 
+tensorflow\+::string {\bfseries mixed\+\_\+precision}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ae06d7be2f272a9f0db9533f6f9538995}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_ae06d7be2f272a9f0db9533f6f9538995}} 
+bool {\bfseries skip\+\_\+initialize\+\_\+tpu} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a1d796f34d5231ffb49c7a9c27053df02}\label{structtensorflow_1_1serving_1_1main_1_1Server_1_1Options_a1d796f34d5231ffb49c7a9c27053df02}} 
+bool {\bfseries enable\+\_\+grpc\+\_\+healthcheck\+\_\+service} = false
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/model\+\_\+servers/server.\+h\item 
+tensorflow\+\_\+serving/model\+\_\+servers/server.\+cc\end{DoxyCompactItemize}

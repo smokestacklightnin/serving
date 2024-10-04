@@ -1,0 +1,99 @@
+\hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask}{}\doxysection{tensorflow\+::serving\+::Batching\+Session\+Task Struct Reference}
+\label{structtensorflow_1_1serving_1_1BatchingSessionTask}\index{tensorflow::serving::BatchingSessionTask@{tensorflow::serving::BatchingSessionTask}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Batching\+Session\+Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{structtensorflow_1_1serving_1_1BatchingSessionTask__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Batching\+Session\+Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{structtensorflow_1_1serving_1_1BatchingSessionTask__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a6fdbc9ffcee7d8e5b006b69caa9cf8a5}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a6fdbc9ffcee7d8e5b006b69caa9cf8a5}} 
+typedef std\+::vector$<$ std\+::vector$<$ Tensor $>$ $>$ {\bfseries Tensor\+Matrix}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a91ff8e877221b79a13755b4566e6dd3d}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a91ff8e877221b79a13755b4566e6dd3d}} 
+size\+\_\+t {\bfseries size} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a373a9cb0a3901cda84d8c9c4d894ecad}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a373a9cb0a3901cda84d8c9c4d894ecad}} 
+static std\+::string {\bfseries Name} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a414c3a8ae8a5a7c38b6aac190361e7dd}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a414c3a8ae8a5a7c38b6aac190361e7dd}} 
+uint64\+\_\+t {\bfseries enqueue\+\_\+time\+\_\+micros}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a37211125ccaca7d7d8c1f5a7f78ee956}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a37211125ccaca7d7d8c1f5a7f78ee956}} 
+Run\+Options {\bfseries run\+\_\+options}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a63740c858ebe283a81afa731b4d5a653}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a63740c858ebe283a81afa731b4d5a653}} 
+size\+\_\+t {\bfseries zeroth\+\_\+dim\+\_\+size}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a9a3738dcbd22b3f6603d99b2a898cff3}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a9a3738dcbd22b3f6603d99b2a898cff3}} 
+const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$ $>$ $\ast$ {\bfseries inputs}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a91fb78909799f64d611280875f5f790d}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a91fb78909799f64d611280875f5f790d}} 
+const std\+::vector$<$ string $>$ $\ast$ {\bfseries output\+\_\+tensor\+\_\+names}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a3227a00c9984efa3475709e11a303728}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a3227a00c9984efa3475709e11a303728}} 
+Notification $\ast$ {\bfseries done}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a15a28436e5788a85fb5bbfef0355bf5c}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a15a28436e5788a85fb5bbfef0355bf5c}} 
+Status $\ast$ {\bfseries status}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a8860c4080caef1a3c410c9e13f711ebd}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a8860c4080caef1a3c410c9e13f711ebd}} 
+std\+::vector$<$ Tensor $>$ $\ast$ {\bfseries outputs}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_aa3a07ee4d98dd35bb77a95dc46eee437}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_aa3a07ee4d98dd35bb77a95dc46eee437}} 
+Run\+Metadata $\ast$ {\bfseries run\+\_\+metadata}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a8908744c1d1451787e9670d50d825bc7}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a8908744c1d1451787e9670d50d825bc7}} 
+absl\+::optional$<$ thread\+::\+Thread\+Pool\+Options $>$ {\bfseries thread\+\_\+pool\+\_\+options}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_abfc7a564550dc4698b81bf3fe69483b0}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_abfc7a564550dc4698b81bf3fe69483b0}} 
+bool {\bfseries is\+\_\+partial} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_ad3eabcdb4217501db137dad2c76359b8}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_ad3eabcdb4217501db137dad2c76359b8}} 
+std\+::unique\+\_\+ptr$<$ std\+::vector$<$ std\+::pair$<$ string, Tensor $>$ $>$ $>$ {\bfseries owned\+\_\+split\+\_\+inputs}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a9cdcfd844f18c87833ea44b302f3c685}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a9cdcfd844f18c87833ea44b302f3c685}} 
+int {\bfseries split\+\_\+index} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_abf4760aaa56b44d57686a696634860bf}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_abf4760aaa56b44d57686a696634860bf}} 
+std\+::function$<$ void()$>$ {\bfseries done\+\_\+callback}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_abe23aaf6416ae82426ed5358c0b1f460}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_abe23aaf6416ae82426ed5358c0b1f460}} 
+std\+::shared\+\_\+ptr$<$ Tensor\+Matrix $>$ {\bfseries shared\+\_\+outputs}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_a5322dc380b7173f4424f3802e8a4f09f}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_a5322dc380b7173f4424f3802e8a4f09f}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ThreadSafeStatus}{Thread\+Safe\+Status}} $>$ {\bfseries thread\+\_\+safe\+\_\+status}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BatchingSessionTask_adffabec37d4b342ecce98c6d71513c6f}\label{structtensorflow_1_1serving_1_1BatchingSessionTask_adffabec37d4b342ecce98c6d71513c6f}} 
+std\+::shared\+\_\+ptr$<$ std\+::vector$<$ Run\+Metadata $>$ $>$ {\bfseries split\+\_\+run\+\_\+metadatas}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/batching/batching\+\_\+session.\+h\end{DoxyCompactItemize}

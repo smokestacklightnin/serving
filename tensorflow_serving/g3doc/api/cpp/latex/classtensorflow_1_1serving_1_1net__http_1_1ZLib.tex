@@ -1,0 +1,83 @@
+\hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib}{}\doxysection{tensorflow\+::serving\+::net\+\_\+http\+::ZLib Class Reference}
+\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib}\index{tensorflow::serving::net\_http::ZLib@{tensorflow::serving::net\_http::ZLib}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a31c05ad244aec8bf042b103dc898ea0b}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a31c05ad244aec8bf042b103dc898ea0b}} 
+void {\bfseries Reinit} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a6a3d692688249d5e9a4e2d8fb8738289}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a6a3d692688249d5e9a4e2d8fb8738289}} 
+void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_ae890d4043056825c0e323268e9c4d3a3}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_ae890d4043056825c0e323268e9c4d3a3}} 
+void {\bfseries Set\+Dont\+Hide\+Stream\+End} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a2d7b9150253350ae8cc467444d65c0b8}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a2d7b9150253350ae8cc467444d65c0b8}} 
+void {\bfseries Set\+Compression\+Level} (int level)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a8eaed93efb16321185f47ad1a4589fa7}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a8eaed93efb16321185f47ad1a4589fa7}} 
+void {\bfseries Set\+Compression\+Window\+Size\+In\+Bits} (int bits)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_ac64ce9240ee4355ec8a34871fe83d1bb}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_ac64ce9240ee4355ec8a34871fe83d1bb}} 
+void {\bfseries Set\+Compression\+Mem\+Level} (int level)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a2fb04f8bf8b5035409c8d645a147fbd6}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a2fb04f8bf8b5035409c8d645a147fbd6}} 
+int {\bfseries Min\+Footer\+Size} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a2705eb0e1fadf143cde793483d73de5e}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a2705eb0e1fadf143cde793483d73de5e}} 
+int {\bfseries Compress} (Bytef $\ast$dest, u\+Longf $\ast$dest\+Len, const Bytef $\ast$source, u\+Long source\+Len)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_af63e80625cc05e276ab680f5b4e159c3}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_af63e80625cc05e276ab680f5b4e159c3}} 
+int {\bfseries Uncompress} (Bytef $\ast$dest, u\+Longf $\ast$dest\+Len, const Bytef $\ast$source, u\+Long source\+Len)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a1d60760865777a5122e09af5e7154449}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a1d60760865777a5122e09af5e7154449}} 
+u\+Longf {\bfseries Gzip\+Uncompressed\+Length} (const Bytef $\ast$source, u\+Long len)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a42af43fa2696040fcc4a63984bad031b}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a42af43fa2696040fcc4a63984bad031b}} 
+int {\bfseries Uncompress\+Gzip\+And\+Allocate} (Bytef $\ast$$\ast$dest, u\+Longf $\ast$dest\+Len, const Bytef $\ast$source, u\+Long source\+Len)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a0ddfe46cb4f8cb8b18831284a6011b60}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a0ddfe46cb4f8cb8b18831284a6011b60}} 
+int {\bfseries Compress\+At\+Most} (Bytef $\ast$dest, u\+Longf $\ast$dest\+Len, const Bytef $\ast$source, u\+Long $\ast$source\+Len)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a880542fb11b47e62ab372a84dd78acf8}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a880542fb11b47e62ab372a84dd78acf8}} 
+int {\bfseries Compress\+Chunk\+Done} (Bytef $\ast$dest, u\+Longf $\ast$dest\+Len)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a5d435e9335e3caeb4b75df8d6b4b13b8}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a5d435e9335e3caeb4b75df8d6b4b13b8}} 
+int {\bfseries Uncompress\+At\+Most} (Bytef $\ast$dest, u\+Longf $\ast$dest\+Len, const Bytef $\ast$source, u\+Long $\ast$source\+Len)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a6cdf2a91cba4d35f69a1e59a0757c8e3}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a6cdf2a91cba4d35f69a1e59a0757c8e3}} 
+bool {\bfseries Uncompress\+Chunk\+Done} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a510d121a5fbed5c09c29770a7fcb1c75}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a510d121a5fbed5c09c29770a7fcb1c75}} 
+bool {\bfseries first\+\_\+chunk} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a42abca7649d9427970f5f8dbfb05ce68}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a42abca7649d9427970f5f8dbfb05ce68}} 
+bool {\bfseries Is\+Gzip\+Footer\+Complete} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_aa69977b16d68e44e191b0cd1ce159ac4}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_aa69977b16d68e44e191b0cd1ce159ac4}} 
+bool {\bfseries Is\+Gzip\+Footer\+Valid} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a4ecdbdb9f88913c95f7c426cf43578e8}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a4ecdbdb9f88913c95f7c426cf43578e8}} 
+u\+Long {\bfseries uncompressed\+\_\+size} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a3618e1d59f1228bdc86a23d59ab45d85}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a3618e1d59f1228bdc86a23d59ab45d85}} 
+static u\+Long {\bfseries Min\+Compressbuf\+Size} (u\+Long uncompress\+\_\+size)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a1dd79d9afef1ccd3002fbdb080d28c18}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a1dd79d9afef1ccd3002fbdb080d28c18}} 
+static bool {\bfseries Has\+Gzip\+Header} (const char $\ast$source, int source\+Len)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a4aa2412c480c52a4f59c06907ab871e6}\label{classtensorflow_1_1serving_1_1net__http_1_1ZLib_a4aa2412c480c52a4f59c06907ab871e6}} 
+static constexpr int64\+\_\+t {\bfseries k\+Max\+Uncompressed\+Bytes} = 100 $\ast$ 1024 $\ast$ 1024
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/util/net\+\_\+http/compression/gzip\+\_\+zlib.\+h\item 
+tensorflow\+\_\+serving/util/net\+\_\+http/compression/gzip\+\_\+zlib.\+cc\end{DoxyCompactItemize}

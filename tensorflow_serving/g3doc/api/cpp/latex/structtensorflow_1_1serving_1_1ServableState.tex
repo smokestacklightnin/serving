@@ -1,0 +1,54 @@
+\hypertarget{structtensorflow_1_1serving_1_1ServableState}{}\doxysection{tensorflow\+::serving\+::Servable\+State Struct Reference}
+\label{structtensorflow_1_1serving_1_1ServableState}\index{tensorflow::serving::ServableState@{tensorflow::serving::ServableState}}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Servable\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{structtensorflow_1_1serving_1_1ServableState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServableState_a1e5ed6bcc3fadea5e88989fe36ed5542}\label{structtensorflow_1_1serving_1_1ServableState_a1e5ed6bcc3fadea5e88989fe36ed5542}} 
+enum class {\bfseries Manager\+State} \+: int \{ \newline
+{\bfseries k\+Start}
+, {\bfseries k\+Loading}
+, {\bfseries k\+Available}
+, {\bfseries k\+Unloading}
+, \newline
+{\bfseries k\+End}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServableState_a125c2a9c2009491f12ad80df017ed3f0}\label{structtensorflow_1_1serving_1_1ServableState_a125c2a9c2009491f12ad80df017ed3f0}} 
+string {\bfseries Debug\+String} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServableState_a6968fadb4ef8a823128ad54ba1471396}\label{structtensorflow_1_1serving_1_1ServableState_a6968fadb4ef8a823128ad54ba1471396}} 
+static string {\bfseries Manager\+State\+String} (Manager\+State state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServableState_a8fddd5065a2ea189a7b4e333a0cda3df}\label{structtensorflow_1_1serving_1_1ServableState_a8fddd5065a2ea189a7b4e333a0cda3df}} 
+\mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} {\bfseries id}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServableState_a32cc38aae55327182b206b3a04cd4a5d}\label{structtensorflow_1_1serving_1_1ServableState_a32cc38aae55327182b206b3a04cd4a5d}} 
+Manager\+State {\bfseries manager\+\_\+state}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServableState_ae648258ad900a9ed4dd9190ba1595192}\label{structtensorflow_1_1serving_1_1ServableState_ae648258ad900a9ed4dd9190ba1595192}} 
+Status {\bfseries health}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/servable\+\_\+state.\+h\end{DoxyCompactItemize}

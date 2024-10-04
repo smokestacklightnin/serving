@@ -1,0 +1,21 @@
+::: {#classtensorflow_1_1serving_1_1FastReadDynamicPtr_1_1ShareableOwnedPtr}
+:::
+
+[\[classtensorflow\_1\_1serving\_1\_1FastReadDynamicPtr\_1\_1ShareableOwnedPtr\]]{#classtensorflow_1_1serving_1_1FastReadDynamicPtr_1_1ShareableOwnedPtr
+label="classtensorflow_1_1serving_1_1FastReadDynamicPtr_1_1ShareableOwnedPtr"}
+
+[\[classtensorflow\_1\_1serving\_1\_1FastReadDynamicPtr\_1\_1ShareableOwnedPtr\_ab84580ef78d66591fa71b09f134c3472\]]{#classtensorflow_1_1serving_1_1FastReadDynamicPtr_1_1ShareableOwnedPtr_ab84580ef78d66591fa71b09f134c3472
+label="classtensorflow_1_1serving_1_1FastReadDynamicPtr_1_1ShareableOwnedPtr_ab84580ef78d66591fa71b09f134c3472"}
+**ShareableOwnedPtr** (OwnedPtr p)
+
+[\[classtensorflow\_1\_1serving\_1\_1FastReadDynamicPtr\_1\_1ShareableOwnedPtr\_a8ff8078c29b146fbce4c3ae5b0b3959d\]]{#classtensorflow_1_1serving_1_1FastReadDynamicPtr_1_1ShareableOwnedPtr_a8ff8078c29b146fbce4c3ae5b0b3959d
+label="classtensorflow_1_1serving_1_1FastReadDynamicPtr_1_1ShareableOwnedPtr_a8ff8078c29b146fbce4c3ae5b0b3959d"}
+ReadPtr **NewShare** ()
+
+[\[classtensorflow\_1\_1serving\_1\_1FastReadDynamicPtr\_1\_1ShareableOwnedPtr\_a041508acf92c1f2392bf702a4d863419\]]{#classtensorflow_1_1serving_1_1FastReadDynamicPtr_1_1ShareableOwnedPtr_a041508acf92c1f2392bf702a4d863419
+label="classtensorflow_1_1serving_1_1FastReadDynamicPtr_1_1ShareableOwnedPtr_a041508acf92c1f2392bf702a4d863419"}
+OwnedPtr **Release** () &&
+
+The documentation for this class was generated from the following file:
+
+tensorflow\_serving/util/fast\_read\_dynamic\_ptr.h

@@ -1,0 +1,254 @@
+\hypertarget{classtensorflow_1_1serving_1_1BasicManager}{}\doxysection{tensorflow\+::serving\+::Basic\+Manager Class Reference}
+\label{classtensorflow_1_1serving_1_1BasicManager}\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+
+
+{\ttfamily \#include $<$basic\+\_\+manager.\+h$>$}
+
+
+
+Inheritance diagram for tensorflow\+::serving\+::Basic\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtensorflow_1_1serving_1_1BasicManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Basic\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtensorflow_1_1serving_1_1BasicManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtensorflow_1_1serving_1_1BasicManager_1_1Options}{Options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_abeacf431a3e838da2b1602828f0c0eb2}\label{classtensorflow_1_1serving_1_1BasicManager_abeacf431a3e838da2b1602828f0c0eb2}} 
+using {\bfseries Pre\+Load\+Hook} = std\+::function$<$ void(const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&)$>$
+\item 
+using \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a8ee7a19d059b362c0702686d981bf5fc}{Done\+Callback}} = std\+::function$<$ void(const Status \&status)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a492123b8bb97709184ddb57772e3ccf3}{$\sim$\+Basic\+Manager}} () override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a3c004d32952596c1f5759b1cfcc3c639}{List\+Available\+Servable\+Ids}} () const override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_ad58907b2d551d693d13b6c979c4bd511}\label{classtensorflow_1_1serving_1_1BasicManager_ad58907b2d551d693d13b6c979c4bd511}} 
+Status {\bfseries Get\+Untyped\+Servable\+Handle} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableRequest}{Servable\+Request}} \&request, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1UntypedServableHandle}{Untyped\+Servable\+Handle}} $>$ $\ast$untyped\+\_\+handle) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a675a065bc2acf6229be899618e190b2b}\label{classtensorflow_1_1serving_1_1BasicManager_a675a065bc2acf6229be899618e190b2b}} 
+std\+::map$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1UntypedServableHandle}{Untyped\+Servable\+Handle}} $>$ $>$ {\bfseries Get\+Available\+Untyped\+Servable\+Handles} () const override
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_ac2759caea67d3d37b9dba31589f9ef1d}{Manage\+Servable}} (\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} $>$$>$ servable)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a72406e3aedfa0084e24f2bd8ec7efdcc}{Manage\+Servable\+With\+Additional\+State}} (\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} $>$$>$ servable, std\+::unique\+\_\+ptr$<$ T $>$ additional\+\_\+state)
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a3209cd82cbb5eac79bc3238b3c6bec43}{Stop\+Managing\+Servable}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&id)
+\item 
+std\+::vector$<$ string $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_afbdc3d0ed83559c7d8b3b0092194ead6}{Get\+Managed\+Servable\+Names}} () const
+\item 
+{\footnotesize template$<$typename T  = std\+::nullptr\+\_\+t$>$ }\\std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateSnapshot}{Servable\+State\+Snapshot}}$<$ T $>$ $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a31716665d8df8451d379363309dac826}{Get\+Managed\+Servable\+State\+Snapshots}} (const string \&servable\+\_\+name) const
+\item 
+{\footnotesize template$<$typename T  = std\+::nullptr\+\_\+t$>$ }\\absl\+::optional$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateSnapshot}{Servable\+State\+Snapshot}}$<$ T $>$ $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_af681f56bbef07ab201f25c0097f73e75}{Get\+Managed\+Servable\+State\+Snapshot}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&id)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a99dbea960f6d47461dbfca5bfa149335}{Get\+Additional\+Servable\+State}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&id)
+\item 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a09e87e3b0bc3410a78db3439ff0fb9bb}{Load\+Servable}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&id, \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a8ee7a19d059b362c0702686d981bf5fc}{Done\+Callback}} done\+\_\+callback)
+\item 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a84dca5ec1ecc28421d5ab020beac2ee3}{Cancel\+Load\+Servable\+Retry}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&id)
+\item 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a97af7156e38c29225534bacdeefe9408}{Unload\+Servable}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&id, \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a8ee7a19d059b362c0702686d981bf5fc}{Done\+Callback}} done\+\_\+callback)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_af8f89ab0900a43b12cfbd9b2185fbfde}\label{classtensorflow_1_1serving_1_1BasicManager_af8f89ab0900a43b12cfbd9b2185fbfde}} 
+static Status {\bfseries Create} (\mbox{\hyperlink{structtensorflow_1_1serving_1_1BasicManager_1_1Options}{Options}} options, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager}{Basic\+Manager}} $>$ $\ast$manager)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a2158193bbefd406c1206927ce42fb865}\label{classtensorflow_1_1serving_1_1BasicManager_a2158193bbefd406c1206927ce42fb865}} 
+class {\bfseries Aspired\+Versions\+Manager}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_aa40648d98e6ee77b0bc8b0a272b54410}\label{classtensorflow_1_1serving_1_1BasicManager_aa40648d98e6ee77b0bc8b0a272b54410}} 
+class {\bfseries test\+\_\+util\+::\+Basic\+Manager\+Test\+Access}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helps manage the lifecycle of servables including loading, serving and unloading them. The manager accepts servables in the form of Loaders.
+
+We start managing a servable through one of the Manage\+Servable$\ast$ methods. You can go on to load the servable after this by calling \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a09e87e3b0bc3410a78db3439ff0fb9bb}{Load\+Servable()}}. Loading will also make the servable available to serve. Once you decide to unload it, you can call \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a97af7156e38c29225534bacdeefe9408}{Unload\+Servable()}} on it, which will make it unavailable to serve, then unload the servable.
+
+Servables are retained until \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a3209cd82cbb5eac79bc3238b3c6bec43}{Stop\+Managing\+Servable()}} is called. This allows a higher level manager with more information to decide when it\textquotesingle{}s safe to forget about a servable.
+
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager}{Basic\+Manager}} tracks the resources (e.\+g. RAM) used by loaded servables, and only allows loading new servables that fit within the overall resource pool.
+
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager}{Basic\+Manager}} can be configured to use a thread-\/pool to do it\textquotesingle{}s load and unloads. This makes the \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a09e87e3b0bc3410a78db3439ff0fb9bb}{Load\+Servable()}} and \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a97af7156e38c29225534bacdeefe9408}{Unload\+Servable()}} methods schedule the load/unloads rather than executing them synchronously. If there are more pending load/unloads than threads in the thread pool, they are processed in FIFO order.
+
+In the presence of loaders that over-\/estimate their servables\textquotesingle{} resource needs and/or only bind their servables\textquotesingle{} resources to device instances, load/unload concurrency can be reduced below the thread-\/pool size. That is because we may have to wait for one servable\textquotesingle{}s load/unload to finish to pin down the resource availability for loading another servable.
+
+REQUIRES\+:
+\begin{DoxyEnumerate}
+\item Order of method calls -\/ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_ac2759caea67d3d37b9dba31589f9ef1d}{Manage\+Servable()}} (and variants) -\/$>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a09e87e3b0bc3410a78db3439ff0fb9bb}{Load\+Servable()}} -\/$>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a97af7156e38c29225534bacdeefe9408}{Unload\+Servable()}} -\/$>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a3209cd82cbb5eac79bc3238b3c6bec43}{Stop\+Managing\+Servable()}}.
+\item Do not schedule concurrent load and unloads of the same servable.
+\item Do not call load or unload multiple times on the same servable.
+\end{DoxyEnumerate}
+
+This class is thread-\/safe.
+
+Example usage\+: \begin{DoxyVerb}const ServableId id = {kServableName, 0};
+std::unique_ptr&lt;Loader> loader = ...;
+...
+BasicManager manager;
+TF_CHECK_OK(manager.ManageServable(
+  CreateServableData(id, std::move(loader))));
+TF_CHECK_OK(manager.LoadServable(id));
+
+...
+TF_CHECK_OK(manager.GetServableHandle(
+    ServableRequest::Latest(kServableName), &handle));
+...
+
+TF_CHECK_OK(manager.UnloadServable(id));
+TF_CHECK_OK(manager.StopManagingServable(id)); 
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a8ee7a19d059b362c0702686d981bf5fc}\label{classtensorflow_1_1serving_1_1BasicManager_a8ee7a19d059b362c0702686d981bf5fc}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!DoneCallback@{DoneCallback}}
+\index{DoneCallback@{DoneCallback}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{DoneCallback}{DoneCallback}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a8ee7a19d059b362c0702686d981bf5fc}{tensorflow\+::serving\+::\+Basic\+Manager\+::\+Done\+Callback}} =  std\+::function$<$void(const Status\& status)$>$}
+
+Callback called at the end of \{Load,Unload\}Servable(). We pass in the status of the operation to the callback. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a492123b8bb97709184ddb57772e3ccf3}\label{classtensorflow_1_1serving_1_1BasicManager_a492123b8bb97709184ddb57772e3ccf3}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!````~BasicManager@{$\sim$BasicManager}}
+\index{````~BasicManager@{$\sim$BasicManager}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$BasicManager()}{~BasicManager()}}
+{\footnotesize\ttfamily tensorflow\+::serving\+::\+Basic\+Manager\+::$\sim$\+Basic\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+If configured to use a load/unload thread-\/pool, waits until all scheduled loads and unloads have finished and then destroys the set of threads. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a84dca5ec1ecc28421d5ab020beac2ee3}\label{classtensorflow_1_1serving_1_1BasicManager_a84dca5ec1ecc28421d5ab020beac2ee3}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!CancelLoadServableRetry@{CancelLoadServableRetry}}
+\index{CancelLoadServableRetry@{CancelLoadServableRetry}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{CancelLoadServableRetry()}{CancelLoadServableRetry()}}
+{\footnotesize\ttfamily void tensorflow\+::serving\+::\+Basic\+Manager\+::\+Cancel\+Load\+Servable\+Retry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&}]{id }\end{DoxyParamCaption})}
+
+Cancels retrying the servable load during \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a09e87e3b0bc3410a78db3439ff0fb9bb}{Load\+Servable()}} by replacing the \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_ae344a05f0ae81c0f589daaa737223435}{Loader\+Harness\+::should\+\_\+retry}} with a function that always returns false. Does nothing if the servable isn\textquotesingle{}t managed.
+
+If the retries are cancelled, the servable goes into a state dependent on the last Load() called on it. If the last Load() was successful, it will be in state k\+Ready, else in k\+Error. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a99dbea960f6d47461dbfca5bfa149335}\label{classtensorflow_1_1serving_1_1BasicManager_a99dbea960f6d47461dbfca5bfa149335}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!GetAdditionalServableState@{GetAdditionalServableState}}
+\index{GetAdditionalServableState@{GetAdditionalServableState}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{GetAdditionalServableState()}{GetAdditionalServableState()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T $\ast$ tensorflow\+::serving\+::\+Basic\+Manager\+::\+Get\+Additional\+Servable\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&}]{id }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the additional state for the servable. Returns nullptr if there is no additional state setup or if there is a type mismatch between what was setup and what is being asked for.
+\end{DoxyReturn}
+REQUIRES\+: This manager should have been managing this servable already, else we return nullptr. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_afbdc3d0ed83559c7d8b3b0092194ead6}\label{classtensorflow_1_1serving_1_1BasicManager_afbdc3d0ed83559c7d8b3b0092194ead6}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!GetManagedServableNames@{GetManagedServableNames}}
+\index{GetManagedServableNames@{GetManagedServableNames}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{GetManagedServableNames()}{GetManagedServableNames()}}
+{\footnotesize\ttfamily std\+::vector$<$ string $>$ tensorflow\+::serving\+::\+Basic\+Manager\+::\+Get\+Managed\+Servable\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the names of all the servables managed by this manager. The names will be duplicate-\/free and not in any particular order. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_af681f56bbef07ab201f25c0097f73e75}\label{classtensorflow_1_1serving_1_1BasicManager_af681f56bbef07ab201f25c0097f73e75}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!GetManagedServableStateSnapshot@{GetManagedServableStateSnapshot}}
+\index{GetManagedServableStateSnapshot@{GetManagedServableStateSnapshot}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{GetManagedServableStateSnapshot()}{GetManagedServableStateSnapshot()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+absl\+::optional$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateSnapshot}{Servable\+State\+Snapshot}}$<$ T $>$ $>$ tensorflow\+::serving\+::\+Basic\+Manager\+::\+Get\+Managed\+Servable\+State\+Snapshot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&}]{id }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the state snapshot of a particular servable-\/id managed by this manager if available.
+\end{DoxyReturn}
+REQUIRES\+: This manager should have been managing this servable already, else we return nullopt. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a31716665d8df8451d379363309dac826}\label{classtensorflow_1_1serving_1_1BasicManager_a31716665d8df8451d379363309dac826}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!GetManagedServableStateSnapshots@{GetManagedServableStateSnapshots}}
+\index{GetManagedServableStateSnapshots@{GetManagedServableStateSnapshots}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{GetManagedServableStateSnapshots()}{GetManagedServableStateSnapshots()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateSnapshot}{Servable\+State\+Snapshot}}$<$ T $>$ $>$ tensorflow\+::serving\+::\+Basic\+Manager\+::\+Get\+Managed\+Servable\+State\+Snapshots (\begin{DoxyParamCaption}\item[{const string \&}]{servable\+\_\+name }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the state snapshots of all the servables of a particular stream, managed by this manager.
+\end{DoxyReturn}
+T is the additional-\/state type, if any. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a3c004d32952596c1f5759b1cfcc3c639}\label{classtensorflow_1_1serving_1_1BasicManager_a3c004d32952596c1f5759b1cfcc3c639}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!ListAvailableServableIds@{ListAvailableServableIds}}
+\index{ListAvailableServableIds@{ListAvailableServableIds}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{ListAvailableServableIds()}{ListAvailableServableIds()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} $>$ tensorflow\+::serving\+::\+Basic\+Manager\+::\+List\+Available\+Servable\+Ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gets a list of all available servable ids, i.\+e. each of these can be retrieved using Get\+Servable\+Handle. 
+
+Implements \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager_a10694eb8c3e845e4738788092057b7ef}{tensorflow\+::serving\+::\+Manager}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a09e87e3b0bc3410a78db3439ff0fb9bb}\label{classtensorflow_1_1serving_1_1BasicManager_a09e87e3b0bc3410a78db3439ff0fb9bb}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!LoadServable@{LoadServable}}
+\index{LoadServable@{LoadServable}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{LoadServable()}{LoadServable()}}
+{\footnotesize\ttfamily void tensorflow\+::serving\+::\+Basic\+Manager\+::\+Load\+Servable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&}]{id,  }\item[{\mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a8ee7a19d059b362c0702686d981bf5fc}{Done\+Callback}}}]{done\+\_\+callback }\end{DoxyParamCaption})}
+
+Loads the servable with this id, and updates the serving map too. Calls {\itshape done\+\_\+callback} with ok iff the servable was loaded successfully, else returns an error status.
+
+If using a thread-\/pool, this method transitions the servable harness to k\+Loading state, schedules the load and returns, otherwise it completes the load before returning.
+
+REQUIRES\+: This manager should have been managing this servable already, for it to be loaded, else we call {\itshape done\+\_\+callback} with an error status. Do not call this multiple times on the same servable. Only one of those will succeed and the rest will fail with an error status. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_ac2759caea67d3d37b9dba31589f9ef1d}\label{classtensorflow_1_1serving_1_1BasicManager_ac2759caea67d3d37b9dba31589f9ef1d}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!ManageServable@{ManageServable}}
+\index{ManageServable@{ManageServable}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{ManageServable()}{ManageServable()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Basic\+Manager\+::\+Manage\+Servable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} $>$$>$}]{servable }\end{DoxyParamCaption})}
+
+Starts managing the servable.
+
+Returns an error if given a servable that is already being managed.
+
+If {\itshape servable} is in an error state, this method does {\bfseries{not}} return an error. Instead, the manager accepts the servable, puts it in state k\+Error (with a notification sent to the event bus), and then immediately stops managing it. This behavior facilitates uniform handling of errors that occur in sources (e.\+g. invalid file path to servable data) and ones that occur in the manager (e.\+g. insufficient resources to load servable). \mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a72406e3aedfa0084e24f2bd8ec7efdcc}\label{classtensorflow_1_1serving_1_1BasicManager_a72406e3aedfa0084e24f2bd8ec7efdcc}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!ManageServableWithAdditionalState@{ManageServableWithAdditionalState}}
+\index{ManageServableWithAdditionalState@{ManageServableWithAdditionalState}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{ManageServableWithAdditionalState()}{ManageServableWithAdditionalState()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Status tensorflow\+::serving\+::\+Basic\+Manager\+::\+Manage\+Servable\+With\+Additional\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} $>$$>$}]{servable,  }\item[{std\+::unique\+\_\+ptr$<$ T $>$}]{additional\+\_\+state }\end{DoxyParamCaption})}
+
+Similar to the above method, but callers, usually other managers built on top of this one, can associate additional state with the servable. Additional state may be ACL or lifetime metadata for that servable. The ownership of the state is transferred to this class. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a3209cd82cbb5eac79bc3238b3c6bec43}\label{classtensorflow_1_1serving_1_1BasicManager_a3209cd82cbb5eac79bc3238b3c6bec43}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!StopManagingServable@{StopManagingServable}}
+\index{StopManagingServable@{StopManagingServable}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{StopManagingServable()}{StopManagingServable()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Basic\+Manager\+::\+Stop\+Managing\+Servable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&}]{id }\end{DoxyParamCaption})}
+
+Tells the manager to stop managing this servable. Requires that the servable is currently being managed and that its state is one of \{k\+New, k\+Error, k\+Disabled\}. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1BasicManager_a97af7156e38c29225534bacdeefe9408}\label{classtensorflow_1_1serving_1_1BasicManager_a97af7156e38c29225534bacdeefe9408}} 
+\index{tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}!UnloadServable@{UnloadServable}}
+\index{UnloadServable@{UnloadServable}!tensorflow::serving::BasicManager@{tensorflow::serving::BasicManager}}
+\doxysubsubsection{\texorpdfstring{UnloadServable()}{UnloadServable()}}
+{\footnotesize\ttfamily void tensorflow\+::serving\+::\+Basic\+Manager\+::\+Unload\+Servable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&}]{id,  }\item[{\mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a8ee7a19d059b362c0702686d981bf5fc}{Done\+Callback}}}]{done\+\_\+callback }\end{DoxyParamCaption})}
+
+Unloads the servable with this id, and updates the serving map too. Calls {\itshape done\+\_\+callback} with ok iff the servable was unloaded successfully, else returns an error status.
+
+If using a thread-\/pool, this method transitions the servable harness to k\+Quiescing state, schedules the unload and returns, otherwise it completes the unload before returning.
+
+REQUIRES\+: This manager should have loaded and made this servable available, for it to be unloaded, else calls {\itshape done\+\_\+callback} with an error status. Do not call this multiple times on the same servable. Only one of those will succeed and the rest will fail with an error status. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/basic\+\_\+manager.\+h\item 
+tensorflow\+\_\+serving/core/basic\+\_\+manager.\+cc\end{DoxyCompactItemize}

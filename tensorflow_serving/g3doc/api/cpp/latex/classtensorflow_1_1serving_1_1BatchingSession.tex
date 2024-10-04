@@ -1,0 +1,51 @@
+\hypertarget{classtensorflow_1_1serving_1_1BatchingSession}{}\doxysection{tensorflow\+::serving\+::Batching\+Session Class Reference}
+\label{classtensorflow_1_1serving_1_1BatchingSession}\index{tensorflow::serving::BatchingSession@{tensorflow::serving::BatchingSession}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Batching\+Session\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtensorflow_1_1serving_1_1BatchingSession__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Batching\+Session\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtensorflow_1_1serving_1_1BatchingSession__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BatchingSession_ac226e7586884f57ec81ee346f8342eb2}\label{classtensorflow_1_1serving_1_1BatchingSession_ac226e7586884f57ec81ee346f8342eb2}} 
+Status {\bfseries Run} (const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs, const std\+::vector$<$ string $>$ \&output\+\_\+tensor\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+node\+\_\+names, std\+::vector$<$ Tensor $>$ $\ast$outputs) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BatchingSession_afe8ed5493bda24f823bff4684e2b3039}\label{classtensorflow_1_1serving_1_1BatchingSession_afe8ed5493bda24f823bff4684e2b3039}} 
+Status {\bfseries Run} (const Run\+Options \&run\+\_\+options, const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs, const std\+::vector$<$ string $>$ \&output\+\_\+tensor\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+node\+\_\+names, std\+::vector$<$ Tensor $>$ $\ast$outputs, Run\+Metadata $\ast$run\+\_\+metadata) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BatchingSession_abb57b98a930c1bbd131c8b9b57619b23}\label{classtensorflow_1_1serving_1_1BatchingSession_abb57b98a930c1bbd131c8b9b57619b23}} 
+Status {\bfseries Run} (const Run\+Options \&run\+\_\+options, const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs, const std\+::vector$<$ string $>$ \&output\+\_\+tensor\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+node\+\_\+names, std\+::vector$<$ Tensor $>$ $\ast$outputs, Run\+Metadata $\ast$run\+\_\+metadata, const thread\+::\+Thread\+Pool\+Options \&thread\+\_\+pool\+\_\+options) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BatchingSession_a3a8028fd4b8098d3065e5fa0fbb7620e}\label{classtensorflow_1_1serving_1_1BatchingSession_a3a8028fd4b8098d3065e5fa0fbb7620e}} 
+Status {\bfseries List\+Devices} (std\+::vector$<$ Device\+Attributes $>$ $\ast$response) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BatchingSession_a5fe13d33b2144aa27782caaea1527e13}\label{classtensorflow_1_1serving_1_1BatchingSession_a5fe13d33b2144aa27782caaea1527e13}} 
+static Status {\bfseries Create} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1BatchingOptions}{Batching\+Session\+Options}} \&options, std\+::unique\+\_\+ptr$<$ Session $>$ wrapped, const std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator}{Signature\+With\+Batching\+Session\+Scheduler\+Creator}} $>$ \&signatures\+\_\+with\+\_\+scheduler\+\_\+creators, const std\+::string \&thread\+\_\+pool\+\_\+name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BatchingSession}{Batching\+Session}} $>$ $\ast$result)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1BatchingSession_a601e5e5c631648662e5c5a1c180a5a4f}\label{classtensorflow_1_1serving_1_1BatchingSession_a601e5e5c631648662e5c5a1c180a5a4f}} 
+static Status {\bfseries Create} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1BatchingOptions}{Batching\+Session\+Options}} \&options, std\+::unique\+\_\+ptr$<$ Session $>$ wrapped, const std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator}{Signature\+With\+Batching\+Session\+Scheduler\+Creator}} $>$ \&signatures\+\_\+with\+\_\+scheduler\+\_\+creators, Batching\+Session\+Scheduler\+Creator default\+\_\+creator, const std\+::string \&thread\+\_\+pool\+\_\+name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1BatchingSession}{Batching\+Session}} $>$ $\ast$result)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/batching/batching\+\_\+session.\+cc\end{DoxyCompactItemize}

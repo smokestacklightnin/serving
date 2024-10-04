@@ -1,0 +1,57 @@
+\hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options}{}\doxysection{tensorflow\+::serving\+::Basic\+Manager\+::Options Struct Reference}
+\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options}\index{tensorflow::serving::BasicManager::Options@{tensorflow::serving::BasicManager::Options}}
+
+
+{\ttfamily \#include $<$basic\+\_\+manager.\+h$>$}
+
+
+
+Collaboration diagram for tensorflow\+::serving\+::Basic\+Manager\+::Options\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{structtensorflow_1_1serving_1_1BasicManager_1_1Options__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_ac9d1a81dee98cc7620de7def2f3fc5ec}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_ac9d1a81dee98cc7620de7def2f3fc5ec}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ResourceTracker}{Resource\+Tracker}} $>$ {\bfseries resource\+\_\+tracker}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_ac070dcf4f3e622849a8352331bf3e8a0}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_ac070dcf4f3e622849a8352331bf3e8a0}} 
+uint32 {\bfseries num\+\_\+load\+\_\+threads} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a273fb5aec53cf0112c4518ef7dbf0ec7}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a273fb5aec53cf0112c4518ef7dbf0ec7}} 
+uint32 {\bfseries num\+\_\+unload\+\_\+threads} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_acecf73db4c465ee6f2b09f1ea30ebd17}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_acecf73db4c465ee6f2b09f1ea30ebd17}} 
+std\+::function$<$ bool(absl\+::\+Status)$>$ {\bfseries should\+\_\+retry\+\_\+model\+\_\+load}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_af01298b82549a3c5d186c364456e6778}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_af01298b82549a3c5d186c364456e6778}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus}{Event\+Bus}}$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableState}{Servable\+State}} $>$ $\ast$ {\bfseries servable\+\_\+event\+\_\+bus} = nullptr
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a4777c52b37e1f1f344a788cbf17e286d}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a4777c52b37e1f1f344a788cbf17e286d}} 
+uint32 {\bfseries max\+\_\+num\+\_\+load\+\_\+retries} = 5
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a135c912432f053b1914b584cb5f788c6}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a135c912432f053b1914b584cb5f788c6}} 
+int64\+\_\+t {\bfseries load\+\_\+retry\+\_\+interval\+\_\+micros} = 1LL $\ast$ 60 $\ast$ 1000 $\ast$ 1000
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a4dc84a151ab56ec00b8fab09afb3fd23}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a4dc84a151ab56ec00b8fab09afb3fd23}} 
+bool {\bfseries flush\+\_\+filesystem\+\_\+caches} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a2c3dceb7d8960577039ed6b60f56021c}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a2c3dceb7d8960577039ed6b60f56021c}} 
+Env $\ast$ {\bfseries env} = Env\+::\+Default()
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a94643fc592451b32d60c86dc63c4a992}\label{structtensorflow_1_1serving_1_1BasicManager_1_1Options_a94643fc592451b32d60c86dc63c4a992}} 
+Pre\+Load\+Hook {\bfseries pre\+\_\+load\+\_\+hook}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Config options and pluggable objects that will be used by the \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager}{Basic\+Manager}}. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/basic\+\_\+manager.\+h\end{DoxyCompactItemize}

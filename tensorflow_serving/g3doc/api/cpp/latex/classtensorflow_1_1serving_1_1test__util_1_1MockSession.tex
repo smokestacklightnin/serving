@@ -1,0 +1,57 @@
+\hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession}{}\doxysection{tensorflow\+::serving\+::test\+\_\+util\+::Mock\+Session Class Reference}
+\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession}\index{tensorflow::serving::test\_util::MockSession@{tensorflow::serving::test\_util::MockSession}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::test\+\_\+util\+::Mock\+Session\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classtensorflow_1_1serving_1_1test__util_1_1MockSession__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::test\+\_\+util\+::Mock\+Session\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classtensorflow_1_1serving_1_1test__util_1_1MockSession__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession_af24dd478e2cd2db69cedafec93046880}\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession_af24dd478e2cd2db69cedafec93046880}} 
+{\bfseries MOCK\+\_\+\+METHOD} (\+::tensorflow\+::\+Status, Create,(const Graph\+Def \&graph),(override))
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a069c5388d6f7fdf43dac22374c4e64bb}\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a069c5388d6f7fdf43dac22374c4e64bb}} 
+{\bfseries MOCK\+\_\+\+METHOD} (\+::tensorflow\+::\+Status, Extend,(const Graph\+Def \&graph),(override))
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a1419776f4ff0354ab6780eaa8fcbaea6}\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a1419776f4ff0354ab6780eaa8fcbaea6}} 
+{\bfseries MOCK\+\_\+\+METHOD} (\+::tensorflow\+::\+Status, Run,((const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs), const std\+::vector$<$ string $>$ \&output\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+nodes, std\+::vector$<$ Tensor $>$ $\ast$outputs),(override))
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession_ac0792f2c3d7be0c0cc9046b3cfb76a33}\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession_ac0792f2c3d7be0c0cc9046b3cfb76a33}} 
+{\bfseries MOCK\+\_\+\+METHOD} (\+::tensorflow\+::\+Status, Run,(const Run\+Options \&run\+\_\+options,(const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs), const std\+::vector$<$ string $>$ \&output\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+nodes, std\+::vector$<$ Tensor $>$ $\ast$outputs, Run\+Metadata $\ast$run\+\_\+metadata),(override))
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a99a748dfb5b790e257822d611a72c60e}\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a99a748dfb5b790e257822d611a72c60e}} 
+{\bfseries MOCK\+\_\+\+METHOD} (\+::tensorflow\+::\+Status, Run,(const Run\+Options \&run\+\_\+options,(const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs), const std\+::vector$<$ string $>$ \&output\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+nodes, std\+::vector$<$ Tensor $>$ $\ast$outputs, Run\+Metadata $\ast$run\+\_\+metadata, const tensorflow\+::thread\+::\+Thread\+Pool\+Options \&thread\+\_\+pool\+\_\+options),(override))
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a73a57196ed5ff0fb515c6ccc6baaa30c}\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a73a57196ed5ff0fb515c6ccc6baaa30c}} 
+{\bfseries MOCK\+\_\+\+METHOD} (\+::tensorflow\+::\+Status, PRun\+Setup,(const std\+::vector$<$ string $>$ \&input\+\_\+names, const std\+::vector$<$ string $>$ \&output\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+nodes, string $\ast$handle),(override))
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a4588de5ec0fa0c06664b5122f07e9762}\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a4588de5ec0fa0c06664b5122f07e9762}} 
+{\bfseries MOCK\+\_\+\+METHOD} (\+::tensorflow\+::\+Status, PRun,(const string \&handle,(const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs), const std\+::vector$<$ string $>$ \&output\+\_\+names, std\+::vector$<$ Tensor $>$ $\ast$outputs),(override))
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession_ad3fa6f11960f852a0fdd08c1bd18765d}\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession_ad3fa6f11960f852a0fdd08c1bd18765d}} 
+{\bfseries MOCK\+\_\+\+METHOD} (\+::tensorflow\+::\+Status, List\+Devices,(std\+::vector$<$\+::tensorflow\+::\+Device\+Attributes $>$ $\ast$response),(override))
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a3d28e12e0cc887feba31493ce0f9320b}\label{classtensorflow_1_1serving_1_1test__util_1_1MockSession_a3d28e12e0cc887feba31493ce0f9320b}} 
+{\bfseries MOCK\+\_\+\+METHOD} (\+::tensorflow\+::\+Status, Close,(),(override))
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/test\+\_\+util/mock\+\_\+session.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\hypertarget{classtensorflow_1_1serving_1_1TfLiteSession}{}\doxysection{tensorflow\+::serving\+::Tf\+Lite\+Session Class Reference}
+\label{classtensorflow_1_1serving_1_1TfLiteSession}\index{tensorflow::serving::TfLiteSession@{tensorflow::serving::TfLiteSession}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Tf\+Lite\+Session\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtensorflow_1_1serving_1_1TfLiteSession__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Tf\+Lite\+Session\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classtensorflow_1_1serving_1_1TfLiteSession__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfLiteSession_af56c4d888c6d9b14fa7f93c3ebf2aec9}\label{classtensorflow_1_1serving_1_1TfLiteSession_af56c4d888c6d9b14fa7f93c3ebf2aec9}} 
+Status {\bfseries Run} (const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs, const std\+::vector$<$ string $>$ \&output\+\_\+tensor\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+node\+\_\+names, std\+::vector$<$ Tensor $>$ $\ast$outputs) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfLiteSession_ad2a1c5664ab495ba320e2517b4d09ff2}\label{classtensorflow_1_1serving_1_1TfLiteSession_ad2a1c5664ab495ba320e2517b4d09ff2}} 
+Status {\bfseries Run} (const Run\+Options \&run\+\_\+options, const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs, const std\+::vector$<$ string $>$ \&output\+\_\+tensor\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+node\+\_\+names, std\+::vector$<$ Tensor $>$ $\ast$outputs, Run\+Metadata $\ast$run\+\_\+metadata) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfLiteSession_a5fa1a7c147c933e0316a54789cc513d3}\label{classtensorflow_1_1serving_1_1TfLiteSession_a5fa1a7c147c933e0316a54789cc513d3}} 
+Status {\bfseries Run} (const Run\+Options \&run\+\_\+options, const std\+::vector$<$ std\+::pair$<$ string, Tensor $>$$>$ \&inputs, const std\+::vector$<$ string $>$ \&output\+\_\+tensor\+\_\+names, const std\+::vector$<$ string $>$ \&target\+\_\+node\+\_\+names, std\+::vector$<$ Tensor $>$ $\ast$outputs, Run\+Metadata $\ast$run\+\_\+metadata, const thread\+::\+Thread\+Pool\+Options \&thread\+\_\+pool\+\_\+options) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfLiteSession_ad869ad828216829a1eb6dfd95b8ddbff}\label{classtensorflow_1_1serving_1_1TfLiteSession_ad869ad828216829a1eb6dfd95b8ddbff}} 
+Status {\bfseries List\+Devices} (std\+::vector$<$ Device\+Attributes $>$ $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfLiteSession_aac1155c582aa38320c71b822fa3bad7c}\label{classtensorflow_1_1serving_1_1TfLiteSession_aac1155c582aa38320c71b822fa3bad7c}} 
+Status {\bfseries Set\+Scheduler} (const Scheduler\+Creator \&scheduler\+\_\+creator, const Basic\+Batch\+Scheduler$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1TfLiteBatchTask}{Tf\+Lite\+Batch\+Task}} $>$\+::Options \&options)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfLiteSession_aabe9a6b7e0aa93a3eb265f098f5ac2b8}\label{classtensorflow_1_1serving_1_1TfLiteSession_aabe9a6b7e0aa93a3eb265f098f5ac2b8}} 
+Basic\+Batch\+Scheduler$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1TfLiteBatchTask}{Tf\+Lite\+Batch\+Task}} $>$\+::Options {\bfseries Get\+Scheduler\+Options} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfLiteSession_a15f669ebbee48bd099d5ef6cf848c75c}\label{classtensorflow_1_1serving_1_1TfLiteSession_a15f669ebbee48bd099d5ef6cf848c75c}} 
+static Status {\bfseries Create} (string \&\&buffer, const Session\+Options \&options, int num\+\_\+pools, int num\+\_\+interpreters\+\_\+per\+\_\+pool, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1TfLiteSession}{Tf\+Lite\+Session}} $>$ $\ast$tflite\+\_\+session, \+::google\+::protobuf\+::\+Map$<$ string, Signature\+Def $>$ $\ast$signatures)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfLiteSession_a691ec11977b3a1b5cb325ca2f771f9eb}\label{classtensorflow_1_1serving_1_1TfLiteSession_a691ec11977b3a1b5cb325ca2f771f9eb}} 
+static Status {\bfseries Create\+Default\+Basic\+Batch\+Scheduler} (const Basic\+Batch\+Scheduler$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1TfLiteBatchTask}{Tf\+Lite\+Batch\+Task}} $>$\+::Options \&options, std\+::function$<$ void(std\+::unique\+\_\+ptr$<$ Batch$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1TfLiteBatchTask}{Tf\+Lite\+Batch\+Task}} $>$$>$)$>$ process\+\_\+batch\+\_\+callback, std\+::unique\+\_\+ptr$<$ Basic\+Batch\+Scheduler$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1TfLiteBatchTask}{Tf\+Lite\+Batch\+Task}} $>$$>$ $\ast$batch\+\_\+scheduler)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfLiteSession_ae296cc32dbee906cc35d78e5ebf280ff}\label{classtensorflow_1_1serving_1_1TfLiteSession_ae296cc32dbee906cc35d78e5ebf280ff}} 
+static Status {\bfseries Split\+Tf\+Lite\+Input\+Task} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1TfLiteBatchTask}{Tf\+Lite\+Batch\+Task}} $>$ $\ast$input\+\_\+task\+\_\+ptr, int open\+\_\+batch\+\_\+remaining\+\_\+slot, int max\+\_\+batch\+\_\+size, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1TfLiteBatchTask}{Tf\+Lite\+Batch\+Task}} $>$$>$ $\ast$output\+\_\+tasks)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/servables/tensorflow/tflite\+\_\+session.\+h\item 
+tensorflow\+\_\+serving/servables/tensorflow/tflite\+\_\+session.\+cc\end{DoxyCompactItemize}

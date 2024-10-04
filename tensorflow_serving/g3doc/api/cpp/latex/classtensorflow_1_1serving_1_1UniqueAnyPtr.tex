@@ -1,0 +1,47 @@
+\hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr}{}\doxysection{tensorflow\+::serving\+::Unique\+Any\+Ptr Class Reference}
+\label{classtensorflow_1_1serving_1_1UniqueAnyPtr}\index{tensorflow::serving::UniqueAnyPtr@{tensorflow::serving::UniqueAnyPtr}}
+
+
+{\ttfamily \#include $<$any\+\_\+ptr.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_a2289c5328e883bc22bd79fc7b7262244}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_a2289c5328e883bc22bd79fc7b7262244}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr_a2289c5328e883bc22bd79fc7b7262244}{Unique\+Any\+Ptr}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr}{Unique\+Any\+Ptr}} is void and null by default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_a828c00154987e28e4909dfadf5a9cad4}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_a828c00154987e28e4909dfadf5a9cad4}} 
+{\bfseries Unique\+Any\+Ptr} (std\+::nullptr\+\_\+t)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_ae33840e17d58e1e45a77306e8c0312a5}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_ae33840e17d58e1e45a77306e8c0312a5}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr_ae33840e17d58e1e45a77306e8c0312a5}{Unique\+Any\+Ptr}} (std\+::unique\+\_\+ptr$<$ T $>$ ptr)
+\begin{DoxyCompactList}\small\item\em Construct from a unique pointer to any type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_a247ff3d59e6df37d7c98adc9680f8fb2}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_a247ff3d59e6df37d7c98adc9680f8fb2}} 
+{\bfseries Unique\+Any\+Ptr} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr}{Unique\+Any\+Ptr}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_a88bba0bf01d730b9b367179310b7953e}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_a88bba0bf01d730b9b367179310b7953e}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr}{Unique\+Any\+Ptr}} \& {\bfseries operator=} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr}{Unique\+Any\+Ptr}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_a9cd8acbcc8592aa2b8975475f4f4f4ea}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_a9cd8acbcc8592aa2b8975475f4f4f4ea}} 
+{\bfseries Unique\+Any\+Ptr} (\mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr}{Unique\+Any\+Ptr}} \&\&other)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_aa8e547b42286ffb54b9e1ac351b3bce1}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_aa8e547b42286ffb54b9e1ac351b3bce1}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr}{Unique\+Any\+Ptr}} \& {\bfseries operator=} (\mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr}{Unique\+Any\+Ptr}} \&\&other)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_acb57a78f3357bd37e85a25ca707d692b}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_acb57a78f3357bd37e85a25ca707d692b}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr_acb57a78f3357bd37e85a25ca707d692b}{get}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for the underlying pointer if it is of type T, otherwise null. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_a5b06edf7f9381bbae5a1fbc903d0e2f0}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_a5b06edf7f9381bbae5a1fbc903d0e2f0}} 
+const \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} \& \mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr_a5b06edf7f9381bbae5a1fbc903d0e2f0}{as\+\_\+any\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for the underlying pointer as an \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1UniqueAnyPtr_ab93984c044a1c82415f4304b269b7f54}\label{classtensorflow_1_1serving_1_1UniqueAnyPtr_ab93984c044a1c82415f4304b269b7f54}} 
+void {\bfseries swap} (\mbox{\hyperlink{classtensorflow_1_1serving_1_1UniqueAnyPtr}{Unique\+Any\+Ptr}} \&other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Like \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}}, but owns the pointed-\/to object (calls delete upon destruction). This class is move-\/only, like std\+::unique\+\_\+ptr. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/util/any\+\_\+ptr.\+h\end{DoxyCompactItemize}

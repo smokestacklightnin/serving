@@ -1,0 +1,24 @@
+::: {#classtensorflow_1_1serving_1_1internal_1_1FileSystemStoragePathSourceTestAccess}
+:::
+
+[\[classtensorflow\_1\_1serving\_1\_1internal\_1\_1FileSystemStoragePathSourceTestAccess\]]{#classtensorflow_1_1serving_1_1internal_1_1FileSystemStoragePathSourceTestAccess
+label="classtensorflow_1_1serving_1_1internal_1_1FileSystemStoragePathSourceTestAccess"}
+
+[\[classtensorflow\_1\_1serving\_1\_1internal\_1\_1FileSystemStoragePathSourceTestAccess\_af62bf28f36a7a42587c937c4fc51ba9b\]]{#classtensorflow_1_1serving_1_1internal_1_1FileSystemStoragePathSourceTestAccess_af62bf28f36a7a42587c937c4fc51ba9b
+label="classtensorflow_1_1serving_1_1internal_1_1FileSystemStoragePathSourceTestAccess_af62bf28f36a7a42587c937c4fc51ba9b"}
+**FileSystemStoragePathSourceTestAccess**
+([Source](#classtensorflow_1_1serving_1_1Source)$<$ StoragePath $>$
+$\ast$source)
+
+[\[classtensorflow\_1\_1serving\_1\_1internal\_1\_1FileSystemStoragePathSourceTestAccess\_aeb423ab8ae64443aa36e7dc1529b9ba7\]]{#classtensorflow_1_1serving_1_1internal_1_1FileSystemStoragePathSourceTestAccess_aeb423ab8ae64443aa36e7dc1529b9ba7
+label="classtensorflow_1_1serving_1_1internal_1_1FileSystemStoragePathSourceTestAccess_aeb423ab8ae64443aa36e7dc1529b9ba7"}
+Status **PollFileSystemAndInvokeCallback** ()
+
+[\[classtensorflow\_1\_1serving\_1\_1internal\_1\_1FileSystemStoragePathSourceTestAccess\_a2130064776598a4d4f7b64778c640067\]]{#classtensorflow_1_1serving_1_1internal_1_1FileSystemStoragePathSourceTestAccess_a2130064776598a4d4f7b64778c640067
+label="classtensorflow_1_1serving_1_1internal_1_1FileSystemStoragePathSourceTestAccess_a2130064776598a4d4f7b64778c640067"}
+void **SetAspiredVersionsCallbackNotifier** (std::function$<$ void()$>$
+fn)
+
+The documentation for this class was generated from the following file:
+
+tensorflow\_serving/sources/storage\_path/file\_system\_storage\_path\_source\_test.cc

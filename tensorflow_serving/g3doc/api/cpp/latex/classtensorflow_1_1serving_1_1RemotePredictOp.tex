@@ -1,0 +1,39 @@
+\hypertarget{classtensorflow_1_1serving_1_1RemotePredictOp}{}\doxysection{tensorflow\+::serving\+::Remote\+Predict\+Op$<$ Prediction\+Service\+Stub\+Type $>$ Class Template Reference}
+\label{classtensorflow_1_1serving_1_1RemotePredictOp}\index{tensorflow::serving::RemotePredictOp$<$ PredictionServiceStubType $>$@{tensorflow::serving::RemotePredictOp$<$ PredictionServiceStubType $>$}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Remote\+Predict\+Op$<$ Prediction\+Service\+Stub\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classtensorflow_1_1serving_1_1RemotePredictOp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Remote\+Predict\+Op$<$ Prediction\+Service\+Stub\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classtensorflow_1_1serving_1_1RemotePredictOp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1RemotePredictOp_a1219bbca9f6cc6cd5cac8cd27c81f179}\label{classtensorflow_1_1serving_1_1RemotePredictOp_a1219bbca9f6cc6cd5cac8cd27c81f179}} 
+{\bfseries Remote\+Predict\+Op} (Op\+Kernel\+Construction $\ast$context)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1RemotePredictOp_abc1bdb8013d8224f00af14b0f386ebc6}\label{classtensorflow_1_1serving_1_1RemotePredictOp_abc1bdb8013d8224f00af14b0f386ebc6}} 
+void {\bfseries Compute\+Async} (Op\+Kernel\+Context $\ast$context, Done\+Callback done) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1RemotePredictOp_a54d416cab723016f2d05492dd72d6acd}\label{classtensorflow_1_1serving_1_1RemotePredictOp_a54d416cab723016f2d05492dd72d6acd}} 
+void {\bfseries Post\+Process\+Response} (Op\+Kernel\+Context $\ast$context, Predict\+Response $\ast$response, const absl\+::\+Status \&rpc\+\_\+status, bool fail\+\_\+op\+\_\+on\+\_\+rpc\+\_\+error, TTypes$<$ const tstring $>$\+::Flat output\+\_\+tensor\+\_\+aliases, Done\+Callback rpc\+\_\+done)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/experimental/tensorflow/ops/remote\+\_\+predict/kernels/remote\+\_\+predict\+\_\+op\+\_\+kernel.\+h\end{DoxyCompactItemize}

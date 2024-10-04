@@ -1,0 +1,5 @@
+<map id="tensorflow::serving::test_util::FakeLoader" name="tensorflow::serving::test_util::FakeLoader">
+<area shape="rect" id="node1" title=" " alt="" coords="13,184,177,225"/>
+<area shape="rect" id="node2" href="$classtensorflow_1_1serving_1_1ResourceUnsafeLoader.html" title=" " alt="" coords="5,95,185,136"/>
+<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1Loader.html" title=" " alt="" coords="23,5,168,47"/>
+</map>

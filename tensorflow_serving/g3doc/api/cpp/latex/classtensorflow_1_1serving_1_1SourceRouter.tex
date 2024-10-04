@@ -1,0 +1,51 @@
+\hypertarget{classtensorflow_1_1serving_1_1SourceRouter}{}\doxysection{tensorflow\+::serving\+::Source\+Router$<$ T $>$ Class Template Reference}
+\label{classtensorflow_1_1serving_1_1SourceRouter}\index{tensorflow::serving::SourceRouter$<$ T $>$@{tensorflow::serving::SourceRouter$<$ T $>$}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Source\+Router$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtensorflow_1_1serving_1_1SourceRouter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Source\+Router$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classtensorflow_1_1serving_1_1SourceRouter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SourceRouter_a41707304d32cec4cdb7b9f65c81663e7}\label{classtensorflow_1_1serving_1_1SourceRouter_a41707304d32cec4cdb7b9f65c81663e7}} 
+std\+::vector$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Source}{Source}}$<$ T $>$ $\ast$ $>$ {\bfseries Get\+Output\+Ports} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SourceRouter_abc1d76cecc39499969776118ea3a8eb8}\label{classtensorflow_1_1serving_1_1SourceRouter_abc1d76cecc39499969776118ea3a8eb8}} 
+void {\bfseries Set\+Aspired\+Versions} (const String\+Piece servable\+\_\+name, std\+::vector$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ T $>$$>$ versions) final
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SourceRouter_a1634ab37e95479ab4a095843b0419925}\label{classtensorflow_1_1serving_1_1SourceRouter_a1634ab37e95479ab4a095843b0419925}} 
+static constexpr int {\bfseries k\+No\+Route} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SourceRouter_ae44476828b7d7d17a1dfe182828b604e}\label{classtensorflow_1_1serving_1_1SourceRouter_ae44476828b7d7d17a1dfe182828b604e}} 
+virtual int {\bfseries num\+\_\+output\+\_\+ports} () const =0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SourceRouter_a3d6240ed0e9aa13fac153d7fbf76c2d1}\label{classtensorflow_1_1serving_1_1SourceRouter_a3d6240ed0e9aa13fac153d7fbf76c2d1}} 
+virtual int {\bfseries Route} (const String\+Piece servable\+\_\+name, const std\+::vector$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ T $>$$>$ \&versions)=0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/source\+\_\+router.\+h\end{DoxyCompactItemize}

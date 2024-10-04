@@ -1,0 +1,23 @@
+\hypertarget{classtensorflow_1_1serving_1_1ThreadSafeStatus}{}\doxysection{tensorflow\+::serving\+::Thread\+Safe\+Status Class Reference}
+\label{classtensorflow_1_1serving_1_1ThreadSafeStatus}\index{tensorflow::serving::ThreadSafeStatus@{tensorflow::serving::ThreadSafeStatus}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ThreadSafeStatus_a54e3cff923412449915d4cb329c9ed02}\label{classtensorflow_1_1serving_1_1ThreadSafeStatus_a54e3cff923412449915d4cb329c9ed02}} 
+const Status \& {\bfseries status} () const \&TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mutex\+\_\+)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ThreadSafeStatus_aadd5d57f100bf4977eb9ed464de0bb68}\label{classtensorflow_1_1serving_1_1ThreadSafeStatus_aadd5d57f100bf4977eb9ed464de0bb68}} 
+Status {\bfseries status} () \&\&TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mutex\+\_\+)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ThreadSafeStatus_ad16ab895d8ba2f2fe8b74948d8fd602f}\label{classtensorflow_1_1serving_1_1ThreadSafeStatus_ad16ab895d8ba2f2fe8b74948d8fd602f}} 
+void {\bfseries Update} (const Status \&new\+\_\+status) TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mutex\+\_\+)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ThreadSafeStatus_aff32ed57fbb4d3ae5107c2abd78e83ba}\label{classtensorflow_1_1serving_1_1ThreadSafeStatus_aff32ed57fbb4d3ae5107c2abd78e83ba}} 
+void {\bfseries Update} (Status \&\&new\+\_\+status) TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mutex\+\_\+)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/batching/threadsafe\+\_\+status.\+h\item 
+tensorflow\+\_\+serving/batching/threadsafe\+\_\+status.\+cc\end{DoxyCompactItemize}

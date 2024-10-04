@@ -1,0 +1,148 @@
+\hypertarget{classtensorflow_1_1serving_1_1Loader}{}\doxysection{tensorflow\+::serving\+::Loader Class Reference}
+\label{classtensorflow_1_1serving_1_1Loader}\index{tensorflow::serving::Loader@{tensorflow::serving::Loader}}
+
+
+{\ttfamily \#include $<$loader.\+h$>$}
+
+
+
+Inheritance diagram for tensorflow\+::serving\+::Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtensorflow_1_1serving_1_1Loader__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtensorflow_1_1serving_1_1Loader_1_1Metadata}{Metadata}}
+\begin{DoxyCompactList}\small\item\em The metadata consists of the \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_ab12e7e4d5f33ade6dd73d7a30873c032}{$\sim$\+Loader}} ()=default
+\item 
+virtual Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_ab59db26b242a2224889bc7c5c6edae40}{Estimate\+Resources}} (Resource\+Allocation $\ast$estimate) const =0
+\item 
+virtual Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load}} ()
+\item 
+virtual Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7aebd433e4a782265d847e507f3bc824}{Load\+With\+Metadata}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1Loader_1_1Metadata}{Metadata}} \&metadata)
+\item 
+virtual void \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_addca8f4264380e5e635bbe1197f5347f}{Unload}} ()=0
+\item 
+virtual \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a640d67dc6ca9926595d29fdfe63868c1}{servable}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A standardized abstraction for an object that manages the lifecycle of a servable, including loading and unloading it. Servables are arbitrary objects that serve algorithms or data that often, though not necessarily, use a machine-\/learned model.
+
+A \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} for a servable object represents one instance of a stream of servable versions, all sharing a common name (e.\+g. \char`\"{}my\+\_\+servable\char`\"{}) and increasing version numbers, typically representing updated model parameters learned from fresh training data.
+
+A \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} should start in an unloaded state, meaning that no work has been done to prepare to perform operations. A typical instance that has not yet been loaded contains merely a pointer to a location from which its data can be loaded (e.\+g. a file-\/system path or network location). Construction and destruction of instances should be fairly cheap. Expensive initialization operations should be done in \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load()}}.
+
+Subclasses may optionally store a pointer to the \mbox{\hyperlink{classtensorflow_1_1serving_1_1Source}{Source}} that originated it, for accessing state shared across multiple servable objects in a given servable stream.
+
+Implementations need to ensure that the methods they expose are thread-\/safe, or carefully document and/or coordinate their thread-\/safety properties with their clients to ensure correctness. Servables do not need to worry about concurrent execution of \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load()}}/\+Unload() as the caller will ensure that does not happen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Loader_ab12e7e4d5f33ade6dd73d7a30873c032}\label{classtensorflow_1_1serving_1_1Loader_ab12e7e4d5f33ade6dd73d7a30873c032}} 
+\index{tensorflow::serving::Loader@{tensorflow::serving::Loader}!````~Loader@{$\sim$Loader}}
+\index{````~Loader@{$\sim$Loader}!tensorflow::serving::Loader@{tensorflow::serving::Loader}}
+\doxysubsubsection{\texorpdfstring{$\sim$Loader()}{~Loader()}}
+{\footnotesize\ttfamily virtual tensorflow\+::serving\+::\+Loader\+::$\sim$\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+The destructor will never be called on a \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} whose servable is currently loaded, i.\+e. between (successful) calls to \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load()}} and \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_addca8f4264380e5e635bbe1197f5347f}{Unload()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Loader_ab59db26b242a2224889bc7c5c6edae40}\label{classtensorflow_1_1serving_1_1Loader_ab59db26b242a2224889bc7c5c6edae40}} 
+\index{tensorflow::serving::Loader@{tensorflow::serving::Loader}!EstimateResources@{EstimateResources}}
+\index{EstimateResources@{EstimateResources}!tensorflow::serving::Loader@{tensorflow::serving::Loader}}
+\doxysubsubsection{\texorpdfstring{EstimateResources()}{EstimateResources()}}
+{\footnotesize\ttfamily virtual Status tensorflow\+::serving\+::\+Loader\+::\+Estimate\+Resources (\begin{DoxyParamCaption}\item[{Resource\+Allocation $\ast$}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Estimates the resources a servable will use.
+
+IMPORTANT\+: This method\textquotesingle{}s implementation must obey following requirements, which enable the serving system to reason correctly about which servables can be loaded safely\+:
+\begin{DoxyEnumerate}
+\item The estimate must represent an upper bound on the actual value.
+\item Prior to load, the estimate may include resources that are not bound to any specific device instance, e.\+g. RAM on one of the two GPUs.
+\item While loaded, for any devices with multiple instances (e.\+g. two GPUs), the estimate must specify the instance to which each resource is bound.
+\item The estimate must be monotonically non-\/increasing, i.\+e. it cannot increase over time. Reasons to have it potentially decrease over time \begin{DoxyReturn}{Returns}
+an estimate of the resources the servable will consume once loaded. If the servable has already been loaded, returns an estimate of the actual resource usage. 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}
+
+Implemented in \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a05ede6c604d05037f59fe13472b48935}{tensorflow\+::serving\+::\+Simple\+Loader$<$ Servable\+Type $>$}}, and \mbox{\hyperlink{classtensorflow_1_1serving_1_1ResourceUnsafeLoader_a1a0c1398af9af54032ba16a79a9ecac4}{tensorflow\+::serving\+::\+Resource\+Unsafe\+Loader}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}\label{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}} 
+\index{tensorflow::serving::Loader@{tensorflow::serving::Loader}!Load@{Load}}
+\index{Load@{Load}!tensorflow::serving::Loader@{tensorflow::serving::Loader}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily virtual Status tensorflow\+::serving\+::\+Loader\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Fetches any data that needs to be loaded before using the servable returned by \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a640d67dc6ca9926595d29fdfe63868c1}{servable()}}. May use no more resources than the estimate reported by \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_ab59db26b242a2224889bc7c5c6edae40}{Estimate\+Resources()}}.
+
+If implementing \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load()}}, you don\textquotesingle{}t have to override \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7aebd433e4a782265d847e507f3bc824}{Load\+With\+Metadata()}}. 
+
+Reimplemented in \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a2edb74f10db51d582ee689d3d81cacb7}{tensorflow\+::serving\+::test\+\_\+util\+::\+Fake\+Loader}}, and \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}{tensorflow\+::serving\+::\+Simple\+Loader$<$ Servable\+Type $>$}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Loader_a7aebd433e4a782265d847e507f3bc824}\label{classtensorflow_1_1serving_1_1Loader_a7aebd433e4a782265d847e507f3bc824}} 
+\index{tensorflow::serving::Loader@{tensorflow::serving::Loader}!LoadWithMetadata@{LoadWithMetadata}}
+\index{LoadWithMetadata@{LoadWithMetadata}!tensorflow::serving::Loader@{tensorflow::serving::Loader}}
+\doxysubsubsection{\texorpdfstring{LoadWithMetadata()}{LoadWithMetadata()}}
+{\footnotesize\ttfamily virtual Status tensorflow\+::serving\+::\+Loader\+::\+Load\+With\+Metadata (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1Loader_1_1Metadata}{Metadata}} \&}]{metadata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Similar to the above method, but takes \mbox{\hyperlink{structtensorflow_1_1serving_1_1Loader_1_1Metadata}{Metadata}} as a param, which may be used by the loader implementation appropriately.
+
+If you\textquotesingle{}re overriding \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7aebd433e4a782265d847e507f3bc824}{Load\+With\+Metadata()}}, because you can use the metadata appropriately, you can skip overriding \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load()}}. 
+
+Reimplemented in \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a4c9a2f88fd1cab8a68ffa69bb9900e24}{tensorflow\+::serving\+::\+Simple\+Loader$<$ Servable\+Type $>$}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Loader_a640d67dc6ca9926595d29fdfe63868c1}\label{classtensorflow_1_1serving_1_1Loader_a640d67dc6ca9926595d29fdfe63868c1}} 
+\index{tensorflow::serving::Loader@{tensorflow::serving::Loader}!servable@{servable}}
+\index{servable@{servable}!tensorflow::serving::Loader@{tensorflow::serving::Loader}}
+\doxysubsubsection{\texorpdfstring{servable()}{servable()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} tensorflow\+::serving\+::\+Loader\+::servable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns an opaque interface to the underlying servable object. The caller should know the precise type of the interface in order to make actual use of it. For example\+:
+
+Custom\+Loader implementation\+: \begin{DoxyVerb}class CustomLoader : public Loader {
+ public:
+  ...
+  Status Load() override {
+    servable_ = ...;
+  }
+
+  AnyPtr servable() override { return servable_; }
+
+ private:
+  CustomServable* servable_ = nullptr;
+};
+\end{DoxyVerb}
+ Serving user request\+: \begin{DoxyVerb}ServableHandle&lt;CustomServable> handle = ...
+CustomServable* servable = handle.get();
+servable->...
+\end{DoxyVerb}
+ If \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a640d67dc6ca9926595d29fdfe63868c1}{servable()}} is called after successful \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load()}} and before \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_addca8f4264380e5e635bbe1197f5347f}{Unload()}}, it returns a valid, non-\/null \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} object. If called before a successful \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load()}} call or after \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_addca8f4264380e5e635bbe1197f5347f}{Unload()}}, it returns null \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}}. 
+
+Implemented in \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_afd3838612c119a086d1b17ce7cdfb9ed}{tensorflow\+::serving\+::test\+\_\+util\+::\+Fake\+Loader}}, and \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a914a9107be7cfeb587998934be9d9fee}{tensorflow\+::serving\+::\+Simple\+Loader$<$ Servable\+Type $>$}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Loader_addca8f4264380e5e635bbe1197f5347f}\label{classtensorflow_1_1serving_1_1Loader_addca8f4264380e5e635bbe1197f5347f}} 
+\index{tensorflow::serving::Loader@{tensorflow::serving::Loader}!Unload@{Unload}}
+\index{Unload@{Unload}!tensorflow::serving::Loader@{tensorflow::serving::Loader}}
+\doxysubsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily virtual void tensorflow\+::serving\+::\+Loader\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Frees any resources allocated during \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load()}} (except perhaps for resources shared across servables that are still needed for other active ones). The loader does not need to return to the \char`\"{}new\char`\"{} state (i.\+e. \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{Load()}} cannot be called after \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_addca8f4264380e5e635bbe1197f5347f}{Unload()}}). 
+
+Implemented in \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a336ea084823272d433d19be25769fc70}{tensorflow\+::serving\+::test\+\_\+util\+::\+Fake\+Loader}}, and \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ae24b904b3155f039fadd88b1c23e2f82}{tensorflow\+::serving\+::\+Simple\+Loader$<$ Servable\+Type $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/loader.\+h\end{DoxyCompactItemize}

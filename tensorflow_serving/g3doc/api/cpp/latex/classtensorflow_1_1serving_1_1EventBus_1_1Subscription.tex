@@ -1,0 +1,31 @@
+\hypertarget{classtensorflow_1_1serving_1_1EventBus_1_1Subscription}{}\doxysection{tensorflow\+::serving\+::Event\+Bus$<$ E $>$\+::Subscription Class Reference}
+\label{classtensorflow_1_1serving_1_1EventBus_1_1Subscription}\index{tensorflow::serving::EventBus$<$ E $>$::Subscription@{tensorflow::serving::EventBus$<$ E $>$::Subscription}}
+
+
+{\ttfamily \#include $<$event\+\_\+bus.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1EventBus_1_1Subscription_a81795ea8fef03dd4240a753ccd532f7c}\label{classtensorflow_1_1serving_1_1EventBus_1_1Subscription_a81795ea8fef03dd4240a753ccd532f7c}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus_1_1Subscription_a81795ea8fef03dd4240a753ccd532f7c}{$\sim$\+Subscription}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the subscriber. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1EventBus_1_1Subscription_afe4e553ef407bc9bbf2aadbf298be275}\label{classtensorflow_1_1serving_1_1EventBus_1_1Subscription_afe4e553ef407bc9bbf2aadbf298be275}} 
+class {\bfseries Event\+Bus}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename E$>$\newline
+class tensorflow\+::serving\+::\+Event\+Bus$<$ E $>$\+::\+Subscription}
+
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus_1_1Subscription}{Subscription}} is an RAII object and tracks the lifecycle of a single subscription to an \mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus}{Event\+Bus}}. Upon destruction, it automatically Unsubscribes from the originating \mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus}{Event\+Bus}}.
+
+Note that \mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus_1_1Subscription}{Subscription}} only maintains weak\+\_\+ptr references to the \mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus}{Event\+Bus}}, such that the \mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus}{Event\+Bus}} and Subscriptions can be safely destructed in any order. \mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus_1_1Subscription}{Subscription}} is not an owner of \mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus}{Event\+Bus}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/util/event\+\_\+bus.\+h\end{DoxyCompactItemize}

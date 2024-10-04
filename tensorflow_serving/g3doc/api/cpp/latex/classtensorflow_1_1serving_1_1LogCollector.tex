@@ -1,0 +1,42 @@
+\hypertarget{classtensorflow_1_1serving_1_1LogCollector}{}\doxysection{tensorflow\+::serving\+::Log\+Collector Class Reference}
+\label{classtensorflow_1_1serving_1_1LogCollector}\index{tensorflow::serving::LogCollector@{tensorflow::serving::LogCollector}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Log\+Collector\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classtensorflow_1_1serving_1_1LogCollector__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LogCollector_abb47f70e33f17c5c987956aa4cab1d7d}\label{classtensorflow_1_1serving_1_1LogCollector_abb47f70e33f17c5c987956aa4cab1d7d}} 
+using {\bfseries Factory} = std\+::function$<$ decltype(Create)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LogCollector_a48c04c9fa62d00442deebdeb65ba5dd0}\label{classtensorflow_1_1serving_1_1LogCollector_a48c04c9fa62d00442deebdeb65ba5dd0}} 
+virtual Status {\bfseries Collect\+Message} (const google\+::protobuf\+::\+Message \&message)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LogCollector_a7d2af55f5821f931643ca0f613ec50a7}\label{classtensorflow_1_1serving_1_1LogCollector_a7d2af55f5821f931643ca0f613ec50a7}} 
+virtual Status {\bfseries Flush} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LogCollector_aeed35b69eca1e5e70f69f56b9432a92c}\label{classtensorflow_1_1serving_1_1LogCollector_aeed35b69eca1e5e70f69f56b9432a92c}} 
+static Status {\bfseries Create} (const Log\+Collector\+Config \&log\+\_\+collector\+\_\+config, const uint32 id, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1LogCollector}{Log\+Collector}} $>$ $\ast$log\+\_\+collector)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LogCollector_a01ec37a4efb29a70ce7a70f2c35a19f7}\label{classtensorflow_1_1serving_1_1LogCollector_a01ec37a4efb29a70ce7a70f2c35a19f7}} 
+static Status {\bfseries Register\+Factory} (const string \&type, const Factory \&factory)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/log\+\_\+collector.\+h\item 
+tensorflow\+\_\+serving/core/log\+\_\+collector.\+cc\end{DoxyCompactItemize}

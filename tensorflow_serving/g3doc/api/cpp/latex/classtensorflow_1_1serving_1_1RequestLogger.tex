@@ -1,0 +1,49 @@
+\hypertarget{classtensorflow_1_1serving_1_1RequestLogger}{}\doxysection{tensorflow\+::serving\+::Request\+Logger Class Reference}
+\label{classtensorflow_1_1serving_1_1RequestLogger}\index{tensorflow::serving::RequestLogger@{tensorflow::serving::RequestLogger}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Request\+Logger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classtensorflow_1_1serving_1_1RequestLogger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Request\+Logger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classtensorflow_1_1serving_1_1RequestLogger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1RequestLogger_a04a7f5a2c33bd423a346074b2b35ba23}\label{classtensorflow_1_1serving_1_1RequestLogger_a04a7f5a2c33bd423a346074b2b35ba23}} 
+{\footnotesize template$<$typename Request , typename Response $>$ }\\using {\bfseries Get\+Stream\+Logger\+Fn} = std\+::function$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1StreamLogger}{Stream\+Logger}}$<$ Request, Response $>$ $\ast$()$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1RequestLogger_ad8ef1286602adae51e408c159b46879a}\label{classtensorflow_1_1serving_1_1RequestLogger_ad8ef1286602adae51e408c159b46879a}} 
+{\bfseries Request\+Logger} (const Logging\+Config \&logging\+\_\+config, const std\+::vector$<$ string $>$ \&saved\+\_\+model\+\_\+tags, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1LogCollector}{Log\+Collector}} $>$ log\+\_\+collector)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1RequestLogger_a8b5584be6edc378d490209385cdc3686}\label{classtensorflow_1_1serving_1_1RequestLogger_a8b5584be6edc378d490209385cdc3686}} 
+Status {\bfseries Log} (const google\+::protobuf\+::\+Message \&request, const google\+::protobuf\+::\+Message \&response, const Log\+Metadata \&log\+\_\+metadata)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1RequestLogger_ad611f5044b2ada63755d3b1fc6c04d85}\label{classtensorflow_1_1serving_1_1RequestLogger_ad611f5044b2ada63755d3b1fc6c04d85}} 
+{\footnotesize template$<$typename Request , typename Response $>$ }\\void {\bfseries Maybe\+Start\+Logging\+Stream} (const Log\+Metadata \&log\+\_\+metadata, Get\+Stream\+Logger\+Fn$<$ Request, Response $>$ get\+\_\+stream\+\_\+logger\+\_\+fn)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1RequestLogger_a3ba14be0732fe75d64dac77aa0e05076}\label{classtensorflow_1_1serving_1_1RequestLogger_a3ba14be0732fe75d64dac77aa0e05076}} 
+const Logging\+Config \& {\bfseries logging\+\_\+config} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/request\+\_\+logger.\+h\item 
+tensorflow\+\_\+serving/core/request\+\_\+logger.\+cc\end{DoxyCompactItemize}

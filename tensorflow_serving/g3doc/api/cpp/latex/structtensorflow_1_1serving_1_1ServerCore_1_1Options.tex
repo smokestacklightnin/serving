@@ -1,0 +1,137 @@
+\hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options}{}\doxysection{tensorflow\+::serving\+::Server\+Core\+::Options Struct Reference}
+\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options}\index{tensorflow::serving::ServerCore::Options@{tensorflow::serving::ServerCore::Options}}
+
+
+\mbox{\hyperlink{structtensorflow_1_1serving_1_1ServerCore_1_1Options}{Options}} for configuring a \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServerCore}{Server\+Core}} object.  
+
+
+
+
+{\ttfamily \#include $<$server\+\_\+core.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ad366c96f7630e820abb86c20b452a7f8}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ad366c96f7630e820abb86c20b452a7f8}} 
+Model\+Server\+Config {\bfseries model\+\_\+server\+\_\+config}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a0dd3e3317ac7c2ce207749769697547f}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a0dd3e3317ac7c2ce207749769697547f}} 
+absl\+::optional$<$ string $>$ {\bfseries model\+\_\+config\+\_\+list\+\_\+root\+\_\+dir}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ac6533eedc1e06d29eb635a077c15d976}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ac6533eedc1e06d29eb635a077c15d976}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1AspiredVersionPolicy}{Aspired\+Version\+Policy}} $>$ {\bfseries aspired\+\_\+version\+\_\+policy}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_abb352b42ab835dc229aeccc2a3dece90}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_abb352b42ab835dc229aeccc2a3dece90}} 
+Aspired\+Versions\+Manager\+::\+Custom\+Sort\+Actions\+Fn {\bfseries custom\+\_\+sort\+\_\+actions}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ad724243e1f5ec5a3e20341228b315f62}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ad724243e1f5ec5a3e20341228b315f62}} 
+int32 {\bfseries num\+\_\+load\+\_\+threads} = 0
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ae0b1856f3fd34dde6af198c6cbf56024}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ae0b1856f3fd34dde6af198c6cbf56024}} 
+int32 {\bfseries num\+\_\+initial\+\_\+load\+\_\+threads} = 4.\+0 $\ast$ port\+::\+Num\+Schedulable\+CPUs()
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a421c6e8b868f1039e4d86d0f23f87968}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a421c6e8b868f1039e4d86d0f23f87968}} 
+int32 {\bfseries num\+\_\+unload\+\_\+threads} = 0
+\item 
+uint64\+\_\+t {\bfseries total\+\_\+model\+\_\+memory\+\_\+limit\+\_\+bytes}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ac5c3555e5cc20c36e57c087d53b1a5b5}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ac5c3555e5cc20c36e57c087d53b1a5b5}} 
+int32 {\bfseries max\+\_\+num\+\_\+load\+\_\+retries} = 5
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a5ed92dd908011d9fff126978792755c8}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a5ed92dd908011d9fff126978792755c8}} 
+int64\+\_\+t {\bfseries load\+\_\+retry\+\_\+interval\+\_\+micros} = 1LL $\ast$ 60 $\ast$ 1000 $\ast$ 1000
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a8eb09a3c3c12121842a2aed8ae946202}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a8eb09a3c3c12121842a2aed8ae946202}} 
+int32 {\bfseries file\+\_\+system\+\_\+poll\+\_\+wait\+\_\+seconds} = 30
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_af888f5067ae8179c922e4303272b1a87}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_af888f5067ae8179c922e4303272b1a87}} 
+bool {\bfseries flush\+\_\+filesystem\+\_\+caches} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a88ba921bf5f48526e1b78d2404f61d38}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a88ba921bf5f48526e1b78d2404f61d38}} 
+Platform\+Config\+Map {\bfseries platform\+\_\+config\+\_\+map}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_aba6790373826e505649c600ba8320d5e}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_aba6790373826e505649c600ba8320d5e}} 
+Servable\+State\+Monitor\+Creator {\bfseries servable\+\_\+state\+\_\+monitor\+\_\+creator}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a471a3195c4ec2ca55eebb986f9545176}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a471a3195c4ec2ca55eebb986f9545176}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServerCore_aded4a259be715e96c76f6d239ea68a80}{Custom\+Model\+Config\+Loader}} {\bfseries custom\+\_\+model\+\_\+config\+\_\+loader}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a5867807b889e98c0d6cc4c049a94723c}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a5867807b889e98c0d6cc4c049a94723c}} 
+bool {\bfseries allow\+\_\+version\+\_\+labels} = true
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a6ed934357fc0f5a3ecc383f30334bba2}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a6ed934357fc0f5a3ecc383f30334bba2}} 
+bool {\bfseries fail\+\_\+if\+\_\+no\+\_\+model\+\_\+versions\+\_\+found} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a74f7765baa95ca75e610b1035eab88cb}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a74f7765baa95ca75e610b1035eab88cb}} 
+bool {\bfseries enable\+\_\+reload\+\_\+servables\+\_\+with\+\_\+error} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ab16b2ca9eb8941bb5c6ae0be1cf32f52}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ab16b2ca9eb8941bb5c6ae0be1cf32f52}} 
+bool {\bfseries servable\+\_\+versions\+\_\+always\+\_\+present} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a7a2cfc9d07af5571a22e19b40ee5b276}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a7a2cfc9d07af5571a22e19b40ee5b276}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServerRequestLogger}{Server\+Request\+Logger}} $>$ {\bfseries server\+\_\+request\+\_\+logger}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a729c70e808a2b90523aab03044c9bf82}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a729c70e808a2b90523aab03044c9bf82}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServerCore_a1112df0a65160902633dcc7590aa5a7c}{Server\+Request\+Logger\+Updater}} {\bfseries server\+\_\+request\+\_\+logger\+\_\+updater}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a9a6dba3e2bd30c676bdeaa3902d52c89}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a9a6dba3e2bd30c676bdeaa3902d52c89}} 
+Pre\+Load\+Hook {\bfseries pre\+\_\+load\+\_\+hook}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ab55e6f5f379b35b6b2dc1872b465cbc0}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_ab55e6f5f379b35b6b2dc1872b465cbc0}} 
+bool {\bfseries allow\+\_\+version\+\_\+labels\+\_\+for\+\_\+unavailable\+\_\+models} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a023e379ad3a55507147f1a398491f370}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a023e379ad3a55507147f1a398491f370}} 
+bool {\bfseries force\+\_\+allow\+\_\+any\+\_\+version\+\_\+labels\+\_\+for\+\_\+unavailable\+\_\+models} = false
+\item 
+internal\+::\+Predict\+Response\+Tensor\+Serialization\+Option {\bfseries predict\+\_\+response\+\_\+tensor\+\_\+serialization\+\_\+option}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a624e7b595d61051ca967d1a51a6f71fe}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a624e7b595d61051ca967d1a51a6f71fe}} 
+std\+::string {\bfseries storage\+\_\+path\+\_\+prefix}
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a7a6ae4145ac5884afc9fc2295177651d}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a7a6ae4145ac5884afc9fc2295177651d}} 
+bool {\bfseries enable\+\_\+cors\+\_\+support} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a377076613e0d13be46015f7c22d3f5c8}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a377076613e0d13be46015f7c22d3f5c8}} 
+bool {\bfseries with\+\_\+current\+\_\+context} = false
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a76c2a460ff8525a5124f6460c9350c4e}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a76c2a460ff8525a5124f6460c9350c4e}} 
+absl\+::\+Duration {\bfseries servable\+\_\+state\+\_\+waiter\+\_\+timeout} = absl\+::\+Infinite\+Duration()
+\item 
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a4352846fb2a71e32ae912db161c815ba}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a4352846fb2a71e32ae912db161c815ba}} 
+std\+::function$<$ bool(absl\+::\+Status)$>$ {\bfseries should\+\_\+retry\+\_\+model\+\_\+load}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structtensorflow_1_1serving_1_1ServerCore_1_1Options}{Options}} for configuring a \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServerCore}{Server\+Core}} object. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a2aad8f04ac32a8a34651acf0cbff4533}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a2aad8f04ac32a8a34651acf0cbff4533}} 
+\index{tensorflow::serving::ServerCore::Options@{tensorflow::serving::ServerCore::Options}!predict\_response\_tensor\_serialization\_option@{predict\_response\_tensor\_serialization\_option}}
+\index{predict\_response\_tensor\_serialization\_option@{predict\_response\_tensor\_serialization\_option}!tensorflow::serving::ServerCore::Options@{tensorflow::serving::ServerCore::Options}}
+\doxysubsubsection{\texorpdfstring{predict\_response\_tensor\_serialization\_option}{predict\_response\_tensor\_serialization\_option}}
+{\footnotesize\ttfamily internal\+::\+Predict\+Response\+Tensor\+Serialization\+Option tensorflow\+::serving\+::\+Server\+Core\+::\+Options\+::predict\+\_\+response\+\_\+tensor\+\_\+serialization\+\_\+option}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            internal::PredictResponseTensorSerializationOption::kAsProtoField}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a91d7528c90124b297887b5949146d3e0}\label{structtensorflow_1_1serving_1_1ServerCore_1_1Options_a91d7528c90124b297887b5949146d3e0}} 
+\index{tensorflow::serving::ServerCore::Options@{tensorflow::serving::ServerCore::Options}!total\_model\_memory\_limit\_bytes@{total\_model\_memory\_limit\_bytes}}
+\index{total\_model\_memory\_limit\_bytes@{total\_model\_memory\_limit\_bytes}!tensorflow::serving::ServerCore::Options@{tensorflow::serving::ServerCore::Options}}
+\doxysubsubsection{\texorpdfstring{total\_model\_memory\_limit\_bytes}{total\_model\_memory\_limit\_bytes}}
+{\footnotesize\ttfamily uint64\+\_\+t tensorflow\+::serving\+::\+Server\+Core\+::\+Options\+::total\+\_\+model\+\_\+memory\+\_\+limit\+\_\+bytes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        std::numeric\_limits<uint64\_t>::max()}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/model\+\_\+servers/server\+\_\+core.\+h\end{DoxyCompactItemize}

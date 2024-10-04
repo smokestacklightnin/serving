@@ -1,0 +1,70 @@
+\hypertarget{classtensorflow_1_1serving_1_1Manager}{}\doxysection{tensorflow\+::serving\+::Manager Class Reference}
+\label{classtensorflow_1_1serving_1_1Manager}\index{tensorflow::serving::Manager@{tensorflow::serving::Manager}}
+
+
+{\ttfamily \#include $<$manager.\+h$>$}
+
+
+
+Inheritance diagram for tensorflow\+::serving\+::Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtensorflow_1_1serving_1_1Manager__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager_a10694eb8c3e845e4738788092057b7ef}{List\+Available\+Servable\+Ids}} () const =0
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::map$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}, \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableHandle}{Servable\+Handle}}$<$ T $>$ $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager_a8ad1c3155120737e5a41776ceeff6aaa}{Get\+Available\+Servable\+Handles}} () const
+\item 
+{\footnotesize template$<$typename T $>$ }\\Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager_aca70babd38f4b416cf27bbf40f8bb093}{Get\+Servable\+Handle}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableRequest}{Servable\+Request}} \&request, \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableHandle}{Servable\+Handle}}$<$ T $>$ $\ast$const handle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Manager_a5022aa931fef5755238dd5fb8f78ad6c}\label{classtensorflow_1_1serving_1_1Manager_a5022aa931fef5755238dd5fb8f78ad6c}} 
+class {\bfseries Manager\+Wrapper}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager}{Manager}} is responsible for loading, unloading, lookup and lifetime management of all \mbox{\hyperlink{classtensorflow_1_1serving_1_1Servable}{Servable}} objects via their Loaders. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Manager_a8ad1c3155120737e5a41776ceeff6aaa}\label{classtensorflow_1_1serving_1_1Manager_a8ad1c3155120737e5a41776ceeff6aaa}} 
+\index{tensorflow::serving::Manager@{tensorflow::serving::Manager}!GetAvailableServableHandles@{GetAvailableServableHandles}}
+\index{GetAvailableServableHandles@{GetAvailableServableHandles}!tensorflow::serving::Manager@{tensorflow::serving::Manager}}
+\doxysubsubsection{\texorpdfstring{GetAvailableServableHandles()}{GetAvailableServableHandles()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::map$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}, \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableHandle}{Servable\+Handle}}$<$ T $>$ $>$ tensorflow\+::serving\+::\+Manager\+::\+Get\+Available\+Servable\+Handles}
+
+Returns a map of all the currently available servables of a particular type T. The map is from the servable\textquotesingle{}s id to its corresponding handle.
+
+IMPORTANT\+: The caller should not hold onto the handles for a long time, because holding them will delay servable loading and unloading. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1Manager_aca70babd38f4b416cf27bbf40f8bb093}\label{classtensorflow_1_1serving_1_1Manager_aca70babd38f4b416cf27bbf40f8bb093}} 
+\index{tensorflow::serving::Manager@{tensorflow::serving::Manager}!GetServableHandle@{GetServableHandle}}
+\index{GetServableHandle@{GetServableHandle}!tensorflow::serving::Manager@{tensorflow::serving::Manager}}
+\doxysubsubsection{\texorpdfstring{GetServableHandle()}{GetServableHandle()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Status tensorflow\+::serving\+::\+Manager\+::\+Get\+Servable\+Handle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableRequest}{Servable\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableHandle}{Servable\+Handle}}$<$ T $>$ $\ast$const}]{handle }\end{DoxyParamCaption})}
+
+Returns a \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableHandle}{Servable\+Handle}} given a \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableRequest}{Servable\+Request}}. Returns error if no such \mbox{\hyperlink{classtensorflow_1_1serving_1_1Servable}{Servable}} is available -- e.\+g. not yet loaded, has been quiesced/unloaded, etc. Callers may assume that an OK status indicates a non-\/null handle.
+
+IMPORTANT\+: The caller should not hold onto the handles for a long time, because holding them will delay servable loading and unloading. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1Manager_a10694eb8c3e845e4738788092057b7ef}\label{classtensorflow_1_1serving_1_1Manager_a10694eb8c3e845e4738788092057b7ef}} 
+\index{tensorflow::serving::Manager@{tensorflow::serving::Manager}!ListAvailableServableIds@{ListAvailableServableIds}}
+\index{ListAvailableServableIds@{ListAvailableServableIds}!tensorflow::serving::Manager@{tensorflow::serving::Manager}}
+\doxysubsubsection{\texorpdfstring{ListAvailableServableIds()}{ListAvailableServableIds()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}$>$ tensorflow\+::serving\+::\+Manager\+::\+List\+Available\+Servable\+Ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gets a list of all available servable ids, i.\+e. each of these can be retrieved using Get\+Servable\+Handle. 
+
+Implemented in \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServerCore_ac88da0268e401fa99bcd074e692ee709}{tensorflow\+::serving\+::\+Server\+Core}}, \mbox{\hyperlink{classtensorflow_1_1serving_1_1ManagerWrapper_a76a6e899de4dfca374b71c4ef415b3d0}{tensorflow\+::serving\+::\+Manager\+Wrapper}}, \mbox{\hyperlink{classtensorflow_1_1serving_1_1CachingManager_af7ec61e19bcd1ac85a4c97c32e977ffe}{tensorflow\+::serving\+::\+Caching\+Manager}}, \mbox{\hyperlink{classtensorflow_1_1serving_1_1BasicManager_a3c004d32952596c1f5759b1cfcc3c639}{tensorflow\+::serving\+::\+Basic\+Manager}}, and \mbox{\hyperlink{classtensorflow_1_1serving_1_1AspiredVersionsManager_a058a76ee71c52d4a6319f14cd9b2ad69}{tensorflow\+::serving\+::\+Aspired\+Versions\+Manager}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/manager.\+h\end{DoxyCompactItemize}

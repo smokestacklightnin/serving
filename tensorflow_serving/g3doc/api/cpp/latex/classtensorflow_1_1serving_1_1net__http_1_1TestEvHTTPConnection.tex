@@ -1,0 +1,61 @@
+\hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection}{}\doxysection{tensorflow\+::serving\+::net\+\_\+http\+::Test\+Ev\+HTTPConnection Class Reference}
+\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection}\index{tensorflow::serving::net\_http::TestEvHTTPConnection@{tensorflow::serving::net\_http::TestEvHTTPConnection}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::net\+\_\+http\+::Test\+Ev\+HTTPConnection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::net\+\_\+http\+::Test\+Ev\+HTTPConnection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_af0f6d1a44ae8cde23369bbf67e0a64d8}\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_af0f6d1a44ae8cde23369bbf67e0a64d8}} 
+{\bfseries Test\+Ev\+HTTPConnection} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection}{Test\+Ev\+HTTPConnection}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_aaa3298c849c68d9b4d54cea31493a72b}\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_aaa3298c849c68d9b4d54cea31493a72b}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection}{Test\+Ev\+HTTPConnection}} \& {\bfseries operator=} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection}{Test\+Ev\+HTTPConnection}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_aa6514c0457bcf28c33f9bc074a4d2833}\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_aa6514c0457bcf28c33f9bc074a4d2833}} 
+void {\bfseries Terminate} () override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a8fd460b64308127e543562b78652f080}\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a8fd460b64308127e543562b78652f080}} 
+bool {\bfseries Blocking\+Send\+Request} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1TestClientRequest}{Test\+Client\+Request}} \&request, \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1TestClientResponse}{Test\+Client\+Response}} $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a41357800736a2bc4516cb18b9eb4e55e}\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a41357800736a2bc4516cb18b9eb4e55e}} 
+bool {\bfseries Send\+Request} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1TestClientRequest}{Test\+Client\+Request}} \&request, \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1TestClientResponse}{Test\+Client\+Response}} $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a117a8f7ddc785ee7832a8a366ef5cc6c}\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a117a8f7ddc785ee7832a8a366ef5cc6c}} 
+void {\bfseries Set\+Executor} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1EventExecutor}{Event\+Executor}} $>$ executor) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a474285be99fdd4cf595f91da3fbc729e}\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a474285be99fdd4cf595f91da3fbc729e}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection}{Test\+Ev\+HTTPConnection}} $>$ {\bfseries Connect} (absl\+::string\+\_\+view url)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a2710dfe62103f842758ded371631214b}\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a2710dfe62103f842758ded371631214b}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection}{Test\+Ev\+HTTPConnection}} $>$ {\bfseries Connect} (absl\+::string\+\_\+view host, int port)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a81445984f79a709567d7981d05d7a347}\label{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection_a81445984f79a709567d7981d05d7a347}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1TestEvHTTPConnection}{Test\+Ev\+HTTPConnection}} $>$ {\bfseries Connect\+Local} (int port)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/util/net\+\_\+http/client/test\+\_\+client/internal/evhttp\+\_\+connection.\+h\item 
+tensorflow\+\_\+serving/util/net\+\_\+http/client/test\+\_\+client/internal/evhttp\+\_\+connection.\+cc\end{DoxyCompactItemize}

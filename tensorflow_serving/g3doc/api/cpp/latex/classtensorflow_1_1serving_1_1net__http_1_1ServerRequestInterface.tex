@@ -1,0 +1,96 @@
+\hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface}{}\doxysection{tensorflow\+::serving\+::net\+\_\+http\+::Server\+Request\+Interface Class Reference}
+\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface}\index{tensorflow::serving::net\_http::ServerRequestInterface@{tensorflow::serving::net\_http::ServerRequestInterface}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::net\+\_\+http\+::Server\+Request\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_1_1BlockDeleter}{Block\+Deleter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a99e6341cf57a054cb8b938b0ca744f95}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a99e6341cf57a054cb8b938b0ca744f95}} 
+enum class {\bfseries Body\+Status} \{ {\bfseries PENDING} = 0
+, {\bfseries COMPLETE} = 1
+, {\bfseries FAILED} = 2
+ \}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_ad3b9246024c81fc53df8f03c3f42ada3}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_ad3b9246024c81fc53df8f03c3f42ada3}} 
+enum class {\bfseries Callback\+Status} \{ {\bfseries NOT\+\_\+\+SCHEDULED} = 0
+, {\bfseries SCHEDULED} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a3a5ad543b7d882b97e28c7e151de0bbb}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a3a5ad543b7d882b97e28c7e151de0bbb}} 
+{\bfseries Server\+Request\+Interface} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface}{Server\+Request\+Interface}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a6f512b015cc9668b9c1836fb6c992e68}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a6f512b015cc9668b9c1836fb6c992e68}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface}{Server\+Request\+Interface}} \& {\bfseries operator=} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface}{Server\+Request\+Interface}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_afe73612de6dad7898c068141af590720}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_afe73612de6dad7898c068141af590720}} 
+virtual absl\+::string\+\_\+view {\bfseries uri\+\_\+path} () const =0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_ab28896c0defe813c8dbbdb1115aa6e52}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_ab28896c0defe813c8dbbdb1115aa6e52}} 
+virtual absl\+::string\+\_\+view {\bfseries http\+\_\+method} () const =0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a7386e69b3f3afe5314eb67217c2fc991}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a7386e69b3f3afe5314eb67217c2fc991}} 
+virtual void {\bfseries Write\+Response\+Bytes} (const char $\ast$data, int64\+\_\+t size)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a7c5430f25c8027aa4addf9b2ad1ff30e}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a7c5430f25c8027aa4addf9b2ad1ff30e}} 
+virtual void {\bfseries Write\+Response\+String} (absl\+::string\+\_\+view data)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a963c74640d07cb5392eef91368813cdb}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a963c74640d07cb5392eef91368813cdb}} 
+virtual std\+::unique\+\_\+ptr$<$ char\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_1_1BlockDeleter}{Server\+Request\+Interface\+::\+Block\+Deleter}} $>$ {\bfseries Read\+Request\+Bytes} (int64\+\_\+t $\ast$size)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_ae3a98d79089c651a03da6289e134890f}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_ae3a98d79089c651a03da6289e134890f}} 
+virtual absl\+::string\+\_\+view {\bfseries Get\+Request\+Header} (absl\+::string\+\_\+view header) const =0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a89f7e11f96c388a02fd087ac130844ce}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a89f7e11f96c388a02fd087ac130844ce}} 
+virtual std\+::vector$<$ absl\+::string\+\_\+view $>$ {\bfseries request\+\_\+headers} () const =0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a996fa082fe1ea76d81ad935d90994f47}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a996fa082fe1ea76d81ad935d90994f47}} 
+virtual void {\bfseries Overwrite\+Response\+Header} (absl\+::string\+\_\+view header, absl\+::string\+\_\+view value)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a71f7e44d9a9db13d1cf6be9eaf5aefd6}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a71f7e44d9a9db13d1cf6be9eaf5aefd6}} 
+virtual void {\bfseries Append\+Response\+Header} (absl\+::string\+\_\+view header, absl\+::string\+\_\+view value)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a8160444169240317224840eccacfac37}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a8160444169240317224840eccacfac37}} 
+virtual void {\bfseries Partial\+Reply\+With\+Status} (HTTPStatus\+Code status)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a1b73a93234a38221484b9d293bd24b48}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a1b73a93234a38221484b9d293bd24b48}} 
+virtual void {\bfseries Partial\+Reply} ()=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_aadf9595b07c1c102225d67f1cf152a5d}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_aadf9595b07c1c102225d67f1cf152a5d}} 
+virtual Callback\+Status {\bfseries Partial\+Reply\+With\+Flush\+Callback} (std\+::function$<$ void()$>$ callback)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_abd9dea278abdd8c9e4942469f8173275}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_abd9dea278abdd8c9e4942469f8173275}} 
+virtual Body\+Status {\bfseries response\+\_\+body\+\_\+status} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_ae19225bd125fe4f04966b1b7ef3d6160}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_ae19225bd125fe4f04966b1b7ef3d6160}} 
+virtual Body\+Status {\bfseries request\+\_\+body\+\_\+status} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a38679ff777daa9c8815bc580c2fd8ce5}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a38679ff777daa9c8815bc580c2fd8ce5}} 
+virtual void {\bfseries Reply\+With\+Status} (HTTPStatus\+Code status)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a8b4554fa0e0e6633f92943abe2d82bff}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_a8b4554fa0e0e6633f92943abe2d82bff}} 
+virtual void {\bfseries Reply} ()=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_aa429da9ec48052ab8f3bc3b286951e4e}\label{classtensorflow_1_1serving_1_1net__http_1_1ServerRequestInterface_aa429da9ec48052ab8f3bc3b286951e4e}} 
+virtual void {\bfseries Abort} ()=0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/util/net\+\_\+http/server/public/server\+\_\+request\+\_\+interface.\+h\end{DoxyCompactItemize}

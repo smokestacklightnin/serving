@@ -1,0 +1,23 @@
+::: {#structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator}
+:::
+
+[\[structtensorflow\_1\_1serving\_1\_1SignatureWithBatchingSessionSchedulerCreator\]]{#structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator
+label="structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator"}
+
+Collaboration diagram for
+tensorflow::serving::SignatureWithBatchingSessionSchedulerCreator:
+
+![image](structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator__coll__graph.pdf){width="252pt"}
+
+[\[structtensorflow\_1\_1serving\_1\_1SignatureWithBatchingSessionSchedulerCreator\_aa779cd49f064a3ad32edec0944f93533\]]{#structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator_aa779cd49f064a3ad32edec0944f93533
+label="structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator_aa779cd49f064a3ad32edec0944f93533"}
+[TensorSignature](#structtensorflow_1_1serving_1_1TensorSignature)
+**signature**
+
+[\[structtensorflow\_1\_1serving\_1\_1SignatureWithBatchingSessionSchedulerCreator\_ae7b10e64b626dd8d9ba5c7afbdd80074\]]{#structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator_ae7b10e64b626dd8d9ba5c7afbdd80074
+label="structtensorflow_1_1serving_1_1SignatureWithBatchingSessionSchedulerCreator_ae7b10e64b626dd8d9ba5c7afbdd80074"}
+BatchingSessionSchedulerCreator **scheduler\_creator**
+
+The documentation for this struct was generated from the following file:
+
+tensorflow\_serving/batching/batching\_session.h

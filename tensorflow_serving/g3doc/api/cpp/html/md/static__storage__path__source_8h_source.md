@@ -1,0 +1,325 @@
+::: {#top}
+::: {#titlearea}
++-----------------------------------------------------------------------+
+| ::: {#projectname}                                                    |
+| My Project                                                            |
+| :::                                                                   |
++-----------------------------------------------------------------------+
+:::
+
+::: {#main-nav}
+:::
+
+::: {#MSearchSelectWindow onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()" onkeydown="return searchBox.OnSearchSelectKey(event)"}
+:::
+
+::: {#MSearchResultsWindow}
+:::
+
+::: {#nav-path .navpath}
+-   [tensorflow\_serving](dir_bbc8937306723ff096d79d77f4a73363.html){.el}
+-   [sources](dir_08664dcc00c1eef0a53a2c7ac1bb1da0.html){.el}
+-   [storage\_path](dir_d847b898c0628c9998724b5c11dae72c.html){.el}
+:::
+:::
+
+::: {.header}
+::: {.headertitle}
+::: {.title}
+static\_storage\_path\_source.h
+:::
+:::
+:::
+
+::: {.contents}
+::: {.fragment}
+::: {.line}
+[]{#l00001}[ 1]{.lineno} [/\* Copyright 2016 Google Inc. All Rights
+Reserved.]{.comment}
+:::
+
+::: {.line}
+[]{#l00002}[ 2]{.lineno} []{.comment}
+:::
+
+::: {.line}
+[]{#l00003}[ 3]{.lineno} [Licensed under the Apache License, Version 2.0
+(the \"License\");]{.comment}
+:::
+
+::: {.line}
+[]{#l00004}[ 4]{.lineno} [you may not use this file except in compliance
+with the License.]{.comment}
+:::
+
+::: {.line}
+[]{#l00005}[ 5]{.lineno} [You may obtain a copy of the License
+at]{.comment}
+:::
+
+::: {.line}
+[]{#l00006}[ 6]{.lineno} []{.comment}
+:::
+
+::: {.line}
+[]{#l00007}[ 7]{.lineno} [
+http://www.apache.org/licenses/LICENSE-2.0]{.comment}
+:::
+
+::: {.line}
+[]{#l00008}[ 8]{.lineno} []{.comment}
+:::
+
+::: {.line}
+[]{#l00009}[ 9]{.lineno} [Unless required by applicable law or agreed to
+in writing, software]{.comment}
+:::
+
+::: {.line}
+[]{#l00010}[ 10]{.lineno} [distributed under the License is distributed
+on an \"AS IS\" BASIS,]{.comment}
+:::
+
+::: {.line}
+[]{#l00011}[ 11]{.lineno} [WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.]{.comment}
+:::
+
+::: {.line}
+[]{#l00012}[ 12]{.lineno} [See the License for the specific language
+governing permissions and]{.comment}
+:::
+
+::: {.line}
+[]{#l00013}[ 13]{.lineno} [limitations under the License.]{.comment}
+:::
+
+::: {.line}
+[]{#l00014}[
+14]{.lineno} [==============================================================================\*/]{.comment}
+:::
+
+::: {.line}
+[]{#l00015}[ 15]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00016}[ 16]{.lineno} [\#ifndef
+TENSORFLOW\_SERVING\_SOURCES\_STORAGE\_PATH\_STATIC\_STORAGE\_PATH\_SOURCE\_H\_]{.preprocessor}
+:::
+
+::: {.line}
+[]{#l00017}[ 17]{.lineno} [\#define
+TENSORFLOW\_SERVING\_SOURCES\_STORAGE\_PATH\_STATIC\_STORAGE\_PATH\_SOURCE\_H\_]{.preprocessor}
+:::
+
+::: {.line}
+[]{#l00018}[ 18]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00019}[ 19]{.lineno} [\#include \<memory\>]{.preprocessor}
+:::
+
+::: {.line}
+[]{#l00020}[ 20]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00021}[ 21]{.lineno} [\#include
+\"tensorflow/core/lib/core/status.h\"]{.preprocessor}
+:::
+
+::: {.line}
+[]{#l00022}[ 22]{.lineno} [\#include
+\"tensorflow/core/platform/macros.h\"]{.preprocessor}
+:::
+
+::: {.line}
+[]{#l00023}[ 23]{.lineno} [\#include
+\"tensorflow/core/platform/types.h\"]{.preprocessor}
+:::
+
+::: {.line}
+[]{#l00024}[ 24]{.lineno} [\#include
+\"tensorflow\_serving/core/source.h\"]{.preprocessor}
+:::
+
+::: {.line}
+[]{#l00025}[ 25]{.lineno} [\#include
+\"tensorflow\_serving/core/storage\_path.h\"]{.preprocessor}
+:::
+
+::: {.line}
+[]{#l00026}[ 26]{.lineno} [\#include
+\"tensorflow\_serving/sources/storage\_path/static\_storage\_path\_source.pb.h\"]{.preprocessor}
+:::
+
+::: {.line}
+[]{#l00027}[ 27]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00028}[ 28]{.lineno} [namespace ]{.keyword}tensorflow {
+:::
+
+::: {.line}
+[]{#l00029}[ 29]{.lineno} [namespace ]{.keyword}serving {
+:::
+
+::: {.line}
+[]{#l00030}[ 30]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00031}[ 31]{.lineno} [// A StoragePathSource that calls the
+aspired-versions callback exactly once,]{.comment}
+:::
+
+::: {.line}
+[]{#l00032}[ 32]{.lineno} [// with a single hard-coded servable and
+version path.]{.comment}
+:::
+
+::: {.line}
+[]{#l00033}[ 33]{.lineno} [// Useful for testing and experimental
+deployments.]{.comment}
+:::
+
+::: {.line}
+[]{#l00034}[
+[34](classtensorflow_1_1serving_1_1StaticStoragePathSource.html){.line}]{.lineno} [class
+]{.keyword}[StaticStoragePathSource](classtensorflow_1_1serving_1_1StaticStoragePathSource.html){.code}
+: [public]{.keyword}
+[Source](classtensorflow_1_1serving_1_1Source.html){.code}\<StoragePath\>
+{
+:::
+
+::: {.line}
+[]{#l00035}[ 35]{.lineno}  [public]{.keyword}:
+:::
+
+::: {.line}
+[]{#l00036}[ 36]{.lineno}  [static]{.keyword} Status
+Create([const]{.keyword} StaticStoragePathSourceConfig& config,
+:::
+
+::: {.line}
+[]{#l00037}[ 37]{.lineno}  std::unique\_ptr\<StaticStoragePathSource\>\*
+result);
+:::
+
+::: {.line}
+[]{#l00038}[ 38]{.lineno} 
+\~[StaticStoragePathSource](classtensorflow_1_1serving_1_1StaticStoragePathSource.html){.code}()
+[override]{.keyword} = [default]{.keywordflow};
+:::
+
+::: {.line}
+[]{#l00039}[ 39]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00040}[ 40]{.lineno}  [void]{.keywordtype}
+SetAspiredVersionsCallback([AspiredVersionsCallback](classtensorflow_1_1serving_1_1Source.html#aeb281087e1478b0ff4a74e3f60496c6f){.code}
+callback) [override]{.keyword};
+:::
+
+::: {.line}
+[]{#l00041}[ 41]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00042}[ 42]{.lineno}  [private]{.keyword}:
+:::
+
+::: {.line}
+[]{#l00043}[ 43]{.lineno} 
+[StaticStoragePathSource](classtensorflow_1_1serving_1_1StaticStoragePathSource.html){.code}()
+= [default]{.keywordflow};
+:::
+
+::: {.line}
+[]{#l00044}[ 44]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00045}[ 45]{.lineno}  StaticStoragePathSourceConfig config\_;
+:::
+
+::: {.line}
+[]{#l00046}[ 46]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00047}[ 47]{.lineno} 
+TF\_DISALLOW\_COPY\_AND\_ASSIGN([StaticStoragePathSource](classtensorflow_1_1serving_1_1StaticStoragePathSource.html){.code});
+:::
+
+::: {.line}
+[]{#l00048}[ 48]{.lineno} };
+:::
+
+::: {.line}
+[]{#l00049}[ 49]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00050}[ 50]{.lineno} } [// namespace serving]{.comment}
+:::
+
+::: {.line}
+[]{#l00051}[ 51]{.lineno} } [// namespace tensorflow]{.comment}
+:::
+
+::: {.line}
+[]{#l00052}[ 52]{.lineno} 
+:::
+
+::: {.line}
+[]{#l00053}[ 53]{.lineno} [\#endif ]{.preprocessor}[//
+TENSORFLOW\_SERVING\_SOURCES\_STORAGE\_PATH\_STATIC\_STORAGE\_PATH\_SOURCE\_H\_]{.comment}
+:::
+
+::: {#aclasstensorflow_1_1serving_1_1Source_html .ttc}
+::: {.ttname}
+[tensorflow::serving::Source](classtensorflow_1_1serving_1_1Source.html)
+:::
+
+::: {.ttdef}
+**Definition:** source.h:65
+:::
+:::
+
+::: {#aclasstensorflow_1_1serving_1_1Source_html_aeb281087e1478b0ff4a74e3f60496c6f .ttc}
+::: {.ttname}
+[tensorflow::serving::Source\< StoragePath
+\>::AspiredVersionsCallback](classtensorflow_1_1serving_1_1Source.html#aeb281087e1478b0ff4a74e3f60496c6f)
+:::
+
+::: {.ttdeci}
+std::function\< void(const StringPiece servable\_name, std::vector\<
+ServableData\< StoragePath \> \> versions)\> AspiredVersionsCallback
+:::
+
+::: {.ttdef}
+**Definition:** source.h:88
+:::
+:::
+
+::: {#aclasstensorflow_1_1serving_1_1StaticStoragePathSource_html .ttc}
+::: {.ttname}
+[tensorflow::serving::StaticStoragePathSource](classtensorflow_1_1serving_1_1StaticStoragePathSource.html)
+:::
+
+::: {.ttdef}
+**Definition:** static\_storage\_path\_source.h:34
+:::
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+[Generated by [![doxygen](doxygen.svg){.footer width="104"
+height="31"}](https://www.doxygen.org/index.html) 1.9.1]{.small}

@@ -1,0 +1,49 @@
+\hypertarget{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl}{}\doxysection{tensorflow\+::serving\+::Tfrt\+Prediction\+Service\+Impl Class Reference}
+\label{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl}\index{tensorflow::serving::TfrtPredictionServiceImpl@{tensorflow::serving::TfrtPredictionServiceImpl}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Tfrt\+Prediction\+Service\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Tfrt\+Prediction\+Service\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_a7e1a167614401fe656667217db641681}\label{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_a7e1a167614401fe656667217db641681}} 
+{\bfseries Tfrt\+Prediction\+Service\+Impl} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1PredictionServiceOptions}{Prediction\+Service\+Options}} \&options)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_ad2b086077b6ef4b933e6f8c2d0aba923}\label{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_ad2b086077b6ef4b933e6f8c2d0aba923}} 
+\+::grpc\+::\+Status {\bfseries Predict} (\+::grpc\+::\+Server\+Context $\ast$context, const Predict\+Request $\ast$request, Predict\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_a8efab43ea3a17e4916c714092f76c746}\label{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_a8efab43ea3a17e4916c714092f76c746}} 
+\+::grpc\+::\+Status {\bfseries Get\+Model\+Metadata} (\+::grpc\+::\+Server\+Context $\ast$context, const Get\+Model\+Metadata\+Request $\ast$request, Get\+Model\+Metadata\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_a2547ab8ff4f2496124b2295321498a0a}\label{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_a2547ab8ff4f2496124b2295321498a0a}} 
+\+::grpc\+::\+Status {\bfseries Classify} (\+::grpc\+::\+Server\+Context $\ast$context, const Classification\+Request $\ast$request, Classification\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_ad52f5963c5d72af1014593ec46873c70}\label{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_ad52f5963c5d72af1014593ec46873c70}} 
+\+::grpc\+::\+Status {\bfseries Regress} (\+::grpc\+::\+Server\+Context $\ast$context, const Regression\+Request $\ast$request, Regression\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_a7c88b08994b556677c1f57c6339e7fe6}\label{classtensorflow_1_1serving_1_1TfrtPredictionServiceImpl_a7c88b08994b556677c1f57c6339e7fe6}} 
+\+::grpc\+::\+Status {\bfseries Multi\+Inference} (\+::grpc\+::\+Server\+Context $\ast$context, const Multi\+Inference\+Request $\ast$request, Multi\+Inference\+Response $\ast$response) override
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/model\+\_\+servers/tfrt\+\_\+prediction\+\_\+service\+\_\+impl.\+h\item 
+tensorflow\+\_\+serving/model\+\_\+servers/tfrt\+\_\+prediction\+\_\+service\+\_\+impl.\+cc\end{DoxyCompactItemize}

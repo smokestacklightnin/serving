@@ -1,0 +1,38 @@
+\hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface}{}\doxysection{tensorflow\+::serving\+::net\+\_\+http\+::Test\+HTTPClient\+Interface Class Reference}
+\label{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface}\index{tensorflow::serving::net\_http::TestHTTPClientInterface@{tensorflow::serving::net\_http::TestHTTPClientInterface}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::net\+\_\+http\+::Test\+HTTPClient\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_ae49eed1257f6090570e4fe8945a6e5f5}\label{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_ae49eed1257f6090570e4fe8945a6e5f5}} 
+{\bfseries Test\+HTTPClient\+Interface} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface}{Test\+HTTPClient\+Interface}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_ab2475abd13f1dd54458ddcac63776314}\label{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_ab2475abd13f1dd54458ddcac63776314}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface}{Test\+HTTPClient\+Interface}} \& {\bfseries operator=} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface}{Test\+HTTPClient\+Interface}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_acde23c08ba3fdd8f505b3af232cb07f9}\label{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_acde23c08ba3fdd8f505b3af232cb07f9}} 
+virtual void {\bfseries Terminate} ()=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_af1e04d0a1089650328e351ea02a3ad1a}\label{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_af1e04d0a1089650328e351ea02a3ad1a}} 
+virtual bool {\bfseries Blocking\+Send\+Request} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1TestClientRequest}{Test\+Client\+Request}} \&request, \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1TestClientResponse}{Test\+Client\+Response}} $\ast$response)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_aafe1ccbaa3de907367ddae06c2f0259f}\label{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_aafe1ccbaa3de907367ddae06c2f0259f}} 
+virtual bool {\bfseries Send\+Request} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1TestClientRequest}{Test\+Client\+Request}} \&request, \mbox{\hyperlink{structtensorflow_1_1serving_1_1net__http_1_1TestClientResponse}{Test\+Client\+Response}} $\ast$response)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_a2e91cfa281e2ea32e891afc23aff62a8}\label{classtensorflow_1_1serving_1_1net__http_1_1TestHTTPClientInterface_a2e91cfa281e2ea32e891afc23aff62a8}} 
+virtual void {\bfseries Set\+Executor} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1EventExecutor}{Event\+Executor}} $>$ executor)=0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/util/net\+\_\+http/client/test\+\_\+client/public/httpclient\+\_\+interface.\+h\end{DoxyCompactItemize}

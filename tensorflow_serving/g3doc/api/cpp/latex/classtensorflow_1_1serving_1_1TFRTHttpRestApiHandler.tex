@@ -1,0 +1,57 @@
+\hypertarget{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler}{}\doxysection{tensorflow\+::serving\+::TFRTHttp\+Rest\+Api\+Handler Class Reference}
+\label{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler}\index{tensorflow::serving::TFRTHttpRestApiHandler@{tensorflow::serving::TFRTHttpRestApiHandler}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::TFRTHttp\+Rest\+Api\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::TFRTHttp\+Rest\+Api\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler_a5fc3a8da6bc2a54a45945d6254d5a676}\label{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler_a5fc3a8da6bc2a54a45945d6254d5a676}} 
+{\bfseries TFRTHttp\+Rest\+Api\+Handler} (int timeout\+\_\+in\+\_\+ms, \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServerCore}{Server\+Core}} $\ast$core)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler_ac9172debfd995858f1713a42a8ffb670}\label{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler_ac9172debfd995858f1713a42a8ffb670}} 
+Status {\bfseries Process\+Request} (const absl\+::string\+\_\+view http\+\_\+method, const absl\+::string\+\_\+view request\+\_\+path, const absl\+::string\+\_\+view request\+\_\+body, std\+::vector$<$ std\+::pair$<$ string, string $>$$>$ $\ast$headers, string $\ast$model\+\_\+name, string $\ast$method, string $\ast$output) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$const {\bfseries k\+Path\+Regex}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler_a082c34fec314537ccedaa9e2cf9db157}\label{classtensorflow_1_1serving_1_1TFRTHttpRestApiHandler_a082c34fec314537ccedaa9e2cf9db157}} 
+\index{tensorflow::serving::TFRTHttpRestApiHandler@{tensorflow::serving::TFRTHttpRestApiHandler}!kPathRegex@{kPathRegex}}
+\index{kPathRegex@{kPathRegex}!tensorflow::serving::TFRTHttpRestApiHandler@{tensorflow::serving::TFRTHttpRestApiHandler}}
+\doxysubsubsection{\texorpdfstring{kPathRegex}{kPathRegex}}
+{\footnotesize\ttfamily const char $\ast$const tensorflow\+::serving\+::\+TFRTHttp\+Rest\+Api\+Handler\+::k\+Path\+Regex\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{    kHTTPRestApiHandlerPathRegex}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/model\+\_\+servers/tfrt\+\_\+http\+\_\+rest\+\_\+api\+\_\+handler.\+h\item 
+tensorflow\+\_\+serving/model\+\_\+servers/tfrt\+\_\+http\+\_\+rest\+\_\+api\+\_\+handler.\+cc\end{DoxyCompactItemize}

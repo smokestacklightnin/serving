@@ -1,0 +1,44 @@
+\hypertarget{classtensorflow_1_1serving_1_1Executor}{}\doxysection{tensorflow\+::serving\+::Executor Class Reference}
+\label{classtensorflow_1_1serving_1_1Executor}\index{tensorflow::serving::Executor@{tensorflow::serving::Executor}}
+
+
+{\ttfamily \#include $<$executor.\+h$>$}
+
+
+
+Inheritance diagram for tensorflow\+::serving\+::Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classtensorflow_1_1serving_1_1Executor__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classtensorflow_1_1serving_1_1Executor_af2826585d706a46e3e91e8f40f277dcc}{Schedule}} (std\+::function$<$ void()$>$ fn)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract object that can execute closures.
+
+Implementations of executor must be thread-\/safe. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Executor_af2826585d706a46e3e91e8f40f277dcc}\label{classtensorflow_1_1serving_1_1Executor_af2826585d706a46e3e91e8f40f277dcc}} 
+\index{tensorflow::serving::Executor@{tensorflow::serving::Executor}!Schedule@{Schedule}}
+\index{Schedule@{Schedule}!tensorflow::serving::Executor@{tensorflow::serving::Executor}}
+\doxysubsubsection{\texorpdfstring{Schedule()}{Schedule()}}
+{\footnotesize\ttfamily virtual void tensorflow\+::serving\+::\+Executor\+::\+Schedule (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Schedule the specified \textquotesingle{}fn\textquotesingle{} for execution in this executor. Depending on the subclass implementation, this may block in some situations. 
+
+Implemented in \mbox{\hyperlink{classtensorflow_1_1serving_1_1ThreadPoolExecutor_a5d81e166c32207d3ce4c378927e0f131}{tensorflow\+::serving\+::\+Thread\+Pool\+Executor}}, and \mbox{\hyperlink{classtensorflow_1_1serving_1_1InlineExecutor_a4787bb65866f0b4746d65103cc17761a}{tensorflow\+::serving\+::\+Inline\+Executor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/util/executor.\+h\end{DoxyCompactItemize}

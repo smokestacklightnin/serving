@@ -1,0 +1,74 @@
+\hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable}{}\doxysection{tensorflow\+::serving\+::Tfrt\+Saved\+Model\+Servable Class Reference}
+\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable}\index{tensorflow::serving::TfrtSavedModelServable@{tensorflow::serving::TfrtSavedModelServable}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Tfrt\+Saved\+Model\+Servable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classtensorflow_1_1serving_1_1TfrtSavedModelServable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Tfrt\+Saved\+Model\+Servable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classtensorflow_1_1serving_1_1TfrtSavedModelServable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a45a5da4983f5fe6b862697fbce9350b4}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a45a5da4983f5fe6b862697fbce9350b4}} 
+{\bfseries Tfrt\+Saved\+Model\+Servable} (absl\+::string\+\_\+view name, int64\+\_\+t version, const Tfrt\+Saved\+Model\+Config \&config, const Saved\+Model\+Config \&model\+\_\+config, std\+::unique\+\_\+ptr$<$ tfrt\+\_\+stub\+::\+Saved\+Model $>$ saved\+\_\+model, \mbox{\hyperlink{classtensorflow_1_1serving_1_1ThreadPoolFactory}{Thread\+Pool\+Factory}} $\ast$thread\+\_\+pool\+\_\+factory)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a1c030cd2189aff8a4efe44d9a028d0c4}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a1c030cd2189aff8a4efe44d9a028d0c4}} 
+{\bfseries Tfrt\+Saved\+Model\+Servable} (absl\+::string\+\_\+view name, int64\+\_\+t version, const Tfrt\+Saved\+Model\+Config \&config, const Saved\+Model\+Config \&model\+\_\+config, std\+::unique\+\_\+ptr$<$ tfrt\+\_\+stub\+::\+Saved\+Model $>$ saved\+\_\+model, \mbox{\hyperlink{classtensorflow_1_1serving_1_1ThreadPoolFactory}{Thread\+Pool\+Factory}} $\ast$thread\+\_\+pool\+\_\+factory, std\+::function$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1RequestRecorder}{Request\+Recorder}} $>$(\mbox{\hyperlink{classtensorflow_1_1serving_1_1TfrtSavedModelServable}{Tfrt\+Saved\+Model\+Servable}} \&)$>$ recorder\+\_\+creator)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a2145a828680d89213120ee5b40ecef7a}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a2145a828680d89213120ee5b40ecef7a}} 
+absl\+::\+Status {\bfseries Classify} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Classification\+Request \&request, Classification\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a19543571e73874c4a49383795429a40f}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a19543571e73874c4a49383795429a40f}} 
+absl\+::\+Status {\bfseries Regress} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Regression\+Request \&request, Regression\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a6009af9816f87208564f9e6aa9c20d25}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a6009af9816f87208564f9e6aa9c20d25}} 
+absl\+::\+Status {\bfseries Predict} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Predict\+Request \&request, Predict\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_aab502e05af33a4cd61407c524090f8ea}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_aab502e05af33a4cd61407c524090f8ea}} 
+absl\+::\+Status\+Or$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1PredictStreamedContext}{Predict\+Streamed\+Context}} $>$ $>$ {\bfseries Predict\+Streamed} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, absl\+::\+Any\+Invocable$<$ void(absl\+::\+Status\+Or$<$ Predict\+Response $>$)$>$ response\+\_\+callback) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_ac0ab6a2ac24d6f51903a9db4fd4a1bc2}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_ac0ab6a2ac24d6f51903a9db4fd4a1bc2}} 
+absl\+::\+Status {\bfseries Multi\+Inference} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Multi\+Inference\+Request \&request, Multi\+Inference\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a4c444df2d52ea82108599685d07bf715}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a4c444df2d52ea82108599685d07bf715}} 
+absl\+::\+Status {\bfseries Get\+Model\+Metadata} (const Get\+Model\+Metadata\+Request \&request, Get\+Model\+Metadata\+Response $\ast$response) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a264c963eaf59e0509f9fab620fd45c0c}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a264c963eaf59e0509f9fab620fd45c0c}} 
+bool {\bfseries Supports\+Paging} () const override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a9d654d28c40e514d38bef198edc230dc}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a9d654d28c40e514d38bef198edc230dc}} 
+absl\+::\+Status {\bfseries Suspend} () override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_ae5fb11c47ab58187638b1af63753f133}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_ae5fb11c47ab58187638b1af63753f133}} 
+absl\+::\+Status {\bfseries Resume} () override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a39d0e1fb10328be68f36f33a2f2fb678}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a39d0e1fb10328be68f36f33a2f2fb678}} 
+tfrt\+\_\+stub\+::\+Saved\+Model \& {\bfseries saved\+\_\+model} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a41c731f83584e3625a5c0a1e97a2ffcd}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a41c731f83584e3625a5c0a1e97a2ffcd}} 
+void {\bfseries set\+\_\+resume\+\_\+fn} (absl\+::\+Any\+Invocable$<$ absl\+::\+Status(\mbox{\hyperlink{classtensorflow_1_1serving_1_1TfrtSavedModelServable}{Tfrt\+Saved\+Model\+Servable}} $\ast$)$>$ resume\+\_\+fn)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a7f27383faefb9a7dcc1f9122b323513a}\label{classtensorflow_1_1serving_1_1TfrtSavedModelServable_a7f27383faefb9a7dcc1f9122b323513a}} 
+void {\bfseries set\+\_\+suspend\+\_\+fn} (absl\+::\+Any\+Invocable$<$ absl\+::\+Status(\mbox{\hyperlink{classtensorflow_1_1serving_1_1TfrtSavedModelServable}{Tfrt\+Saved\+Model\+Servable}} $\ast$)$>$ suspend\+\_\+fn)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/servables/tensorflow/tfrt\+\_\+servable.\+h\item 
+tensorflow\+\_\+serving/servables/tensorflow/tfrt\+\_\+servable.\+cc\end{DoxyCompactItemize}

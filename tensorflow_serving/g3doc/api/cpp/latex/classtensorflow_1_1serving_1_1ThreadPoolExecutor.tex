@@ -1,0 +1,49 @@
+\hypertarget{classtensorflow_1_1serving_1_1ThreadPoolExecutor}{}\doxysection{tensorflow\+::serving\+::Thread\+Pool\+Executor Class Reference}
+\label{classtensorflow_1_1serving_1_1ThreadPoolExecutor}\index{tensorflow::serving::ThreadPoolExecutor@{tensorflow::serving::ThreadPoolExecutor}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Thread\+Pool\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classtensorflow_1_1serving_1_1ThreadPoolExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Thread\+Pool\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classtensorflow_1_1serving_1_1ThreadPoolExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ThreadPoolExecutor_a77b2368009576fdbf09012b7f17a5925}\label{classtensorflow_1_1serving_1_1ThreadPoolExecutor_a77b2368009576fdbf09012b7f17a5925}} 
+{\bfseries Thread\+Pool\+Executor} (Env $\ast$env, const string \&thread\+\_\+pool\+\_\+name, int num\+\_\+threads)
+\item 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1ThreadPoolExecutor_a5d81e166c32207d3ce4c378927e0f131}{Schedule}} (std\+::function$<$ void()$>$ fn) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ThreadPoolExecutor_a5d81e166c32207d3ce4c378927e0f131}\label{classtensorflow_1_1serving_1_1ThreadPoolExecutor_a5d81e166c32207d3ce4c378927e0f131}} 
+\index{tensorflow::serving::ThreadPoolExecutor@{tensorflow::serving::ThreadPoolExecutor}!Schedule@{Schedule}}
+\index{Schedule@{Schedule}!tensorflow::serving::ThreadPoolExecutor@{tensorflow::serving::ThreadPoolExecutor}}
+\doxysubsubsection{\texorpdfstring{Schedule()}{Schedule()}}
+{\footnotesize\ttfamily void tensorflow\+::serving\+::\+Thread\+Pool\+Executor\+::\+Schedule (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Schedule the specified \textquotesingle{}fn\textquotesingle{} for execution in this executor. Depending on the subclass implementation, this may block in some situations. 
+
+Implements \mbox{\hyperlink{classtensorflow_1_1serving_1_1Executor_af2826585d706a46e3e91e8f40f277dcc}{tensorflow\+::serving\+::\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/util/threadpool\+\_\+executor.\+h\item 
+tensorflow\+\_\+serving/util/threadpool\+\_\+executor.\+cc\end{DoxyCompactItemize}

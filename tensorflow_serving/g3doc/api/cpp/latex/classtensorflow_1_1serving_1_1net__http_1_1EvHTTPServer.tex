@@ -1,0 +1,79 @@
+\hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer}{}\doxysection{tensorflow\+::serving\+::net\+\_\+http\+::Ev\+HTTPServer Class Reference}
+\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer}\index{tensorflow::serving::net\_http::EvHTTPServer@{tensorflow::serving::net\_http::EvHTTPServer}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::net\+\_\+http\+::Ev\+HTTPServer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::net\+\_\+http\+::Ev\+HTTPServer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_aa1b6616f36c1cda4f8e90574711e4e31}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_aa1b6616f36c1cda4f8e90574711e4e31}} 
+{\bfseries Ev\+HTTPServer} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer}{Ev\+HTTPServer}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a2fcbe7012275a5edf9887b3318c6388e}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a2fcbe7012275a5edf9887b3318c6388e}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer}{Ev\+HTTPServer}} \& {\bfseries operator=} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer}{Ev\+HTTPServer}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_af5c8692434e8b849ef39d34a19b0c059}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_af5c8692434e8b849ef39d34a19b0c059}} 
+{\bfseries Ev\+HTTPServer} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1ServerOptions}{Server\+Options}} $>$ options)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a7023abbfb04afcc506be3bde08b9c063}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a7023abbfb04afcc506be3bde08b9c063}} 
+bool {\bfseries Initialize} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_ac2e62ff79c6e61374c3a7d4bec8a184a}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_ac2e62ff79c6e61374c3a7d4bec8a184a}} 
+bool {\bfseries Start\+Accepting\+Requests} () override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_ac15faca9bccd2429aed0c8fe4672d9bd}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_ac15faca9bccd2429aed0c8fe4672d9bd}} 
+bool {\bfseries is\+\_\+accepting\+\_\+requests} () const override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a8b686f94f4c0a6e6b3ab6bf290b501a7}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a8b686f94f4c0a6e6b3ab6bf290b501a7}} 
+int {\bfseries listen\+\_\+port} () const override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_aa996becd4828ac4b25de40ba14085b80}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_aa996becd4828ac4b25de40ba14085b80}} 
+void {\bfseries Terminate} () override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a63ae433a02cc051b3dfb4f581cae9140}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a63ae433a02cc051b3dfb4f581cae9140}} 
+bool {\bfseries is\+\_\+terminating} () const override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a6c1f5464b86b5c15b99eb9b202f7102f}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a6c1f5464b86b5c15b99eb9b202f7102f}} 
+void {\bfseries Wait\+For\+Termination} () override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_afd252461c5e8a327f63788f9f22856d9}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_afd252461c5e8a327f63788f9f22856d9}} 
+bool {\bfseries Wait\+For\+Termination\+With\+Timeout} (absl\+::\+Duration timeout) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_aadda38e432cb6b454e896ed6dcea8299}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_aadda38e432cb6b454e896ed6dcea8299}} 
+void {\bfseries Register\+Request\+Handler} (absl\+::string\+\_\+view uri, Request\+Handler handler, const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1RequestHandlerOptions}{Request\+Handler\+Options}} \&options) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_ac1037d34b1cc20d188c00915ced82327}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_ac1037d34b1cc20d188c00915ced82327}} 
+void {\bfseries Register\+Request\+Dispatcher} (Request\+Dispatcher dispatcher, const \mbox{\hyperlink{classtensorflow_1_1serving_1_1net__http_1_1RequestHandlerOptions}{Request\+Handler\+Options}} \&options) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a81512ffd0c51361eab22e2aa1f981a9e}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a81512ffd0c51361eab22e2aa1f981a9e}} 
+void {\bfseries Inc\+Ops} () override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a7130ccc1f427b117b4749a4eac69150d}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_a7130ccc1f427b117b4749a4eac69150d}} 
+void {\bfseries Dec\+Ops} () override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_ab9d18f5adb974f21d79b45441c6bcc7d}\label{classtensorflow_1_1serving_1_1net__http_1_1EvHTTPServer_ab9d18f5adb974f21d79b45441c6bcc7d}} 
+bool {\bfseries Event\+Loop\+Schedule} (std\+::function$<$ void()$>$ fn) override
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/util/net\+\_\+http/server/internal/evhttp\+\_\+server.\+h\item 
+tensorflow\+\_\+serving/util/net\+\_\+http/server/internal/evhttp\+\_\+server.\+cc\end{DoxyCompactItemize}

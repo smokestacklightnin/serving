@@ -1,0 +1,168 @@
+\hypertarget{classtensorflow_1_1serving_1_1SimpleLoader}{}\doxysection{tensorflow\+::serving\+::Simple\+Loader$<$ Servable\+Type $>$ Class Template Reference}
+\label{classtensorflow_1_1serving_1_1SimpleLoader}\index{tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Simple\+Loader$<$ Servable\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classtensorflow_1_1serving_1_1SimpleLoader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Simple\+Loader$<$ Servable\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classtensorflow_1_1serving_1_1SimpleLoader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_a41233d05569814753928a67a414281a9}\label{classtensorflow_1_1serving_1_1SimpleLoader_a41233d05569814753928a67a414281a9}} 
+using {\bfseries Creator} = std\+::function$<$ Status(std\+::unique\+\_\+ptr$<$ Servable\+Type $>$ $\ast$)$>$
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_a4623eb7f1ee9169db1d9f23e0f377922}\label{classtensorflow_1_1serving_1_1SimpleLoader_a4623eb7f1ee9169db1d9f23e0f377922}} 
+using {\bfseries Creator\+With\+Metadata} = std\+::function$<$ Status(const \mbox{\hyperlink{structtensorflow_1_1serving_1_1Loader_1_1Metadata}{Metadata}} \&, std\+::unique\+\_\+ptr$<$ Servable\+Type $>$ $\ast$)$>$
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_ab25158ab5062f7e125d5771ebef4c571}\label{classtensorflow_1_1serving_1_1SimpleLoader_ab25158ab5062f7e125d5771ebef4c571}} 
+using {\bfseries Creator\+Variant} = absl\+::variant$<$ Creator, Creator\+With\+Metadata $>$
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_ad56b75f604ff95b4740573209efd3fd5}\label{classtensorflow_1_1serving_1_1SimpleLoader_ad56b75f604ff95b4740573209efd3fd5}} 
+using {\bfseries Resource\+Estimator} = std\+::function$<$ Status(Resource\+Allocation $\ast$)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_ab128232d2103f28712aca27d74a4d255}\label{classtensorflow_1_1serving_1_1SimpleLoader_ab128232d2103f28712aca27d74a4d255}} 
+{\bfseries Simple\+Loader} (Creator creator, Resource\+Estimator resource\+\_\+estimator)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_a9125d0e74cf2f7cd41ddaae3902713cb}\label{classtensorflow_1_1serving_1_1SimpleLoader_a9125d0e74cf2f7cd41ddaae3902713cb}} 
+{\bfseries Simple\+Loader} (Creator\+With\+Metadata creator\+\_\+with\+\_\+metadata, Resource\+Estimator resource\+\_\+estimator)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_a14d1a5400554740aceae0d60840e1832}\label{classtensorflow_1_1serving_1_1SimpleLoader_a14d1a5400554740aceae0d60840e1832}} 
+{\bfseries Simple\+Loader} (Creator creator, Resource\+Estimator resource\+\_\+estimator, Resource\+Estimator post\+\_\+load\+\_\+resource\+\_\+estimator)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_afd1e11ebf64eed6be7e63d32df4c8a77}\label{classtensorflow_1_1serving_1_1SimpleLoader_afd1e11ebf64eed6be7e63d32df4c8a77}} 
+{\bfseries Simple\+Loader} (Creator\+With\+Metadata creator\+\_\+with\+\_\+metadata, Resource\+Estimator resource\+\_\+estimator, Resource\+Estimator post\+\_\+load\+\_\+resource\+\_\+estimator)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_a761d945b99d3cab3e8ec1b4e385f5ca2}\label{classtensorflow_1_1serving_1_1SimpleLoader_a761d945b99d3cab3e8ec1b4e385f5ca2}} 
+{\bfseries Simple\+Loader} (Creator\+Variant creator\+\_\+variant, Resource\+Estimator resource\+\_\+estimator, absl\+::optional$<$ Resource\+Estimator $>$ post\+\_\+load\+\_\+resource\+\_\+estimator)
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a05ede6c604d05037f59fe13472b48935}{Estimate\+Resources}} (Resource\+Allocation $\ast$estimate) const override
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}{Load}} () override
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a4c9a2f88fd1cab8a68ffa69bb9900e24}{Load\+With\+Metadata}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1Loader_1_1Metadata}{Metadata}} \&metadata) override
+\item 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ae24b904b3155f039fadd88b1c23e2f82}{Unload}} () override
+\item 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a914a9107be7cfeb587998934be9d9fee}{servable}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_a9df494e930b1c23df38685a10d7c9614}\label{classtensorflow_1_1serving_1_1SimpleLoader_a9df494e930b1c23df38685a10d7c9614}} 
+static Resource\+Estimator {\bfseries Estimate\+No\+Resources} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_a05ede6c604d05037f59fe13472b48935}\label{classtensorflow_1_1serving_1_1SimpleLoader_a05ede6c604d05037f59fe13472b48935}} 
+\index{tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}!EstimateResources@{EstimateResources}}
+\index{EstimateResources@{EstimateResources}!tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}}
+\doxysubsubsection{\texorpdfstring{EstimateResources()}{EstimateResources()}}
+{\footnotesize\ttfamily template$<$typename Servable\+Type $>$ \\
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader}{tensorflow\+::serving\+::\+Simple\+Loader}}$<$ Servable\+Type $>$\+::Estimate\+Resources (\begin{DoxyParamCaption}\item[{Resource\+Allocation $\ast$}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Estimates the resources a servable will use.
+
+IMPORTANT\+: This method\textquotesingle{}s implementation must obey following requirements, which enable the serving system to reason correctly about which servables can be loaded safely\+:
+\begin{DoxyEnumerate}
+\item The estimate must represent an upper bound on the actual value.
+\item Prior to load, the estimate may include resources that are not bound to any specific device instance, e.\+g. RAM on one of the two GPUs.
+\item While loaded, for any devices with multiple instances (e.\+g. two GPUs), the estimate must specify the instance to which each resource is bound.
+\item The estimate must be monotonically non-\/increasing, i.\+e. it cannot increase over time. Reasons to have it potentially decrease over time \begin{DoxyReturn}{Returns}
+an estimate of the resources the servable will consume once loaded. If the servable has already been loaded, returns an estimate of the actual resource usage. 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_ab59db26b242a2224889bc7c5c6edae40}{tensorflow\+::serving\+::\+Loader}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}\label{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}} 
+\index{tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}!Load@{Load}}
+\index{Load@{Load}!tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily template$<$typename Servable\+Type $>$ \\
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader}{tensorflow\+::serving\+::\+Simple\+Loader}}$<$ Servable\+Type $>$\+::Load\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Fetches any data that needs to be loaded before using the servable returned by \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a914a9107be7cfeb587998934be9d9fee}{servable()}}. May use no more resources than the estimate reported by \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a05ede6c604d05037f59fe13472b48935}{Estimate\+Resources()}}.
+
+If implementing \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}{Load()}}, you don\textquotesingle{}t have to override \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a4c9a2f88fd1cab8a68ffa69bb9900e24}{Load\+With\+Metadata()}}. 
+
+Reimplemented from \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{tensorflow\+::serving\+::\+Loader}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_a4c9a2f88fd1cab8a68ffa69bb9900e24}\label{classtensorflow_1_1serving_1_1SimpleLoader_a4c9a2f88fd1cab8a68ffa69bb9900e24}} 
+\index{tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}!LoadWithMetadata@{LoadWithMetadata}}
+\index{LoadWithMetadata@{LoadWithMetadata}!tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}}
+\doxysubsubsection{\texorpdfstring{LoadWithMetadata()}{LoadWithMetadata()}}
+{\footnotesize\ttfamily template$<$typename Servable\+Type $>$ \\
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader}{tensorflow\+::serving\+::\+Simple\+Loader}}$<$ Servable\+Type $>$\+::Load\+With\+Metadata (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1Loader_1_1Metadata}{Metadata}} \&}]{metadata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Similar to the above method, but takes Metadata as a param, which may be used by the loader implementation appropriately.
+
+If you\textquotesingle{}re overriding \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a4c9a2f88fd1cab8a68ffa69bb9900e24}{Load\+With\+Metadata()}}, because you can use the metadata appropriately, you can skip overriding \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}{Load()}}. 
+
+Reimplemented from \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7aebd433e4a782265d847e507f3bc824}{tensorflow\+::serving\+::\+Loader}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_a914a9107be7cfeb587998934be9d9fee}\label{classtensorflow_1_1serving_1_1SimpleLoader_a914a9107be7cfeb587998934be9d9fee}} 
+\index{tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}!servable@{servable}}
+\index{servable@{servable}!tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}}
+\doxysubsubsection{\texorpdfstring{servable()}{servable()}}
+{\footnotesize\ttfamily template$<$typename Servable\+Type $>$ \\
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader}{tensorflow\+::serving\+::\+Simple\+Loader}}$<$ Servable\+Type $>$\+::servable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns an opaque interface to the underlying servable object. The caller should know the precise type of the interface in order to make actual use of it. For example\+:
+
+Custom\+Loader implementation\+: \begin{DoxyVerb}class CustomLoader : public Loader {
+ public:
+  ...
+  Status Load() override {
+    servable_ = ...;
+  }
+
+  AnyPtr servable() override { return servable_; }
+
+ private:
+  CustomServable* servable_ = nullptr;
+};
+\end{DoxyVerb}
+ Serving user request\+: \begin{DoxyVerb}ServableHandle&lt;CustomServable> handle = ...
+CustomServable* servable = handle.get();
+servable->...
+\end{DoxyVerb}
+ If \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_a914a9107be7cfeb587998934be9d9fee}{servable()}} is called after successful \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}{Load()}} and before \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ae24b904b3155f039fadd88b1c23e2f82}{Unload()}}, it returns a valid, non-\/null \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} object. If called before a successful \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}{Load()}} call or after \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ae24b904b3155f039fadd88b1c23e2f82}{Unload()}}, it returns null \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}}. 
+
+Implements \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a640d67dc6ca9926595d29fdfe63868c1}{tensorflow\+::serving\+::\+Loader}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SimpleLoader_ae24b904b3155f039fadd88b1c23e2f82}\label{classtensorflow_1_1serving_1_1SimpleLoader_ae24b904b3155f039fadd88b1c23e2f82}} 
+\index{tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}!Unload@{Unload}}
+\index{Unload@{Unload}!tensorflow::serving::SimpleLoader$<$ ServableType $>$@{tensorflow::serving::SimpleLoader$<$ ServableType $>$}}
+\doxysubsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily template$<$typename Servable\+Type $>$ \\
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader}{tensorflow\+::serving\+::\+Simple\+Loader}}$<$ Servable\+Type $>$\+::Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Frees any resources allocated during \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}{Load()}} (except perhaps for resources shared across servables that are still needed for other active ones). The loader does not need to return to the \char`\"{}new\char`\"{} state (i.\+e. \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ada69d680b17f2e054faef889f135cb74}{Load()}} cannot be called after \mbox{\hyperlink{classtensorflow_1_1serving_1_1SimpleLoader_ae24b904b3155f039fadd88b1c23e2f82}{Unload()}}). 
+
+Implements \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_addca8f4264380e5e635bbe1197f5347f}{tensorflow\+::serving\+::\+Loader}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/simple\+\_\+loader.\+h\end{DoxyCompactItemize}

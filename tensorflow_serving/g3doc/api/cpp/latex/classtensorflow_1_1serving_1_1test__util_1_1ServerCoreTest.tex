@@ -1,0 +1,73 @@
+\hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest}{}\doxysection{tensorflow\+::serving\+::test\+\_\+util\+::Server\+Core\+Test Class Reference}
+\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest}\index{tensorflow::serving::test\_util::ServerCoreTest@{tensorflow::serving::test\_util::ServerCoreTest}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::test\+\_\+util\+::Server\+Core\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::test\+\_\+util\+::Server\+Core\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_ad043644032ac1c76131d50a185ec9b91}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_ad043644032ac1c76131d50a185ec9b91}} 
+enum {\bfseries Test\+Type} \{ {\bfseries SAVED\+\_\+\+MODEL\+\_\+\+BACKWARD\+\_\+\+COMPATIBILITY}
+, {\bfseries SAVED\+\_\+\+MODEL}
+, {\bfseries NUM\+\_\+\+TEST\+\_\+\+TYPES}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a3f97399480c8dbdf4d5daa2844286667}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a3f97399480c8dbdf4d5daa2844286667}} 
+static string {\bfseries Get\+Name\+Of\+Test\+Type} (int test\+\_\+type)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a299fc0b10ce6804775938d464b9432fa}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a299fc0b10ce6804775938d464b9432fa}} 
+static \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServerCore_1_1Options}{Server\+Core\+::\+Options}} {\bfseries Get\+Default\+Options} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a7113fe06f410476e8fc56b20b28a70ca}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a7113fe06f410476e8fc56b20b28a70ca}} 
+Model\+Server\+Config {\bfseries Get\+Test\+Model\+Server\+Config\+For\+Fake\+Platform} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a060a714bd169caf5111893cad93f4491}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a060a714bd169caf5111893cad93f4491}} 
+Model\+Server\+Config {\bfseries Get\+Test\+Model\+Server\+Config\+For\+Tensorflow\+Platform} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a37ddd9efa2e87ed457a53ea7b279873c}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a37ddd9efa2e87ed457a53ea7b279873c}} 
+void {\bfseries Switch\+To\+Half\+Plus\+Two\+With2\+Versions} (Model\+Server\+Config $\ast$config)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_aee210d40a079b3ea69caf9ae412970a0}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_aee210d40a079b3ea69caf9ae412970a0}} 
+Status {\bfseries Create\+Server\+Core} (const Model\+Server\+Config \&config, \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServerCore_1_1Options}{Server\+Core\+::\+Options}} options, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServerCore}{Server\+Core}} $>$ $\ast$server\+\_\+core)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_ac1f23e405bdd8c8e0e960af15adca70b}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_ac1f23e405bdd8c8e0e960af15adca70b}} 
+Status {\bfseries Create\+Server\+Core} (const Model\+Server\+Config \&config, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServerCore}{Server\+Core}} $>$ $\ast$server\+\_\+core)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_acaeed909d03bcb2e17318d7afbb2e9a7}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_acaeed909d03bcb2e17318d7afbb2e9a7}} 
+Test\+Type {\bfseries Get\+Test\+Type} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_aa98292d73341783cb2b2ef0ebf4996d0}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_aa98292d73341783cb2b2ef0ebf4996d0}} 
+bool {\bfseries Prefix\+Paths\+With\+URIScheme} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a64ec82721334676ec8be3b4d825b6b52}\label{classtensorflow_1_1serving_1_1test__util_1_1ServerCoreTest_a64ec82721334676ec8be3b4d825b6b52}} 
+string {\bfseries Get\+Name\+For\+Test\+Case} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/model\+\_\+servers/test\+\_\+util/server\+\_\+core\+\_\+test\+\_\+util.\+h\item 
+tensorflow\+\_\+serving/model\+\_\+servers/test\+\_\+util/server\+\_\+core\+\_\+test\+\_\+util.\+cc\end{DoxyCompactItemize}

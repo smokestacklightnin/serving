@@ -1,0 +1,75 @@
+::: {#top}
+::: {#titlearea}
++-----------------------------------------------------------------------+
+| ::: {#projectname}                                                    |
+| My Project                                                            |
+| :::                                                                   |
++-----------------------------------------------------------------------+
+:::
+
+::: {#main-nav}
+:::
+
+::: {#MSearchSelectWindow onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()" onkeydown="return searchBox.OnSearchSelectKey(event)"}
+:::
+
+::: {#MSearchResultsWindow}
+:::
+
+::: {#nav-path .navpath}
+-   **tensorflow**
+-   **serving**
+-   **test\_util**
+-   [MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}
+:::
+:::
+
+::: {.header}
+::: {.headertitle}
+::: {.title}
+tensorflow::serving::test\_util::MockServerCore Member List
+:::
+:::
+:::
+
+::: {.contents}
+This is the complete list of members for
+[tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el},
+including all inherited members.
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------- --------------------------------------
+  [Create](classtensorflow_1_1serving_1_1ServerCore.html#a538a0253233bd77da1051a985e3c2642){.el}(Options options, std::unique\_ptr\< ServerCore \> \*core)                                                                                                                                                [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [static]{.mlabel}
+  **CreateFakeLoaderPlatformConfigMap**() (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                                                                                                                            [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   [inline]{.mlabel}[static]{.mlabel}
+  [CustomModelConfigLoader](classtensorflow_1_1serving_1_1ServerCore.html#aded4a259be715e96c76f6d239ea68a80){.el} typedef                                                                                                                                                                                 [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     
+  **enable\_cors\_support**() const (defined in [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el})                                                                                                                                                                    [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [inline]{.mlabel}
+  **GetAvailableServableHandles**() const (defined in [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el})                                                                                                                                                              [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [inline]{.mlabel}
+  **GetOptions**(const PlatformConfigMap &platform\_config\_map, std::unique\_ptr\< ServerRequestLogger \> server\_request\_logger) (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                                  [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   [inline]{.mlabel}[static]{.mlabel}
+  **GetServableHandle**(const ModelSpec &model\_spec, ServableHandle\< T \> \*const handle) (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                                                                          [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   [inline]{.mlabel}
+  **GetServableHandle**(const ModelSpec &model\_spec, ServableHandle\< Servable \> \*const handle) override (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                                                          [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   [inline]{.mlabel}[virtual]{.mlabel}
+  [tensorflow::serving::Manager::GetServableHandle](classtensorflow_1_1serving_1_1Manager.html#aca70babd38f4b416cf27bbf40f8bb093){.el}(const ServableRequest &request, ServableHandle\< T \> \*const handle)                                                                                              [tensorflow::serving::Manager](classtensorflow_1_1serving_1_1Manager.html){.el}                                           
+  [ListAvailableServableIds](classtensorflow_1_1serving_1_1ServerCore.html#ac88da0268e401fa99bcd074e692ee709){.el}() const override                                                                                                                                                                       [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [inline]{.mlabel}[virtual]{.mlabel}
+  [Log](classtensorflow_1_1serving_1_1ServerCore.html#a7eec47dca427a8fcf5e345572bf818e4){.el}(const google::protobuf::Message &request, const google::protobuf::Message &response, const LogMetadata &log\_metadata)                                                                                      [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [inline]{.mlabel}[virtual]{.mlabel}
+  **MOCK\_METHOD**(ServableStateMonitor \*, servable\_state\_monitor,(),(const, override)) (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                                                                           [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   
+  **MOCK\_METHOD**(Status, ReloadConfig,(const ModelServerConfig &),(override)) (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                                                                                      [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   
+  **MOCK\_METHOD**(Status, Log,(const google::protobuf::Message &request, const google::protobuf::Message &response, const LogMetadata &log\_metadata),(override)) (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})   [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   
+  **MockServerCore**(const PlatformConfigMap &platform\_config\_map) (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                                                                                                 [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   [inline]{.mlabel}[explicit]{.mlabel}
+  **MockServerCore**(const PlatformConfigMap &platform\_config\_map, std::unique\_ptr\< ServerRequestLogger \> server\_request\_logger) (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                              [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   [inline]{.mlabel}
+  **predict\_response\_tensor\_serialization\_option**() const (defined in [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el})                                                                                                                                         [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [inline]{.mlabel}
+  **PreLoadHook** typedef (defined in [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el})                                                                                                                                                                              [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     
+  [ReloadConfig](classtensorflow_1_1serving_1_1ServerCore.html#ac3fbf30a022d978159532c2c68384669){.el}(const ModelServerConfig &config) TF\_LOCKS\_EXCLUDED(config\_mu\_)                                                                                                                                 [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [virtual]{.mlabel}
+  **servable\_** (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                                                                                                                                                     [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   
+  [servable\_state\_monitor](classtensorflow_1_1serving_1_1ServerCore.html#ac435225d6ad57889e29d524b32b84c46){.el}() const                                                                                                                                                                                [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [inline]{.mlabel}[virtual]{.mlabel}
+  **ServableStateMonitorCreator** typedef (defined in [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el})                                                                                                                                                              [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     
+  **ServerCore**(Options options) (defined in [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el})                                                                                                                                                                      [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [protected]{.mlabel}
+  [ServerRequestLoggerUpdater](classtensorflow_1_1serving_1_1ServerCore.html#a1112df0a65160902633dcc7590aa5a7c){.el} typedef                                                                                                                                                                              [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     
+  **SetServable**(std::unique\_ptr\< Servable \> servable) (defined in [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el})                                                                                                           [tensorflow::serving::test\_util::MockServerCore](classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html){.el}   [inline]{.mlabel}
+  **StartLoggingStream**(const LogMetadata &log\_metadata, ServerRequestLogger::CreateStreamLoggerFn\< Request, Response \> create\_stream\_logger\_fn) (defined in [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el})                                                [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [inline]{.mlabel}
+  **\~Manager**()=default (defined in [tensorflow::serving::Manager](classtensorflow_1_1serving_1_1Manager.html){.el})                                                                                                                                                                                    [tensorflow::serving::Manager](classtensorflow_1_1serving_1_1Manager.html){.el}                                           [virtual]{.mlabel}
+  **\~ServerCore**()=default (defined in [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el})                                                                                                                                                                           [tensorflow::serving::ServerCore](classtensorflow_1_1serving_1_1ServerCore.html){.el}                                     [virtual]{.mlabel}
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------- --------------------------------------
+:::
+
+------------------------------------------------------------------------
+
+[Generated by [![doxygen](doxygen.svg){.footer width="104"
+height="31"}](https://www.doxygen.org/index.html) 1.9.1]{.small}

@@ -1,0 +1,256 @@
+\hypertarget{classtensorflow_1_1serving_1_1LoaderHarness}{}\doxysection{tensorflow\+::serving\+::Loader\+Harness Class Reference}
+\label{classtensorflow_1_1serving_1_1LoaderHarness}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+
+
+{\ttfamily \#include $<$loader\+\_\+harness.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtensorflow_1_1serving_1_1LoaderHarness_1_1Options}{Options}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structtensorflow_1_1serving_1_1LoaderHarness_1_1Options}{Options}} to configure a \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness}{Loader\+Harness}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8}{State}} \{ \newline
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8aaf1adf7ec3673b4f5765cfbc5d43b7dc}{k\+New}}
+, \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a20bc321c13f15e2546c39d9e0f296dd3}{k\+Load\+Requested}}
+, \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a80697002f1c98b1828669ae672654ff5}{k\+Load\+Approved}}
+, \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8aa2c94488cf2076543584c6a3f78556d1}{k\+Loading}}
+, \newline
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a25d5606fe07425ea73f245c48612c039}{k\+Ready}}
+, \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a723f4d66c7dcb881700bf57200e52e7d}{k\+Unload\+Requested}}
+, \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8ab872a4b4ff718537f0aee3d06c9f914f}{k\+Quiescing}}
+, \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8aa468d1e1bd9ad8243b7c9d31ac711ed6}{k\+Quiesced}}
+, \newline
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8ae4e34ef3f2680339459b2a77aa84fdb8}{k\+Unloading}}
+, \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a7b04d8795f5fd03c761ce70dab985fee}{k\+Disabled}}
+, \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8ae3587c730cc1aa530fa4ddc9c4204e97}{k\+Error}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a2ed475c3b4a7ede4c00a4e2e34b66cdf}\label{classtensorflow_1_1serving_1_1LoaderHarness_a2ed475c3b4a7ede4c00a4e2e34b66cdf}} 
+{\bfseries Loader\+Harness} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_ac6581aa3aa10002465c0ffab0b83ab95}{id}}, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_ae0be696227d934efdfc91bd13de4e48a}{loader}}, const \mbox{\hyperlink{structtensorflow_1_1serving_1_1LoaderHarness_1_1Options}{Options}} \&options=\mbox{\hyperlink{structtensorflow_1_1serving_1_1LoaderHarness_1_1Options}{Options}}())
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a7f7ab209922600ef1d95e6be35dec8fd}{Loader\+Harness}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_ac6581aa3aa10002465c0ffab0b83ab95}{id}}, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_ae0be696227d934efdfc91bd13de4e48a}{loader}}, std\+::unique\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a2a5bfd26e4b27de0e59a9dea68315a84}{additional\+\_\+state}}, const \mbox{\hyperlink{structtensorflow_1_1serving_1_1LoaderHarness_1_1Options}{Options}} \&options=\mbox{\hyperlink{structtensorflow_1_1serving_1_1LoaderHarness_1_1Options}{Options}}())
+\item 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a60facd158c858dbdcaaae74a18a4edd9}{$\sim$\+Loader\+Harness}} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_ac6581aa3aa10002465c0ffab0b83ab95}\label{classtensorflow_1_1serving_1_1LoaderHarness_ac6581aa3aa10002465c0ffab0b83ab95}} 
+\mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_ac6581aa3aa10002465c0ffab0b83ab95}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the identifier of underlying \mbox{\hyperlink{classtensorflow_1_1serving_1_1Servable}{Servable}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a5ba7d4fb6a28bbfeb94d42cfa81bd95f}\label{classtensorflow_1_1serving_1_1LoaderHarness_a5ba7d4fb6a28bbfeb94d42cfa81bd95f}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8}{State}} \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a5ba7d4fb6a28bbfeb94d42cfa81bd95f}{state}} () const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns the current state of underlying \mbox{\hyperlink{classtensorflow_1_1serving_1_1Servable}{Servable}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} $\ast$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_ae0be696227d934efdfc91bd13de4e48a}{loader}} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_af4ed9d7690c7bd8907cc35f8f0343fd5}\label{classtensorflow_1_1serving_1_1LoaderHarness_af4ed9d7690c7bd8907cc35f8f0343fd5}} 
+{\footnotesize template$<$typename T  = std\+::nullptr\+\_\+t$>$ }\\\mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateSnapshot}{Servable\+State\+Snapshot}}$<$ T $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af4ed9d7690c7bd8907cc35f8f0343fd5}{loader\+\_\+state\+\_\+snapshot}} () const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns the current overall state snapshot of the underlying \mbox{\hyperlink{classtensorflow_1_1serving_1_1Servable}{Servable}}. \end{DoxyCompactList}\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af38723eb75813331dad2f0d910466f57}{Load\+Requested}} () TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_aab4e0158cc9fccd7539df5a9fa312e8c}{Load\+Approved}} () TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load}} () TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a6451e73c25ba30b0c78a560deba29e03}{Unload\+Requested}} () TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a001ec617f6fd186d27cc911f9a952f00}{set\+\_\+should\+\_\+retry}} (std\+::function$<$ bool(absl\+::\+Status)$>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_ae344a05f0ae81c0f589daaa737223435}{should\+\_\+retry}}) TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_ae344a05f0ae81c0f589daaa737223435}\label{classtensorflow_1_1serving_1_1LoaderHarness_ae344a05f0ae81c0f589daaa737223435}} 
+bool \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_ae344a05f0ae81c0f589daaa737223435}{should\+\_\+retry}} (absl\+::\+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_afb34eca424243aacbf71f466d4ec99ef}{status}}) TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns true if the servable should be retried. \end{DoxyCompactList}\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a5c131cef32324cd2ec6b22fc4dd92942}{Unload}} () TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a811f9dbe7ab8fb5df0c35916ec57aad8}{Start\+Quiescing}} () TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a11b81e561e55c5b21907f8fc2eafe6e9}{Done\+Quiescing}} () TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9833ae8f23545a9975901d8a3508d30a}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9833ae8f23545a9975901d8a3508d30a}} 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9833ae8f23545a9975901d8a3508d30a}{Error}} (const Status \&\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_afb34eca424243aacbf71f466d4ec99ef}{status}}) TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\begin{DoxyCompactList}\small\item\em Transitions the state to k\+Error and invokes \textquotesingle{}options\+\_\+.\+error\+\_\+callback\textquotesingle{}. \end{DoxyCompactList}\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_afb34eca424243aacbf71f466d4ec99ef}{status}} () const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a2a5bfd26e4b27de0e59a9dea68315a84}{additional\+\_\+state}} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9c74459525e232eb6a03f4a7a0b9cfb2}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9c74459525e232eb6a03f4a7a0b9cfb2}} 
+template$<$$>$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateSnapshot}{Servable\+State\+Snapshot}}$<$ std\+::nullptr\+\_\+t $>$ {\bfseries loader\+\_\+state\+\_\+snapshot} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a890bb1c1568cae9d58cfe9f750c6c499}\label{classtensorflow_1_1serving_1_1LoaderHarness_a890bb1c1568cae9d58cfe9f750c6c499}} 
+static string {\bfseries State\+Debug\+String} (\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8}{State}} \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a5ba7d4fb6a28bbfeb94d42cfa81bd95f}{state}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness}{Loader\+Harness}} is a widget the \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager}{Manager}} uses to hold on to and talk to a \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} while it owns it. It tracks the overall state of a \mbox{\hyperlink{classtensorflow_1_1serving_1_1Servable}{Servable}} such that \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager}{Manager}} can determine which state transitions to make at what times.
+
+A manager implementation can also add some additional state with each harness. For example, a manager could put ACL or lifecycle metadata here. The ownership is maintained by the harness.
+
+This class is thread-\/safe. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!State@{State}}
+\index{State@{State}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8}{tensorflow\+::serving\+::\+Loader\+Harness\+::\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+State of the underlying servable, from the perspective of the \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness}{Loader\+Harness}} and for the purpose of communication between it and a \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager}{Manager}}. Not equivalent to the semantic servable states in \mbox{\hyperlink{servable__state_8h_source}{servable\+\_\+state.\+h}}.
+
+Valid transitions\+: k\+New-\/-\/$>$k\+Loading-\/-\/$>$k\+Ready-\/-\/$>$k\+Quiescing-\/-\/$>$k\+Quiesced-\/-\/$>$k\+Unloading-\/-\/$>$k\+Disabled as well as\+: any\+\_\+state-\/-\/$>$k\+Error. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNew@{kNew}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kNew@{kNew}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8aaf1adf7ec3673b4f5765cfbc5d43b7dc}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8aaf1adf7ec3673b4f5765cfbc5d43b7dc}} 
+k\+New&Initial state. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLoadRequested@{kLoadRequested}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kLoadRequested@{kLoadRequested}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a20bc321c13f15e2546c39d9e0f296dd3}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a20bc321c13f15e2546c39d9e0f296dd3}} 
+k\+Load\+Requested&The manager has been requested to load this servable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLoadApproved@{kLoadApproved}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kLoadApproved@{kLoadApproved}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a80697002f1c98b1828669ae672654ff5}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a80697002f1c98b1828669ae672654ff5}} 
+k\+Load\+Approved&The servable has been approved for loading, e.\+g. resources have been set aside for it. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLoading@{kLoading}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kLoading@{kLoading}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8aa2c94488cf2076543584c6a3f78556d1}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8aa2c94488cf2076543584c6a3f78556d1}} 
+k\+Loading&\textquotesingle{}loader\+\_\+-\/$>$\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}}\textquotesingle{} has been called. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kReady@{kReady}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kReady@{kReady}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a25d5606fe07425ea73f245c48612c039}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a25d5606fe07425ea73f245c48612c039}} 
+k\+Ready&\textquotesingle{}loader\+\_\+-\/$>$\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}}\textquotesingle{} has succeeded. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kUnloadRequested@{kUnloadRequested}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kUnloadRequested@{kUnloadRequested}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a723f4d66c7dcb881700bf57200e52e7d}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a723f4d66c7dcb881700bf57200e52e7d}} 
+k\+Unload\+Requested&The manager has been requested to unload this servable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kQuiescing@{kQuiescing}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kQuiescing@{kQuiescing}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8ab872a4b4ff718537f0aee3d06c9f914f}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8ab872a4b4ff718537f0aee3d06c9f914f}} 
+k\+Quiescing&The servable is going to be made unavailable for serving. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kQuiesced@{kQuiesced}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kQuiesced@{kQuiesced}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8aa468d1e1bd9ad8243b7c9d31ac711ed6}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8aa468d1e1bd9ad8243b7c9d31ac711ed6}} 
+k\+Quiesced&The servable has been made unavailable for serving. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kUnloading@{kUnloading}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kUnloading@{kUnloading}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8ae4e34ef3f2680339459b2a77aa84fdb8}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8ae4e34ef3f2680339459b2a77aa84fdb8}} 
+k\+Unloading&\textquotesingle{}loader\+\_\+-\/$>$\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a5c131cef32324cd2ec6b22fc4dd92942}{Unload()}}\textquotesingle{} has been called. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDisabled@{kDisabled}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kDisabled@{kDisabled}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a7b04d8795f5fd03c761ce70dab985fee}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8a7b04d8795f5fd03c761ce70dab985fee}} 
+k\+Disabled&\textquotesingle{}loader\+\_\+-\/$>$\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a5c131cef32324cd2ec6b22fc4dd92942}{Unload()}}\textquotesingle{} has finished. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kError@{kError}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!kError@{kError}}}\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8ae3587c730cc1aa530fa4ddc9c4204e97}\label{classtensorflow_1_1serving_1_1LoaderHarness_a9552eba3f9f1ca631c218befd9e686f8ae3587c730cc1aa530fa4ddc9c4204e97}} 
+k\+Error&An error has occurred, either during \textquotesingle{}loader\+\_\+-\/$>$\mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}}\textquotesingle{} or outside of the harness (and was reported to the harness via a call to \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a9833ae8f23545a9975901d8a3508d30a}{Error()}}). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a7f7ab209922600ef1d95e6be35dec8fd}\label{classtensorflow_1_1serving_1_1LoaderHarness_a7f7ab209922600ef1d95e6be35dec8fd}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!LoaderHarness@{LoaderHarness}}
+\index{LoaderHarness@{LoaderHarness}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{LoaderHarness()}{LoaderHarness()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+tensorflow\+::serving\+::\+Loader\+Harness\+::\+Loader\+Harness (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&}]{id,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} $>$}]{loader,  }\item[{std\+::unique\+\_\+ptr$<$ T $>$}]{additional\+\_\+state,  }\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1LoaderHarness_1_1Options}{Options}} \&}]{options = {\ttfamily \mbox{\hyperlink{structtensorflow_1_1serving_1_1LoaderHarness_1_1Options}{Options}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor to create a harness with additional state, which a manager needs. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a60facd158c858dbdcaaae74a18a4edd9}\label{classtensorflow_1_1serving_1_1LoaderHarness_a60facd158c858dbdcaaae74a18a4edd9}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!````~LoaderHarness@{$\sim$LoaderHarness}}
+\index{````~LoaderHarness@{$\sim$LoaderHarness}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{$\sim$LoaderHarness()}{~LoaderHarness()}}
+{\footnotesize\ttfamily tensorflow\+::serving\+::\+Loader\+Harness\+::$\sim$\+Loader\+Harness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Legal to destruct iff current state is one of k\+New, k\+Disabled or k\+Error. Check-\/fails if violated. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a2a5bfd26e4b27de0e59a9dea68315a84}\label{classtensorflow_1_1serving_1_1LoaderHarness_a2a5bfd26e4b27de0e59a9dea68315a84}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!additional\_state@{additional\_state}}
+\index{additional\_state@{additional\_state}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{additional\_state()}{additional\_state()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ tensorflow\+::serving\+::\+Loader\+Harness\+::additional\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the additional state. Returns nullptr if the type mismatches or if it wasn\textquotesingle{}t set. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a11b81e561e55c5b21907f8fc2eafe6e9}\label{classtensorflow_1_1serving_1_1LoaderHarness_a11b81e561e55c5b21907f8fc2eafe6e9}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!DoneQuiescing@{DoneQuiescing}}
+\index{DoneQuiescing@{DoneQuiescing}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{DoneQuiescing()}{DoneQuiescing()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Loader\+Harness\+::\+Done\+Quiescing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transitions the state to k\+Quiesced, which means that there are no more live handles to this servable available in the frontend. At this point, we can unload this object.
+
+REQUIRES\+: State is k\+Quiescing when called. Otherwise DCHECK-\/fails, transitions to state k\+Error and invokes \textquotesingle{}options\+\_\+.\+error\+\_\+callback\textquotesingle{}. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}\label{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!Load@{Load}}
+\index{Load@{Load}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Loader\+Harness\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transitions to k\+Loading, delegates to Servable\+::\+Load(), then transitions either to k\+Ready if \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}} succeeds, or to k\+Error (and invokes \textquotesingle{}options\+\_\+. error\+\_\+callback\textquotesingle{}) if \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}} fails. This call may take a long time.
+
+We retry the Servable\+::\+Load() according to the options set during construction of this class. We stop retrying and give up if 1. we have reached max\+\_\+num\+\_\+load\+\_\+retries or, 2. if cancel\+\_\+load() is set to true.
+
+REQUIRES\+: State is k\+Load\+Approved when called. Otherwise DCHECK-\/fails, transitions to state k\+Error and invokes \textquotesingle{}options\+\_\+.\+error\+\_\+callback\textquotesingle{}. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_aab4e0158cc9fccd7539df5a9fa312e8c}\label{classtensorflow_1_1serving_1_1LoaderHarness_aab4e0158cc9fccd7539df5a9fa312e8c}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!LoadApproved@{LoadApproved}}
+\index{LoadApproved@{LoadApproved}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{LoadApproved()}{LoadApproved()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Loader\+Harness\+::\+Load\+Approved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transitions to k\+Load\+Approved.
+
+REQUIRES\+: State is k\+Load\+Requested when called. Otherwise DCHECK-\/fails, transitions to state k\+Error and invokes \textquotesingle{}options\+\_\+.\+error\+\_\+callback\textquotesingle{}. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_ae0be696227d934efdfc91bd13de4e48a}\label{classtensorflow_1_1serving_1_1LoaderHarness_ae0be696227d934efdfc91bd13de4e48a}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!loader@{loader}}
+\index{loader@{loader}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{loader()}{loader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}}$\ast$ tensorflow\+::serving\+::\+Loader\+Harness\+::loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a pointer to the wrapped loader. Ownership remains with this class. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_af38723eb75813331dad2f0d910466f57}\label{classtensorflow_1_1serving_1_1LoaderHarness_af38723eb75813331dad2f0d910466f57}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!LoadRequested@{LoadRequested}}
+\index{LoadRequested@{LoadRequested}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{LoadRequested()}{LoadRequested()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Loader\+Harness\+::\+Load\+Requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transitions the state of the harness to k\+Load\+Requested iff its current state is k\+New. The test-\/and-\/change is done transactionally, so this method can be used to ensure that at most one \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}} request can proceed. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a001ec617f6fd186d27cc911f9a952f00}\label{classtensorflow_1_1serving_1_1LoaderHarness_a001ec617f6fd186d27cc911f9a952f00}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!set\_should\_retry@{set\_should\_retry}}
+\index{set\_should\_retry@{set\_should\_retry}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{set\_should\_retry()}{set\_should\_retry()}}
+{\footnotesize\ttfamily void tensorflow\+::serving\+::\+Loader\+Harness\+::set\+\_\+should\+\_\+retry (\begin{DoxyParamCaption}\item[{std\+::function$<$ bool(absl\+::\+Status)$>$}]{should\+\_\+retry }\end{DoxyParamCaption})}
+
+Sets the retry behavior for the servable using a function which accepts the status of the last load attempt and returns a boolean. If the boolean is false, we cancel the next retry. This is best-\/effort, and does not preempt a \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}} which is already happening, only subsequent calls.
+
+If the retries are cancelled, the servable goes into a state dependent on the last \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}} called on it. If the last \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}} was successful, it will be in state k\+Ready, else in k\+Error. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a811f9dbe7ab8fb5df0c35916ec57aad8}\label{classtensorflow_1_1serving_1_1LoaderHarness_a811f9dbe7ab8fb5df0c35916ec57aad8}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!StartQuiescing@{StartQuiescing}}
+\index{StartQuiescing@{StartQuiescing}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{StartQuiescing()}{StartQuiescing()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Loader\+Harness\+::\+Start\+Quiescing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transitions the state to k\+Quiescing, which means that we would like to not give out any more handles to this servable.
+
+REQUIRES\+: State is k\+Unload\+Requested when called. Otherwise DCHECK-\/fails, transitions to state k\+Error and invokes \textquotesingle{}options\+\_\+.\+error\+\_\+callback\textquotesingle{}. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_afb34eca424243aacbf71f466d4ec99ef}\label{classtensorflow_1_1serving_1_1LoaderHarness_afb34eca424243aacbf71f466d4ec99ef}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!status@{status}}
+\index{status@{status}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Loader\+Harness\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Whether anything has gone wrong with this servable. If state is k\+Error, this will be non-\/\+OK. If not OK, the error could be something that occurred in a \mbox{\hyperlink{classtensorflow_1_1serving_1_1Source}{Source}} or \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter}{Source\+Adapter}}, in the \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}}, in the \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager}{Manager}}, or elsewhere. All errors pertaining to the servable are reported here, regardless of origin. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a5c131cef32324cd2ec6b22fc4dd92942}\label{classtensorflow_1_1serving_1_1LoaderHarness_a5c131cef32324cd2ec6b22fc4dd92942}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!Unload@{Unload}}
+\index{Unload@{Unload}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Loader\+Harness\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transitions to k\+Unloading, delegates to Servable\+::\+Unload(), then transitions to k\+Disabled when \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_a5c131cef32324cd2ec6b22fc4dd92942}{Unload()}} is done.
+
+REQUIRES\+: State is k\+Quiesced when called. Otherwise DCHECK-\/fails, transitions to state k\+Error and invokes \textquotesingle{}options\+\_\+.\+error\+\_\+callback\textquotesingle{}. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1LoaderHarness_a6451e73c25ba30b0c78a560deba29e03}\label{classtensorflow_1_1serving_1_1LoaderHarness_a6451e73c25ba30b0c78a560deba29e03}} 
+\index{tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}!UnloadRequested@{UnloadRequested}}
+\index{UnloadRequested@{UnloadRequested}!tensorflow::serving::LoaderHarness@{tensorflow::serving::LoaderHarness}}
+\doxysubsubsection{\texorpdfstring{UnloadRequested()}{UnloadRequested()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::\+Loader\+Harness\+::\+Unload\+Requested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transitions the state of the harness to k\+Unload\+Requested iff its current state is k\+Ready. The test-\/and-\/change is done transactionally, so this method can be used to ensure that at most one \mbox{\hyperlink{classtensorflow_1_1serving_1_1LoaderHarness_af7e5a0ecbec71342dcb2aa9764d0604e}{Load()}} request can proceed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/loader\+\_\+harness.\+h\item 
+tensorflow\+\_\+serving/core/loader\+\_\+harness.\+cc\end{DoxyCompactItemize}

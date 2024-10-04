@@ -1,0 +1,29 @@
+\hypertarget{classtensorflow_1_1serving_1_1ResourceTracker}{}\doxysection{tensorflow\+::serving\+::Resource\+Tracker Class Reference}
+\label{classtensorflow_1_1serving_1_1ResourceTracker}\index{tensorflow::serving::ResourceTracker@{tensorflow::serving::ResourceTracker}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ResourceTracker_a0a6ca7665095f104fb32431edc30dbbd}\label{classtensorflow_1_1serving_1_1ResourceTracker_a0a6ca7665095f104fb32431edc30dbbd}} 
+Status {\bfseries Reserve\+Resources} (const \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} \&servable, bool $\ast$success)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ResourceTracker_ae18c086a1e00b5f75e6cdd0fc196b68c}\label{classtensorflow_1_1serving_1_1ResourceTracker_ae18c086a1e00b5f75e6cdd0fc196b68c}} 
+Status {\bfseries Recompute\+Used\+Resources} (const std\+::vector$<$ const \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}} $\ast$ $>$ \&servables)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ResourceTracker_a0bee6aba9b805879cad91a8216b27d2c}\label{classtensorflow_1_1serving_1_1ResourceTracker_a0bee6aba9b805879cad91a8216b27d2c}} 
+const Resource\+Allocation \& {\bfseries total\+\_\+resources} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ResourceTracker_a3642b816f004bc0a21110a7b99bb60f8}\label{classtensorflow_1_1serving_1_1ResourceTracker_a3642b816f004bc0a21110a7b99bb60f8}} 
+const Resource\+Allocation \& {\bfseries used\+\_\+resources} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ResourceTracker_a1f5dda2912636b45701e2a6159e6a263}\label{classtensorflow_1_1serving_1_1ResourceTracker_a1f5dda2912636b45701e2a6159e6a263}} 
+static Status {\bfseries Create} (const Resource\+Allocation \&total\+\_\+resources, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ResourceUtil}{Resource\+Util}} $>$ util, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ResourceTracker}{Resource\+Tracker}} $>$ $\ast$tracker)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/resources/resource\+\_\+tracker.\+h\item 
+tensorflow\+\_\+serving/resources/resource\+\_\+tracker.\+cc\end{DoxyCompactItemize}

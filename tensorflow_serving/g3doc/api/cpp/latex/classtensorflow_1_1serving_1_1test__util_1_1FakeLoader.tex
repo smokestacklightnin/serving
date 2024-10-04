@@ -1,0 +1,106 @@
+\hypertarget{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader}{}\doxysection{tensorflow\+::serving\+::test\+\_\+util\+::Fake\+Loader Class Reference}
+\label{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader}\index{tensorflow::serving::test\_util::FakeLoader@{tensorflow::serving::test\_util::FakeLoader}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::test\+\_\+util\+::Fake\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::test\+\_\+util\+::Fake\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a7dca957e589fd4eaaf57fcf05aab62ae}\label{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a7dca957e589fd4eaaf57fcf05aab62ae}} 
+{\bfseries Fake\+Loader} (int64\+\_\+t \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_afd3838612c119a086d1b17ce7cdfb9ed}{servable}}, const Status load\+\_\+status=Status())
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_ace387f4f5d2b37245bbb5864c548dd0c}\label{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_ace387f4f5d2b37245bbb5864c548dd0c}} 
+Status {\bfseries load\+\_\+status} ()
+\item 
+Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a2edb74f10db51d582ee689d3d81cacb7}{Load}} () override
+\item 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a336ea084823272d433d19be25769fc70}{Unload}} () override
+\item 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_afd3838612c119a086d1b17ce7cdfb9ed}{servable}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a961505cccbe5ead1572b3ba8a69eb097}\label{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a961505cccbe5ead1572b3ba8a69eb097}} 
+static int {\bfseries num\+\_\+fake\+\_\+loaders} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a27d8493fe0f418b27cdd9949db26ede2}\label{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a27d8493fe0f418b27cdd9949db26ede2}} 
+static bool {\bfseries was\+\_\+deleted\+\_\+in\+\_\+this\+\_\+thread} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a2edb74f10db51d582ee689d3d81cacb7}\label{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a2edb74f10db51d582ee689d3d81cacb7}} 
+\index{tensorflow::serving::test\_util::FakeLoader@{tensorflow::serving::test\_util::FakeLoader}!Load@{Load}}
+\index{Load@{Load}!tensorflow::serving::test\_util::FakeLoader@{tensorflow::serving::test\_util::FakeLoader}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily Status tensorflow\+::serving\+::test\+\_\+util\+::\+Fake\+Loader\+::\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Fetches any data that needs to be loaded before using the servable returned by \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_afd3838612c119a086d1b17ce7cdfb9ed}{servable()}}. May use no more resources than the estimate reported by \mbox{\hyperlink{classtensorflow_1_1serving_1_1ResourceUnsafeLoader_a1a0c1398af9af54032ba16a79a9ecac4}{Estimate\+Resources()}}.
+
+If implementing \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a2edb74f10db51d582ee689d3d81cacb7}{Load()}}, you don\textquotesingle{}t have to override \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7aebd433e4a782265d847e507f3bc824}{Load\+With\+Metadata()}}. 
+
+Reimplemented from \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a7dadc89ccbf488aae0102368261cc692}{tensorflow\+::serving\+::\+Loader}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_afd3838612c119a086d1b17ce7cdfb9ed}\label{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_afd3838612c119a086d1b17ce7cdfb9ed}} 
+\index{tensorflow::serving::test\_util::FakeLoader@{tensorflow::serving::test\_util::FakeLoader}!servable@{servable}}
+\index{servable@{servable}!tensorflow::serving::test\_util::FakeLoader@{tensorflow::serving::test\_util::FakeLoader}}
+\doxysubsubsection{\texorpdfstring{servable()}{servable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} tensorflow\+::serving\+::test\+\_\+util\+::\+Fake\+Loader\+::servable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns an opaque interface to the underlying servable object. The caller should know the precise type of the interface in order to make actual use of it. For example\+:
+
+Custom\+Loader implementation\+: \begin{DoxyVerb}class CustomLoader : public Loader {
+ public:
+  ...
+  Status Load() override {
+    servable_ = ...;
+  }
+
+  AnyPtr servable() override { return servable_; }
+
+ private:
+  CustomServable* servable_ = nullptr;
+};
+\end{DoxyVerb}
+ Serving user request\+: \begin{DoxyVerb}ServableHandle&lt;CustomServable> handle = ...
+CustomServable* servable = handle.get();
+servable->...
+\end{DoxyVerb}
+ If \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_afd3838612c119a086d1b17ce7cdfb9ed}{servable()}} is called after successful \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a2edb74f10db51d582ee689d3d81cacb7}{Load()}} and before \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a336ea084823272d433d19be25769fc70}{Unload()}}, it returns a valid, non-\/null \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}} object. If called before a successful \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a2edb74f10db51d582ee689d3d81cacb7}{Load()}} call or after \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a336ea084823272d433d19be25769fc70}{Unload()}}, it returns null \mbox{\hyperlink{classtensorflow_1_1serving_1_1AnyPtr}{Any\+Ptr}}. 
+
+Implements \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_a640d67dc6ca9926595d29fdfe63868c1}{tensorflow\+::serving\+::\+Loader}}.
+
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a336ea084823272d433d19be25769fc70}\label{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a336ea084823272d433d19be25769fc70}} 
+\index{tensorflow::serving::test\_util::FakeLoader@{tensorflow::serving::test\_util::FakeLoader}!Unload@{Unload}}
+\index{Unload@{Unload}!tensorflow::serving::test\_util::FakeLoader@{tensorflow::serving::test\_util::FakeLoader}}
+\doxysubsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void tensorflow\+::serving\+::test\+\_\+util\+::\+Fake\+Loader\+::\+Unload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Frees any resources allocated during \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a2edb74f10db51d582ee689d3d81cacb7}{Load()}} (except perhaps for resources shared across servables that are still needed for other active ones). The loader does not need to return to the \char`\"{}new\char`\"{} state (i.\+e. \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a2edb74f10db51d582ee689d3d81cacb7}{Load()}} cannot be called after \mbox{\hyperlink{classtensorflow_1_1serving_1_1test__util_1_1FakeLoader_a336ea084823272d433d19be25769fc70}{Unload()}}). 
+
+Implements \mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader_addca8f4264380e5e635bbe1197f5347f}{tensorflow\+::serving\+::\+Loader}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/test\+\_\+util/fake\+\_\+loader.\+h\item 
+tensorflow\+\_\+serving/core/test\+\_\+util/fake\+\_\+loader.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\hypertarget{classtensorflow_1_1serving_1_1RegressorInterface}{}\doxysection{tensorflow\+::serving\+::Regressor\+Interface Class Reference}
+\label{classtensorflow_1_1serving_1_1RegressorInterface}\index{tensorflow::serving::RegressorInterface@{tensorflow::serving::RegressorInterface}}
+
+
+{\ttfamily \#include $<$regressor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Status \mbox{\hyperlink{classtensorflow_1_1serving_1_1RegressorInterface_aef7f5c7d1d322f05a0821f20c0164203}{Regress}} (const Regression\+Request \&request, Regression\+Result $\ast$result)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model agnostic interface for performing regression.
+
+Specific implementations will exist for different model types (e.\+g. Tensor\+Flow Saved\+Model) that can convert the request into a model specific input and know how to convert the output into a generic Regression\+Result. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1RegressorInterface_aef7f5c7d1d322f05a0821f20c0164203}\label{classtensorflow_1_1serving_1_1RegressorInterface_aef7f5c7d1d322f05a0821f20c0164203}} 
+\index{tensorflow::serving::RegressorInterface@{tensorflow::serving::RegressorInterface}!Regress@{Regress}}
+\index{Regress@{Regress}!tensorflow::serving::RegressorInterface@{tensorflow::serving::RegressorInterface}}
+\doxysubsubsection{\texorpdfstring{Regress()}{Regress()}}
+{\footnotesize\ttfamily virtual Status tensorflow\+::serving\+::\+Regressor\+Interface\+::\+Regress (\begin{DoxyParamCaption}\item[{const Regression\+Request \&}]{request,  }\item[{Regression\+Result $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Given a Regression\+Request, populates the Regression\+Result with the result.
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & Input request specifying the model/signature to query along with the data payload. \\
+\hline
+{\em result} & The output regression results that will get populated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A status object indicating success or failure. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/apis/regressor.\+h\end{DoxyCompactItemize}

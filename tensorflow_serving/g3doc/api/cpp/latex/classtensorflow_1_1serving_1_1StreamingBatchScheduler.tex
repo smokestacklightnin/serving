@@ -1,0 +1,53 @@
+\hypertarget{classtensorflow_1_1serving_1_1StreamingBatchScheduler}{}\doxysection{tensorflow\+::serving\+::Streaming\+Batch\+Scheduler$<$ Task\+Type $>$ Class Template Reference}
+\label{classtensorflow_1_1serving_1_1StreamingBatchScheduler}\index{tensorflow::serving::StreamingBatchScheduler$<$ TaskType $>$@{tensorflow::serving::StreamingBatchScheduler$<$ TaskType $>$}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Streaming\+Batch\+Scheduler$<$ Task\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classtensorflow_1_1serving_1_1StreamingBatchScheduler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Streaming\+Batch\+Scheduler$<$ Task\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classtensorflow_1_1serving_1_1StreamingBatchScheduler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtensorflow_1_1serving_1_1StreamingBatchScheduler_1_1Options}{Options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamingBatchScheduler_a40142577908f6bc5b75b58e76bbf7d0c}\label{classtensorflow_1_1serving_1_1StreamingBatchScheduler_a40142577908f6bc5b75b58e76bbf7d0c}} 
+Status {\bfseries Schedule} (std\+::unique\+\_\+ptr$<$ Task\+Type $>$ $\ast$task) override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamingBatchScheduler_a87486e2b584d077bd138181498a10fe9}\label{classtensorflow_1_1serving_1_1StreamingBatchScheduler_a87486e2b584d077bd138181498a10fe9}} 
+size\+\_\+t {\bfseries Num\+Enqueued\+Tasks} () const override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamingBatchScheduler_af39088302ce6cb4c97dcd0c7ec96f8ec}\label{classtensorflow_1_1serving_1_1StreamingBatchScheduler_af39088302ce6cb4c97dcd0c7ec96f8ec}} 
+size\+\_\+t {\bfseries Scheduling\+Capacity} () const override
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamingBatchScheduler_a4560b96d82e2f32b126b32474329721d}\label{classtensorflow_1_1serving_1_1StreamingBatchScheduler_a4560b96d82e2f32b126b32474329721d}} 
+size\+\_\+t {\bfseries max\+\_\+task\+\_\+size} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamingBatchScheduler_ac5de9bbb555f0618a4502ae800fa1f85}\label{classtensorflow_1_1serving_1_1StreamingBatchScheduler_ac5de9bbb555f0618a4502ae800fa1f85}} 
+static Status {\bfseries Create} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1StreamingBatchScheduler_1_1Options}{Options}} \&options, std\+::function$<$ void(std\+::unique\+\_\+ptr$<$ Batch$<$ Task\+Type $>$$>$)$>$ process\+\_\+batch\+\_\+callback, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1StreamingBatchScheduler}{Streaming\+Batch\+Scheduler}}$<$ Task\+Type $>$$>$ $\ast$scheduler)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/batching/streaming\+\_\+batch\+\_\+scheduler.\+h\end{DoxyCompactItemize}

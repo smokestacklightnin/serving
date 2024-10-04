@@ -1,0 +1,172 @@
+::: {#top}
+::: {#titlearea}
++-----------------------------------------------------------------------+
+| ::: {#projectname}                                                    |
+| My Project                                                            |
+| :::                                                                   |
++-----------------------------------------------------------------------+
+:::
+
+::: {#main-nav}
+:::
+
+::: {#MSearchSelectWindow onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()" onkeydown="return searchBox.OnSearchSelectKey(event)"}
+:::
+
+::: {#MSearchResultsWindow}
+:::
+
+::: {#nav-path .navpath}
+-   **tensorflow**
+-   **serving**
+-   **test\_util**
+-   [MockServerRequestLogger](classtensorflow_1_1serving_1_1test__util_1_1MockServerRequestLogger.html){.el}
+:::
+:::
+
+::: {.header}
+::: {.summary}
+[Public Member Functions](#pub-methods) \| [List of all
+members](classtensorflow_1_1serving_1_1test__util_1_1MockServerRequestLogger-members.html)
+:::
+
+::: {.headertitle}
+::: {.title}
+tensorflow::serving::test\_util::MockServerRequestLogger Class Reference
+:::
+:::
+:::
+
+::: {.contents}
+::: {.dynheader}
+Inheritance diagram for
+tensorflow::serving::test\_util::MockServerRequestLogger:
+:::
+
+::: {.dyncontent}
+::: {.center}
+![Inheritance
+graph](classtensorflow_1_1serving_1_1test__util_1_1MockServerRequestLogger__inherit__graph.png)
+:::
+
+[\[[legend](graph_legend.html)\]]{.legend}
+:::
+
+::: {.dynheader}
+Collaboration diagram for
+tensorflow::serving::test\_util::MockServerRequestLogger:
+:::
+
+::: {.dyncontent}
+::: {.center}
+![Collaboration
+graph](classtensorflow_1_1serving_1_1test__util_1_1MockServerRequestLogger__coll__graph.png)
+:::
+
+[\[[legend](graph_legend.html)\]]{.legend}
+:::
+
+[]{#pub-methods} Public Member Functions {#public-member-functions .groupheader}
+----------------------------------------
+:::
+
+[]{#a94be098880647ddcbbd65e52c8a0157f}  
+
+**MOCK\_METHOD** (Status, Update,((const std::map\< string,
+std::vector\< LoggingConfig \>\> &logging\_config\_map)),(override))
+
+ 
+
+[]{#ad74af5f8cdd064938d95ea33b599dcec}  
+
+**MOCK\_METHOD** (Status, Log,(const google::protobuf::Message &request,
+const google::protobuf::Message &response, const LogMetadata
+&log\_metadata),(override))
+
+ 
+
+![-](closed.png) Public Member Functions inherited from
+[tensorflow::serving::ServerRequestLogger](classtensorflow_1_1serving_1_1ServerRequestLogger.html){.el}
+
+[]{#a4ba87444abb14576034495c7106d4880} virtual Status 
+
+**Update** (const std::map\< string, std::vector\< LoggingConfig \>\>
+&logging\_config\_map)
+
+ 
+
+[]{#a5ee712900d7f9aa63ad6e31c1d84d257} virtual Status 
+
+**Log** (const google::protobuf::Message &request, const
+google::protobuf::Message &response, const LogMetadata &log\_metadata)
+
+ 
+
+[]{#a5a54da9c036e4115ac69bb5b22e5ed53} template\<typename Request ,
+typename Response \>
+
+std::unique\_ptr\<
+[StreamLogger](classtensorflow_1_1serving_1_1StreamLogger.html){.el}\<
+Request, Response \> \> 
+
+**StartLoggingStream** (const LogMetadata &log\_metadata,
+CreateStreamLoggerFn\< Request, Response \> create\_stream\_logger\_fn)
+
+ 
+
+[]{#inherited} Additional Inherited Members {#additional-inherited-members .groupheader}
+-------------------------------------------
+
+![-](closed.png) Public Types inherited from
+[tensorflow::serving::ServerRequestLogger](classtensorflow_1_1serving_1_1ServerRequestLogger.html){.el}
+
+[]{#a6e1a5971a30dfc712a2567817f9b76e9} using 
+
+**LoggerCreator** = std::function\< Status(const LoggingConfig
+&logging\_config, std::shared\_ptr\<
+[RequestLogger](classtensorflow_1_1serving_1_1RequestLogger.html){.el}
+\> \*)\>
+
+ 
+
+[]{#a5ff117d28de0159ecc181f6bc85f7d24} template\<typename Request ,
+typename Response \>
+
+using 
+
+**CreateStreamLoggerFn** = std::function\< std::unique\_ptr\<
+[StreamLogger](classtensorflow_1_1serving_1_1StreamLogger.html){.el}\<
+Request, Response \> \>()\>
+
+ 
+
+![-](closed.png) Static Public Member Functions inherited from
+[tensorflow::serving::ServerRequestLogger](classtensorflow_1_1serving_1_1ServerRequestLogger.html){.el}
+
+[]{#a2de29105fb583ca1ac99d224efe2d322} static Status 
+
+**Create** (LoggerCreator request\_logger\_creator, std::unique\_ptr\<
+[ServerRequestLogger](classtensorflow_1_1serving_1_1ServerRequestLogger.html){.el}
+\> \*server\_request\_logger)
+
+ 
+
+![-](closed.png) Protected Member Functions inherited from
+[tensorflow::serving::ServerRequestLogger](classtensorflow_1_1serving_1_1ServerRequestLogger.html){.el}
+
+[]{#ab234ed5ecfb8f81b1d3ce1de2f2b8f33}  
+
+**ServerRequestLogger** (LoggerCreator request\_logger\_creator)
+
+ 
+
+------------------------------------------------------------------------
+
+The documentation for this class was generated from the following file:
+
+-   tensorflow\_serving/core/test\_util/[mock\_server\_request\_logger.h](mock__server__request__logger_8h_source.html){.el}
+
+------------------------------------------------------------------------
+
+[Generated by [![doxygen](doxygen.svg){.footer width="104"
+height="31"}](https://www.doxygen.org/index.html) 1.9.1]{.small}

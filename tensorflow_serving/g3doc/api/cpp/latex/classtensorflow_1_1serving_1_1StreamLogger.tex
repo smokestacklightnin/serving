@@ -1,0 +1,28 @@
+\hypertarget{classtensorflow_1_1serving_1_1StreamLogger}{}\doxysection{tensorflow\+::serving\+::Stream\+Logger$<$ Request, Response $>$ Class Template Reference}
+\label{classtensorflow_1_1serving_1_1StreamLogger}\index{tensorflow::serving::StreamLogger$<$ Request, Response $>$@{tensorflow::serving::StreamLogger$<$ Request, Response $>$}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamLogger_a7befdae936105bf5c7067bfacb56d5c5}\label{classtensorflow_1_1serving_1_1StreamLogger_a7befdae936105bf5c7067bfacb56d5c5}} 
+using {\bfseries Log\+Message\+Fn} = std\+::function$<$ absl\+::\+Status(const google\+::protobuf\+::\+Message \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamLogger_a8c2c225e20109c9e9e01ef44c27f14ef}\label{classtensorflow_1_1serving_1_1StreamLogger_a8c2c225e20109c9e9e01ef44c27f14ef}} 
+virtual void {\bfseries Log\+Stream\+Request} (Request request)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamLogger_a1805308e6736793e5365245b89601153}\label{classtensorflow_1_1serving_1_1StreamLogger_a1805308e6736793e5365245b89601153}} 
+virtual void {\bfseries Log\+Stream\+Response} (Response response)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamLogger_af44598e443cfa821c44f4a9b5cb145b0}\label{classtensorflow_1_1serving_1_1StreamLogger_af44598e443cfa821c44f4a9b5cb145b0}} 
+void {\bfseries Add\+Log\+Callback} (const Log\+Metadata \&log\+\_\+metadata, Log\+Message\+Fn log\+\_\+message\+\_\+fn)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1StreamLogger_a9a856fc3f04791d758a26d8a9e9de7fb}\label{classtensorflow_1_1serving_1_1StreamLogger_a9a856fc3f04791d758a26d8a9e9de7fb}} 
+absl\+::\+Status {\bfseries Log\+Message} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/stream\+\_\+logger.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,154 @@
+\hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor}{}\doxysection{tensorflow\+::serving\+::Servable\+State\+Monitor Class Reference}
+\label{classtensorflow_1_1serving_1_1ServableStateMonitor}\index{tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}}
+
+
+{\ttfamily \#include $<$servable\+\_\+state\+\_\+monitor.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateMonitor_1_1Options}{Options}}
+\item 
+struct \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateMonitor_1_1ServableStateAndTime}{Servable\+State\+And\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a5ef18d6969478a087530f5b77e0bd2f1}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a5ef18d6969478a087530f5b77e0bd2f1}} 
+using {\bfseries Servable\+Name} = string
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_aacd5912de4ba934c46ad82db1c525ce3}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_aacd5912de4ba934c46ad82db1c525ce3}} 
+using {\bfseries Version} = int64
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a8010e4b3453ae200256f3d56dd8f755e}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a8010e4b3453ae200256f3d56dd8f755e}} 
+using {\bfseries Version\+Map} = std\+::map$<$ Version, \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateMonitor_1_1ServableStateAndTime}{Servable\+State\+And\+Time}}, std\+::greater$<$ Version $>$ $>$
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a61d0ee57a6dcd59e82e460c0d17a2604}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a61d0ee57a6dcd59e82e460c0d17a2604}} 
+using {\bfseries Servable\+Map} = std\+::map$<$ Servable\+Name, Version\+Map $>$
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a58d43d766bb8316983316896f258498e}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a58d43d766bb8316983316896f258498e}} 
+using {\bfseries Servable\+Set} = std\+::set$<$ Servable\+Name $>$
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a6dbb131b4d7c6f036da6e3ebed3b6ad1}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a6dbb131b4d7c6f036da6e3ebed3b6ad1}} 
+using {\bfseries Bounded\+Log} = std\+::deque$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateMonitor_1_1ServableStateAndTime}{Servable\+State\+And\+Time}} $>$
+\item 
+using \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_a6b64d18d981941012439766e57bd8d66}{Servable\+State\+Notifier\+Fn}} = std\+::function$<$ void(bool reached\+\_\+goal\+\_\+state, const std\+::map$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}, Servable\+State\+::\+Manager\+State $>$ \&states\+\_\+reached)$>$
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a4c97d1fd2318e71b83eac646e27599c9}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a4c97d1fd2318e71b83eac646e27599c9}} 
+using {\bfseries Notify\+Fn} = std\+::function$<$ void(const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableState}{Servable\+State}} \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a85cf3611dfc401b031f92c0cfa353bfd}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a85cf3611dfc401b031f92c0cfa353bfd}} 
+{\bfseries Servable\+State\+Monitor} (\mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus}{Event\+Bus}}$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableState}{Servable\+State}} $>$ $\ast$bus, const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateMonitor_1_1Options}{Options}} \&options=\mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateMonitor_1_1Options}{Options}}())
+\item 
+absl\+::optional$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableState}{Servable\+State}} $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_a8fa6dd1536bbb85a55b3e41c1d2577d1}{Get\+State}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&servable\+\_\+id) const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+absl\+::optional$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateMonitor_1_1ServableStateAndTime}{Servable\+State\+And\+Time}} $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_a8ff54ab2471885168dba0b1a05be7bea}{Get\+State\+And\+Time}} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&servable\+\_\+id) const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+Version\+Map \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_a501ef561e30709fe17f10c913d34bb1e}{Get\+Version\+States}} (const string \&servable\+\_\+name) const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_abc3c1c27b6b7c0e8ef9a42039ede74cc}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_abc3c1c27b6b7c0e8ef9a42039ede74cc}} 
+Servable\+Map \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_abc3c1c27b6b7c0e8ef9a42039ede74cc}{Get\+All\+Servable\+States}} () const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns the current states of all tracked versions of all servables. \end{DoxyCompactList}\item 
+Servable\+Map \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_a522166e0255c93e87a6d63c3d17e3f38}{Get\+Live\+Servable\+States}} () const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_ae3ad2a50b7fa7b695885fe913b70b029}{Forget\+Unloaded\+Servable\+States}} () TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_af4623ec7d0e8c756bfe0603d879304c7}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_af4623ec7d0e8c756bfe0603d879304c7}} 
+Servable\+Set {\bfseries Get\+Available\+Servable\+States} () const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a2afc57f0eb671a3c3342c7dd71a9d6a7}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a2afc57f0eb671a3c3342c7dd71a9d6a7}} 
+Bounded\+Log \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_a2afc57f0eb671a3c3342c7dd71a9d6a7}{Get\+Bounded\+Log}} () const TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\begin{DoxyCompactList}\small\item\em Returns the current bounded log of handled servable state events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a06b073bf82b07c224227e1efa5d44603}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a06b073bf82b07c224227e1efa5d44603}} 
+void {\bfseries Notify\+When\+Servables\+Reach\+State} (const std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableRequest}{Servable\+Request}} $>$ \&servables, Servable\+State\+::\+Manager\+State goal\+\_\+state, const \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_a6b64d18d981941012439766e57bd8d66}{Servable\+State\+Notifier\+Fn}} \&notifier\+\_\+fn) TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+)
+\item 
+bool \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_aa9579ee04bf76fa627d65d9cbbb7ccb7}{Wait\+Until\+Servables\+Reach\+State\+With\+Timeout}} (const std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableRequest}{Servable\+Request}} $>$ \&servables, Servable\+State\+::\+Manager\+State goal\+\_\+state, absl\+::\+Duration timeout, std\+::map$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}, Servable\+State\+::\+Manager\+State $>$ $\ast$states\+\_\+reached=nullptr) TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(mu\+\_\+) TF\+\_\+\+MUST\+\_\+\+USE\+\_\+\+RESULT
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a3e01409c4f3d16789ae42ba9b5fd0b12}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a3e01409c4f3d16789ae42ba9b5fd0b12}} 
+bool {\bfseries Wait\+Until\+Servables\+Reach\+State} (const std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableRequest}{Servable\+Request}} $>$ \&servables, Servable\+State\+::\+Manager\+State goal\+\_\+state, std\+::map$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}, Servable\+State\+::\+Manager\+State $>$ $\ast$states\+\_\+reached=nullptr) TF\+\_\+\+MUST\+\_\+\+USE\+\_\+\+RESULT
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a6d8b172f93c8e74937c4594dd332c154}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a6d8b172f93c8e74937c4594dd332c154}} 
+void {\bfseries Notify} (const Notify\+Fn \&notify\+\_\+fn) TF\+\_\+\+LOCKS\+\_\+\+EXCLUDED(notify\+\_\+mu\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A utility that listens to an \mbox{\hyperlink{classtensorflow_1_1serving_1_1EventBus}{Event\+Bus}}\&lt;\mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableState}{Servable\+State}}$>$, and keeps track of the state of each servable mentioned on the bus. The intended use case is to track the states of servables in a \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager}{Manager}}.
+
+Offers an interface for querying the servable states. It may be useful as the basis for dashboards, as well as for testing a manager.
+
+IMPORTANT\+: You must create this monitor before arranging for events to be published on the event bus, e.\+g. giving the event bus to a \mbox{\hyperlink{classtensorflow_1_1serving_1_1Manager}{Manager}}. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a6b64d18d981941012439766e57bd8d66}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a6b64d18d981941012439766e57bd8d66}} 
+\index{tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}!ServableStateNotifierFn@{ServableStateNotifierFn}}
+\index{ServableStateNotifierFn@{ServableStateNotifierFn}!tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}}
+\doxysubsubsection{\texorpdfstring{ServableStateNotifierFn}{ServableStateNotifierFn}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableStateMonitor_a6b64d18d981941012439766e57bd8d66}{tensorflow\+::serving\+::\+Servable\+State\+Monitor\+::\+Servable\+State\+Notifier\+Fn}} =  std\+::function$<$void( bool reached\+\_\+goal\+\_\+state, const std\+::map$<$\mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}, Servable\+State\+::\+Manager\+State$>$\& states\+\_\+reached)$>$}
+
+Notifies when all of the servables have reached the \textquotesingle{}goal\+\_\+state\textquotesingle{}.
+
+Servables can be specified in two ways\+:
+\begin{DoxyEnumerate}
+\item As specific versions of a servable stream name. In this case, we check whether the specific version has reached the \textquotesingle{}goal\+\_\+state\textquotesingle{} or k\+End.
+\item As latest versions, in which case any version for a servable stream name will be matched against the \textquotesingle{}goal\+\_\+state\textquotesingle{} or k\+End.
+\end{DoxyEnumerate}
+
+We call the \textquotesingle{}notifier\+\_\+fn\textquotesingle{} when both conditions are true -\/
+\begin{DoxyEnumerate}
+\item All of the specific servable requests have either reached the \textquotesingle{}goal\+\_\+state\textquotesingle{} or k\+End.
+\item All of the latest servable requests have reached \textquotesingle{}goal\+\_\+state\textquotesingle{} or k\+End. The \textquotesingle{}notifier\+\_\+fn\textquotesingle{} will be called only once, and not repeatedly.
+\end{DoxyEnumerate}
+
+The \textquotesingle{}reached\+\_\+goal\+\_\+state\textquotesingle{} argument is set as true iff all of the specific servables have reached \textquotesingle{}goal\+\_\+state\textquotesingle{}. So callers should verify that \textquotesingle{}reached\+\_\+goal\+\_\+state\textquotesingle{} is true in the \textquotesingle{}notifier\+\_\+fn\textquotesingle{}.
+
+The \textquotesingle{}states\+\_\+reached\textquotesingle{} argument is populated with the servable\textquotesingle{}s id and the state it reached. The state would be \textquotesingle{}goal\+\_\+state\textquotesingle{} if \textquotesingle{}reached\+\_\+goal\+\_\+state\textquotesingle{} is true, else it will contain one or more servables in k\+End state. For latest servable requests, the servable id will be the id of the servable in the stream which reached the state. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_ae3ad2a50b7fa7b695885fe913b70b029}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_ae3ad2a50b7fa7b695885fe913b70b029}} 
+\index{tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}!ForgetUnloadedServableStates@{ForgetUnloadedServableStates}}
+\index{ForgetUnloadedServableStates@{ForgetUnloadedServableStates}!tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}}
+\doxysubsubsection{\texorpdfstring{ForgetUnloadedServableStates()}{ForgetUnloadedServableStates()}}
+{\footnotesize\ttfamily void tensorflow\+::serving\+::\+Servable\+State\+Monitor\+::\+Forget\+Unloaded\+Servable\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes all servable versions from the Servable\+Map whose states have transitioned to k\+End. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a522166e0255c93e87a6d63c3d17e3f38}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a522166e0255c93e87a6d63c3d17e3f38}} 
+\index{tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}!GetLiveServableStates@{GetLiveServableStates}}
+\index{GetLiveServableStates@{GetLiveServableStates}!tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}}
+\doxysubsubsection{\texorpdfstring{GetLiveServableStates()}{GetLiveServableStates()}}
+{\footnotesize\ttfamily Servable\+State\+Monitor\+::\+Servable\+Map tensorflow\+::serving\+::\+Servable\+State\+Monitor\+::\+Get\+Live\+Servable\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current states of all versions of all servables which have not transitioned to state Servable\+State\+::\+Manager\+State\+::k\+End. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a8fa6dd1536bbb85a55b3e41c1d2577d1}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a8fa6dd1536bbb85a55b3e41c1d2577d1}} 
+\index{tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}!GetState@{GetState}}
+\index{GetState@{GetState}!tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily absl\+::optional$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableState}{Servable\+State}} $>$ tensorflow\+::serving\+::\+Servable\+State\+Monitor\+::\+Get\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&}]{servable\+\_\+id }\end{DoxyParamCaption}) const}
+
+Returns the current state of one servable, or nullopt if that servable is not being tracked. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a8ff54ab2471885168dba0b1a05be7bea}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a8ff54ab2471885168dba0b1a05be7bea}} 
+\index{tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}!GetStateAndTime@{GetStateAndTime}}
+\index{GetStateAndTime@{GetStateAndTime}!tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}}
+\doxysubsubsection{\texorpdfstring{GetStateAndTime()}{GetStateAndTime()}}
+{\footnotesize\ttfamily absl\+::optional$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableStateMonitor_1_1ServableStateAndTime}{Servable\+State\+Monitor\+::\+Servable\+State\+And\+Time}} $>$ tensorflow\+::serving\+::\+Servable\+State\+Monitor\+::\+Get\+State\+And\+Time (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}} \&}]{servable\+\_\+id }\end{DoxyParamCaption}) const}
+
+Returns the current state and time of one servable, or nullopt if that servable is not being tracked. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_a501ef561e30709fe17f10c913d34bb1e}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_a501ef561e30709fe17f10c913d34bb1e}} 
+\index{tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}!GetVersionStates@{GetVersionStates}}
+\index{GetVersionStates@{GetVersionStates}!tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}}
+\doxysubsubsection{\texorpdfstring{GetVersionStates()}{GetVersionStates()}}
+{\footnotesize\ttfamily Servable\+State\+Monitor\+::\+Version\+Map tensorflow\+::serving\+::\+Servable\+State\+Monitor\+::\+Get\+Version\+States (\begin{DoxyParamCaption}\item[{const string \&}]{servable\+\_\+name }\end{DoxyParamCaption}) const}
+
+Returns the current states of all tracked versions of the given servable, if any. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1ServableStateMonitor_aa9579ee04bf76fa627d65d9cbbb7ccb7}\label{classtensorflow_1_1serving_1_1ServableStateMonitor_aa9579ee04bf76fa627d65d9cbbb7ccb7}} 
+\index{tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}!WaitUntilServablesReachStateWithTimeout@{WaitUntilServablesReachStateWithTimeout}}
+\index{WaitUntilServablesReachStateWithTimeout@{WaitUntilServablesReachStateWithTimeout}!tensorflow::serving::ServableStateMonitor@{tensorflow::serving::ServableStateMonitor}}
+\doxysubsubsection{\texorpdfstring{WaitUntilServablesReachStateWithTimeout()}{WaitUntilServablesReachStateWithTimeout()}}
+{\footnotesize\ttfamily bool tensorflow\+::serving\+::\+Servable\+State\+Monitor\+::\+Wait\+Until\+Servables\+Reach\+State\+With\+Timeout (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableRequest}{Servable\+Request}} $>$ \&}]{servables,  }\item[{Servable\+State\+::\+Manager\+State}]{goal\+\_\+state,  }\item[{absl\+::\+Duration}]{timeout,  }\item[{std\+::map$<$ \mbox{\hyperlink{structtensorflow_1_1serving_1_1ServableId}{Servable\+Id}}, Servable\+State\+::\+Manager\+State $>$ $\ast$}]{states\+\_\+reached = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Similar to Notify\+When\+Servables\+Reach\+State(...), but instead of notifying, we wait until the \textquotesingle{}goal\+\_\+state\textquotesingle{} or k\+End is reached.
+
+To understand the return value and the return parameter \textquotesingle{}states\+\_\+reached\textquotesingle{}, please read the documentation on Notify\+When\+Servables\+Reach\+State(...). Wait\+Until\+Servables\+Reach\+State\+With\+Timeout and Wait\+Until\+Servables\+Reach\+State perform the same function, but the former has a timeout while the latter waits indefinitely. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/servable\+\_\+state\+\_\+monitor.\+h\item 
+tensorflow\+\_\+serving/core/servable\+\_\+state\+\_\+monitor.\+cc\end{DoxyCompactItemize}

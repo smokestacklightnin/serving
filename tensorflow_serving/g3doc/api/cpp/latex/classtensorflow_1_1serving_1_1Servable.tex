@@ -1,0 +1,66 @@
+\hypertarget{classtensorflow_1_1serving_1_1Servable}{}\doxysection{tensorflow\+::serving\+::Servable Class Reference}
+\label{classtensorflow_1_1serving_1_1Servable}\index{tensorflow::serving::Servable@{tensorflow::serving::Servable}}
+
+
+Inheritance diagram for tensorflow\+::serving\+::Servable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtensorflow_1_1serving_1_1Servable__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_aae1542327fc78499507b9a4f2fa75571}\label{classtensorflow_1_1serving_1_1Servable_aae1542327fc78499507b9a4f2fa75571}} 
+using {\bfseries Run\+Options} = \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{tensorflow\+::serving\+::servables\+::\+Run\+Options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a38b7c413e4c12e95fdc9680b2888b8a0}\label{classtensorflow_1_1serving_1_1Servable_a38b7c413e4c12e95fdc9680b2888b8a0}} 
+{\bfseries Servable} (absl\+::string\+\_\+view name, int64\+\_\+t version, bool is\+\_\+critical=false)
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a393737a4803a6ba744f9eedd132ddb65}\label{classtensorflow_1_1serving_1_1Servable_a393737a4803a6ba744f9eedd132ddb65}} 
+absl\+::string\+\_\+view {\bfseries name} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a6f4b30e48d3a5ad24899492f88ec4e1a}\label{classtensorflow_1_1serving_1_1Servable_a6f4b30e48d3a5ad24899492f88ec4e1a}} 
+int64\+\_\+t {\bfseries version} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a64816027ce86cefe5a07649c40b8f235}\label{classtensorflow_1_1serving_1_1Servable_a64816027ce86cefe5a07649c40b8f235}} 
+bool {\bfseries Is\+Critical} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_aa3aaf988243ae1a3ea994609aefc2cf3}\label{classtensorflow_1_1serving_1_1Servable_aa3aaf988243ae1a3ea994609aefc2cf3}} 
+virtual absl\+::\+Status {\bfseries Classify} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Classification\+Request \&request, Classification\+Response $\ast$response)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a9d377f74c29f65fb94f3220350aebf94}\label{classtensorflow_1_1serving_1_1Servable_a9d377f74c29f65fb94f3220350aebf94}} 
+virtual absl\+::\+Status {\bfseries Regress} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Regression\+Request \&request, Regression\+Response $\ast$response)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a56da3044f582c699b457cbe53f4880ff}\label{classtensorflow_1_1serving_1_1Servable_a56da3044f582c699b457cbe53f4880ff}} 
+virtual absl\+::\+Status {\bfseries Predict} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Predict\+Request \&request, Predict\+Response $\ast$response)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a6d2e1d7315e0016e745a9ddc49ab60df}\label{classtensorflow_1_1serving_1_1Servable_a6d2e1d7315e0016e745a9ddc49ab60df}} 
+virtual absl\+::\+Status\+Or$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1PredictStreamedContext}{Predict\+Streamed\+Context}} $>$ $>$ {\bfseries Predict\+Streamed} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, absl\+::\+Any\+Invocable$<$ void(absl\+::\+Status\+Or$<$ Predict\+Response $>$)$>$ response\+\_\+callback)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a0a40bd468c4b10f28000f806f66ab321}\label{classtensorflow_1_1serving_1_1Servable_a0a40bd468c4b10f28000f806f66ab321}} 
+virtual absl\+::\+Status {\bfseries Multi\+Inference} (const \mbox{\hyperlink{structtensorflow_1_1serving_1_1servables_1_1RunOptions}{Run\+Options}} \&run\+\_\+options, const Multi\+Inference\+Request \&request, Multi\+Inference\+Response $\ast$response)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a157d7274afc086fa899e8b179c110fcd}\label{classtensorflow_1_1serving_1_1Servable_a157d7274afc086fa899e8b179c110fcd}} 
+virtual absl\+::\+Status {\bfseries Get\+Model\+Metadata} (const Get\+Model\+Metadata\+Request \&request, Get\+Model\+Metadata\+Response $\ast$response)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a09a3e5a158832c0d0abf4a837e4e250c}\label{classtensorflow_1_1serving_1_1Servable_a09a3e5a158832c0d0abf4a837e4e250c}} 
+virtual bool {\bfseries Supports\+Paging} () const
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a0f14477ac47c94af784ef19410b5637d}\label{classtensorflow_1_1serving_1_1Servable_a0f14477ac47c94af784ef19410b5637d}} 
+virtual absl\+::\+Status {\bfseries Suspend} ()
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1Servable_a5714db8d9e57bef3af74926977677b78}\label{classtensorflow_1_1serving_1_1Servable_a5714db8d9e57bef3af74926977677b78}} 
+virtual absl\+::\+Status {\bfseries Resume} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/servables/tensorflow/servable.\+h\item 
+tensorflow\+\_\+serving/servables/tensorflow/servable.\+cc\end{DoxyCompactItemize}

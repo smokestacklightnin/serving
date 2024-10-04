@@ -1,0 +1,80 @@
+\hypertarget{classtensorflow_1_1serving_1_1SourceAdapter}{}\doxysection{tensorflow\+::serving\+::Source\+Adapter$<$ Input\+Type, Output\+Type $>$ Class Template Reference}
+\label{classtensorflow_1_1serving_1_1SourceAdapter}\index{tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$@{tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$}}
+
+
+{\ttfamily \#include $<$source\+\_\+adapter.\+h$>$}
+
+
+
+Inheritance diagram for tensorflow\+::serving\+::Source\+Adapter$<$ Input\+Type, Output\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtensorflow_1_1serving_1_1SourceAdapter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tensorflow\+::serving\+::Source\+Adapter$<$ Input\+Type, Output\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtensorflow_1_1serving_1_1SourceAdapter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter_a9775d0a39269efb319a0dbd94862f183}{Set\+Aspired\+Versions}} (const String\+Piece servable\+\_\+name, std\+::vector$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ Input\+Type $>$$>$ versions) final
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SourceAdapter_aa123a0dc11c1c45073e16bb40ae50285}\label{classtensorflow_1_1serving_1_1SourceAdapter_aa123a0dc11c1c45073e16bb40ae50285}} 
+void {\bfseries Set\+Aspired\+Versions\+Callback} (typename \mbox{\hyperlink{classtensorflow_1_1serving_1_1Source}{Source}}$<$ Output\+Type $>$\+::\mbox{\hyperlink{classtensorflow_1_1serving_1_1Source_aeb281087e1478b0ff4a74e3f60496c6f}{Aspired\+Versions\+Callback}} callback) final
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ Output\+Type $>$ $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter_a7c960f8493040fc8cb0766e4c2cebf60}{Adapt}} (const String\+Piece servable\+\_\+name, std\+::vector$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ Input\+Type $>$$>$ versions)=0
+\item 
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SourceAdapter_acb3ad719a856c7bb0085df33438c4986}\label{classtensorflow_1_1serving_1_1SourceAdapter_acb3ad719a856c7bb0085df33438c4986}} 
+\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ Output\+Type $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter_acb3ad719a856c7bb0085df33438c4986}{Adapt\+One\+Version}} (\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ Input\+Type $>$ input)
+\begin{DoxyCompactList}\small\item\em Adapts a single servable data item. (Implemented on top of \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter_a7c960f8493040fc8cb0766e4c2cebf60}{Adapt()}}.) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Input\+Type, typename Output\+Type$>$\newline
+class tensorflow\+::serving\+::\+Source\+Adapter$<$ Input\+Type, Output\+Type $>$}
+
+An abstraction for a module that receives aspired-\/version callbacks with data of type Input\+Type and converts them into calls with data of type Output\+Type.
+
+A common example uses Input\+Type=Storage\+Path, Output\+Type=unique\+\_\+ptr\&lt;\mbox{\hyperlink{classtensorflow_1_1serving_1_1Loader}{Loader}}$>$, in which case the module \char`\"{}converts\char`\"{} each incoming storage path into a loader capable of loading a (particular type of) servable based on the path.
+
+Source\+Adapters are typically stateless. However, as with all Sources they can house state that is shared among multiple emitted servables. See the discussion in \mbox{\hyperlink{source_8h_source}{source.\+h}}.
+
+Implementing subclasses supply an implementation of the \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter_a7c960f8493040fc8cb0766e4c2cebf60}{Adapt()}} virtual method, which converts a servable version list from Input\+Type to Output\+Type.
+
+IMPORTANT\+: Every leaf derived class must call Detach() at the top of its destructor. (See documentation on Target\+Base\+::\+Detach() in \mbox{\hyperlink{target_8h_source}{target.\+h}}.) Doing so ensures that no \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter_a7c960f8493040fc8cb0766e4c2cebf60}{Adapt()}} calls are in flight during destruction of member variables. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtensorflow_1_1serving_1_1SourceAdapter_a7c960f8493040fc8cb0766e4c2cebf60}\label{classtensorflow_1_1serving_1_1SourceAdapter_a7c960f8493040fc8cb0766e4c2cebf60}} 
+\index{tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$@{tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$}!Adapt@{Adapt}}
+\index{Adapt@{Adapt}!tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$@{tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$}}
+\doxysubsubsection{\texorpdfstring{Adapt()}{Adapt()}}
+{\footnotesize\ttfamily template$<$typename Input\+Type , typename Output\+Type $>$ \\
+virtual std\+::vector$<$\mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$Output\+Type$>$ $>$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter}{tensorflow\+::serving\+::\+Source\+Adapter}}$<$ Input\+Type, Output\+Type $>$\+::Adapt (\begin{DoxyParamCaption}\item[{const String\+Piece}]{servable\+\_\+name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ Input\+Type $>$$>$}]{versions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Given an Input\+Type-\/based aspired-\/versions request, produces a corresponding Output\+Type-\/based request. \mbox{\Hypertarget{classtensorflow_1_1serving_1_1SourceAdapter_a9775d0a39269efb319a0dbd94862f183}\label{classtensorflow_1_1serving_1_1SourceAdapter_a9775d0a39269efb319a0dbd94862f183}} 
+\index{tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$@{tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$}!SetAspiredVersions@{SetAspiredVersions}}
+\index{SetAspiredVersions@{SetAspiredVersions}!tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$@{tensorflow::serving::SourceAdapter$<$ InputType, OutputType $>$}}
+\doxysubsubsection{\texorpdfstring{SetAspiredVersions()}{SetAspiredVersions()}}
+{\footnotesize\ttfamily template$<$typename Input\+Type , typename Output\+Type $>$ \\
+void \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter}{tensorflow\+::serving\+::\+Source\+Adapter}}$<$ Input\+Type, Output\+Type $>$\+::Set\+Aspired\+Versions (\begin{DoxyParamCaption}\item[{const String\+Piece}]{servable\+\_\+name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classtensorflow_1_1serving_1_1ServableData}{Servable\+Data}}$<$ Input\+Type $>$$>$}]{versions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+This method is implemented in terms of \mbox{\hyperlink{classtensorflow_1_1serving_1_1SourceAdapter_a7c960f8493040fc8cb0766e4c2cebf60}{Adapt()}}, which the implementing subclass must supply. 
+
+Implements \mbox{\hyperlink{classtensorflow_1_1serving_1_1TargetBase}{tensorflow\+::serving\+::\+Target\+Base$<$ Input\+Type $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tensorflow\+\_\+serving/core/source\+\_\+adapter.\+h\end{DoxyCompactItemize}
