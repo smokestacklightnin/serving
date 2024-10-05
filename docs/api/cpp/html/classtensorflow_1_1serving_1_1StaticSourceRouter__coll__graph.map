@@ -1,6 +1,0 @@
-<map id="tensorflow::serving::StaticSourceRouter&lt; T &gt;" name="tensorflow::serving::StaticSourceRouter&lt; T &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,273,197,315"/>
-<area shape="rect" id="node2" href="$classtensorflow_1_1serving_1_1SourceRouter.html" title=" " alt="" coords="24,184,179,225"/>
-<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1TargetBase.html" title=" " alt="" coords="29,95,174,136"/>
-<area shape="rect" id="node4" href="$classtensorflow_1_1serving_1_1Target.html" title=" " alt="" coords="29,5,174,47"/>
-</map>

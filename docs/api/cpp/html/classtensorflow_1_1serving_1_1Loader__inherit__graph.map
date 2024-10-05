@@ -1,7 +1,0 @@
-<map id="tensorflow::serving::Loader" name="tensorflow::serving::Loader">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,151,112"/>
-<area shape="rect" id="node2" href="$classtensorflow_1_1serving_1_1ResourceUnsafeLoader.html" title=" " alt="" coords="227,5,407,47"/>
-<area shape="rect" id="node4" href="$classtensorflow_1_1serving_1_1SimpleLoader.html" title=" " alt="" coords="199,71,435,112"/>
-<area shape="rect" id="node5" href="$classtensorflow_1_1serving_1_1test__util_1_1MockLoader.html" title=" " alt="" coords="231,136,402,177"/>
-<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1test__util_1_1FakeLoader.html" title=" " alt="" coords="483,5,647,47"/>
-</map>

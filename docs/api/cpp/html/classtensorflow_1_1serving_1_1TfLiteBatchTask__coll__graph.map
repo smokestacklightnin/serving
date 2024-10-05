@@ -1,6 +1,0 @@
-<map id="tensorflow::serving::TfLiteBatchTask" name="tensorflow::serving::TfLiteBatchTask">
-<area shape="rect" id="node1" title=" " alt="" coords="118,109,263,151"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,13,93,39"/>
-<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1ThreadSafeStatus.html" title=" " alt="" coords="118,5,263,47"/>
-<area shape="rect" id="node4" title=" " alt="" coords="287,13,350,39"/>
-</map>

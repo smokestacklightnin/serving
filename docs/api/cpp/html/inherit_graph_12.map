@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,46,93,73"/>
-<area shape="rect" id="node2" href="$structtensorflow_1_1serving_1_1BatchingSessionTask.html" title=" " alt="" coords="141,5,308,47"/>
-<area shape="rect" id="node4" href="$classtensorflow_1_1serving_1_1TfLiteBatchTask.html" title=" " alt="" coords="152,71,297,112"/>
-<area shape="rect" id="node3" href="$structtensorflow_1_1serving_1_1SavedModelBatchingTask.html" title=" " alt="" coords="356,5,552,47"/>
-</map>
