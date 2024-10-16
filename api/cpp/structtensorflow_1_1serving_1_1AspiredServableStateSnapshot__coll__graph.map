@@ -1,0 +1,4 @@
+<map id="tensorflow::serving::AspiredServableStateSnapshot" name="tensorflow::serving::AspiredServableStateSnapshot">
+<area shape="rect" id="node1" title="A snapshot of a servable&#39;s state and aspiredness." alt="" coords="5,109,236,151"/>
+<area shape="rect" id="node2" href="$structtensorflow_1_1serving_1_1ServableId.html" title=" " alt="" coords="48,5,193,47"/>
+</map>

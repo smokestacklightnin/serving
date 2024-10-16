@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtensorflow_1_1serving_1_1Manager.html" title=" " alt="" coords="11,136,157,177"/>
+<area shape="rect" id="node2" href="$classtensorflow_1_1serving_1_1AspiredVersionsManager.html" title=" " alt="" coords="211,267,401,308"/>
+<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1BasicManager.html" title=" " alt="" coords="233,5,379,47"/>
+<area shape="rect" id="node4" href="$classtensorflow_1_1serving_1_1CachingManager.html" title=" " alt="" coords="233,71,379,112"/>
+<area shape="rect" id="node5" href="$classtensorflow_1_1serving_1_1ManagerWrapper.html" title=" " alt="" coords="233,136,379,177"/>
+<area shape="rect" id="node6" href="$classtensorflow_1_1serving_1_1ServerCore.html" title=" " alt="" coords="233,201,379,243"/>
+<area shape="rect" id="node7" href="$classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html" title=" " alt="" coords="449,201,648,243"/>
+<area shape="rect" id="node8" href="$classtensorflow_1_1serving_1_1Target.html" title=" " alt="" coords="5,295,163,351"/>
+<area shape="rect" id="node9" href="$classtensorflow_1_1serving_1_1TargetBase.html" title=" " alt="" coords="211,333,401,389"/>
+<area shape="rect" id="node10" href="$classtensorflow_1_1serving_1_1internal_1_1AspiredVersionsManagerTargetImpl.html" title=" " alt="" coords="453,333,645,389"/>
+</map>

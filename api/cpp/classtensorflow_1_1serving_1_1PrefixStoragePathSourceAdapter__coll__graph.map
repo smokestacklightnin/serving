@@ -1,0 +1,8 @@
+<map id="tensorflow::serving::PrefixStoragePathSourceAdapter" name="tensorflow::serving::PrefixStoragePathSourceAdapter">
+<area shape="rect" id="node1" title=" " alt="" coords="960,39,1200,80"/>
+<area shape="rect" id="node2" href="$classtensorflow_1_1serving_1_1UnarySourceAdapter.html" title=" " alt="" coords="696,31,912,87"/>
+<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1SourceAdapter.html" title=" " alt="" coords="441,31,648,87"/>
+<area shape="rect" id="node4" href="$classtensorflow_1_1serving_1_1TargetBase.html" title=" " alt="" coords="199,5,393,47"/>
+<area shape="rect" id="node5" href="$classtensorflow_1_1serving_1_1Target.html" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node6" href="$classtensorflow_1_1serving_1_1Source.html" title=" " alt="" coords="207,71,385,112"/>
+</map>

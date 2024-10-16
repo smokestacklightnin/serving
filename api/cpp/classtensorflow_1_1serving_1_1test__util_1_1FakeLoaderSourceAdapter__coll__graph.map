@@ -1,0 +1,9 @@
+<map id="tensorflow::serving::test_util::FakeLoaderSourceAdapter" name="tensorflow::serving::test_util::FakeLoaderSourceAdapter">
+<area shape="rect" id="node1" title=" " alt="" coords="1201,31,1409,87"/>
+<area shape="rect" id="node2" href="$classtensorflow_1_1serving_1_1SimpleLoaderSourceAdapter.html" title=" " alt="" coords="939,31,1153,87"/>
+<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1UnarySourceAdapter.html" title=" " alt="" coords="696,24,891,95"/>
+<area shape="rect" id="node4" href="$classtensorflow_1_1serving_1_1SourceAdapter.html" title=" " alt="" coords="441,31,648,87"/>
+<area shape="rect" id="node5" href="$classtensorflow_1_1serving_1_1TargetBase.html" title=" " alt="" coords="199,5,393,47"/>
+<area shape="rect" id="node6" href="$classtensorflow_1_1serving_1_1Target.html" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node7" href="$classtensorflow_1_1serving_1_1Source.html" title=" " alt="" coords="207,71,385,112"/>
+</map>

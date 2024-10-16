@@ -1,0 +1,5 @@
+<map id="tensorflow::serving::LogCollector" name="tensorflow::serving::LogCollector">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node2" href="$classtensorflow_1_1serving_1_1FakeLogCollector.html" title=" " alt="" coords="5,95,151,136"/>
+<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1MockLogCollector.html" title=" " alt="" coords="175,95,322,136"/>
+</map>

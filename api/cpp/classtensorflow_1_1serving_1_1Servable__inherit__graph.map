@@ -1,0 +1,6 @@
+<map id="tensorflow::serving::Servable" name="tensorflow::serving::Servable">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,151,112"/>
+<area shape="rect" id="node2" href="$classtensorflow_1_1serving_1_1EmptyServable.html" title=" " alt="" coords="221,5,367,47"/>
+<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1MockServable.html" title=" " alt="" coords="221,71,367,112"/>
+<area shape="rect" id="node4" href="$classtensorflow_1_1serving_1_1TfrtSavedModelServable.html" title=" " alt="" coords="199,136,389,177"/>
+</map>

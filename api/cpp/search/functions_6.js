@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['get_568',['get',['../classtensorflow_1_1serving_1_1UniqueAnyPtr.html#acb57a78f3357bd37e85a25ca707d692b',1,'tensorflow::serving::UniqueAnyPtr::get()'],['../classtensorflow_1_1serving_1_1AnyPtr.html#a357cf7dcf137a8064c393b486509d218',1,'tensorflow::serving::AnyPtr::get()']]],
+  ['getadditionalservablestate_569',['GetAdditionalServableState',['../classtensorflow_1_1serving_1_1BasicManager.html#a99dbea960f6d47461dbfca5bfa149335',1,'tensorflow::serving::BasicManager']]],
+  ['getallservablestates_570',['GetAllServableStates',['../classtensorflow_1_1serving_1_1ServableStateMonitor.html#abc3c1c27b6b7c0e8ef9a42039ede74cc',1,'tensorflow::serving::ServableStateMonitor']]],
+  ['getaspiredversionscallback_571',['GetAspiredVersionsCallback',['../classtensorflow_1_1serving_1_1AspiredVersionsManager.html#a4fcdded2573a67abe77f238857e57f35',1,'tensorflow::serving::AspiredVersionsManager']]],
+  ['getavailableservablehandles_572',['GetAvailableServableHandles',['../classtensorflow_1_1serving_1_1Manager.html#a8ad1c3155120737e5a41776ceeff6aaa',1,'tensorflow::serving::Manager']]],
+  ['getboundedlog_573',['GetBoundedLog',['../classtensorflow_1_1serving_1_1ServableStateMonitor.html#a2afc57f0eb671a3c3342c7dd71a9d6a7',1,'tensorflow::serving::ServableStateMonitor']]],
+  ['gethighestaspirednewservableid_574',['GetHighestAspiredNewServableId',['../classtensorflow_1_1serving_1_1AspiredVersionPolicy.html#a71bde7aea4c6116cede2714758688857',1,'tensorflow::serving::AspiredVersionPolicy']]],
+  ['getliveservablestates_575',['GetLiveServableStates',['../classtensorflow_1_1serving_1_1ServableStateMonitor.html#a522166e0255c93e87a6d63c3d17e3f38',1,'tensorflow::serving::ServableStateMonitor']]],
+  ['getmanagedservablenames_576',['GetManagedServableNames',['../classtensorflow_1_1serving_1_1BasicManager.html#afbdc3d0ed83559c7d8b3b0092194ead6',1,'tensorflow::serving::BasicManager']]],
+  ['getmanagedservablestatesnapshot_577',['GetManagedServableStateSnapshot',['../classtensorflow_1_1serving_1_1BasicManager.html#af681f56bbef07ab201f25c0097f73e75',1,'tensorflow::serving::BasicManager']]],
+  ['getmanagedservablestatesnapshots_578',['GetManagedServableStateSnapshots',['../classtensorflow_1_1serving_1_1BasicManager.html#a31716665d8df8451d379363309dac826',1,'tensorflow::serving::BasicManager']]],
+  ['getnextaction_579',['GetNextAction',['../classtensorflow_1_1serving_1_1AspiredVersionPolicy.html#a86135f0f3225cd2999033da63e013214',1,'tensorflow::serving::AspiredVersionPolicy::GetNextAction()'],['../classtensorflow_1_1serving_1_1AvailabilityPreservingPolicy.html#a3e7f155e7dd0bb9fadacfdfe4cad5d4c',1,'tensorflow::serving::AvailabilityPreservingPolicy::GetNextAction()'],['../classtensorflow_1_1serving_1_1ResourcePreservingPolicy.html#ab1fa4fa3d4a8dc165bb86f5377436532',1,'tensorflow::serving::ResourcePreservingPolicy::GetNextAction()']]],
+  ['getservablehandle_580',['GetServableHandle',['../classtensorflow_1_1serving_1_1Manager.html#aca70babd38f4b416cf27bbf40f8bb093',1,'tensorflow::serving::Manager::GetServableHandle()'],['../classtensorflow_1_1serving_1_1ServerCore.html#adbe7fed540950b47bf889d3414239dbf',1,'tensorflow::serving::ServerCore::GetServableHandle()']]],
+  ['getservableversion_581',['GetServableVersion',['../classtensorflow_1_1serving_1_1CachingManager_1_1LoaderFactory.html#ae3b86ce052eeee59a53ef0ab58080729',1,'tensorflow::serving::CachingManager::LoaderFactory::GetServableVersion()'],['../classtensorflow_1_1serving_1_1PathPrefixLoaderFactory.html#a77c005c15269b9996b55e1703658f8cc',1,'tensorflow::serving::PathPrefixLoaderFactory::GetServableVersion()']]],
+  ['getstate_582',['GetState',['../classtensorflow_1_1serving_1_1ServableStateMonitor.html#a8fa6dd1536bbb85a55b3e41c1d2577d1',1,'tensorflow::serving::ServableStateMonitor']]],
+  ['getstateandtime_583',['GetStateAndTime',['../classtensorflow_1_1serving_1_1ServableStateMonitor.html#a8ff54ab2471885168dba0b1a05be7bea',1,'tensorflow::serving::ServableStateMonitor']]],
+  ['getversionstates_584',['GetVersionStates',['../classtensorflow_1_1serving_1_1ServableStateMonitor.html#a501ef561e30709fe17f10c913d34bb1e',1,'tensorflow::serving::ServableStateMonitor']]]
+];

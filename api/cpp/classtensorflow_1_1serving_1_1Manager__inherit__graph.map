@@ -1,0 +1,9 @@
+<map id="tensorflow::serving::Manager" name="tensorflow::serving::Manager">
+<area shape="rect" id="node1" title=" " alt="" coords="5,136,151,177"/>
+<area shape="rect" id="node2" href="$classtensorflow_1_1serving_1_1AspiredVersionsManager.html" title=" " alt="" coords="199,5,389,47"/>
+<area shape="rect" id="node3" href="$classtensorflow_1_1serving_1_1BasicManager.html" title=" " alt="" coords="221,71,367,112"/>
+<area shape="rect" id="node4" href="$classtensorflow_1_1serving_1_1CachingManager.html" title=" " alt="" coords="221,136,367,177"/>
+<area shape="rect" id="node5" href="$classtensorflow_1_1serving_1_1ManagerWrapper.html" title=" " alt="" coords="221,201,367,243"/>
+<area shape="rect" id="node6" href="$classtensorflow_1_1serving_1_1ServerCore.html" title=" " alt="" coords="221,267,367,308"/>
+<area shape="rect" id="node7" href="$classtensorflow_1_1serving_1_1test__util_1_1MockServerCore.html" title=" " alt="" coords="437,267,636,308"/>
+</map>
