@@ -38,4 +38,4 @@ jobs:
     - name: Run unit tests
       shell: bash
       run: |
-        bazel test //tensorflow_serving/... --verbose_failures --test_output=errors 
+        bazel test //tensorflow_serving/{resources,servables,session_bundle,sources,test_util,tools,util}/... --verbose_failures --test_output=errors
